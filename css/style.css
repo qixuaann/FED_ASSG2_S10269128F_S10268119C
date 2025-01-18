@@ -16,3 +16,112 @@ html {
 }
 
 /* Desktop nav */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+#desktop-nav {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+  
+/* Top bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+  
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 550px;
+    flex-grow: 1;
+}
+  
+.search-icon {
+    height: 20px;
+    margin-right: 10px;
+}
+  
+.search {
+    width: 100%;
+    padding: 8px 40px 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 14px;
+}
+  
+.search:focus {
+    border-color: #007bff;
+}
+  
+.camera-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+  
+.camera-btn img {
+    width: 24px;
+    height: 24px;
+}
+  
+/* Icons */
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.icons a {
+    margin-left: 15px;
+}
+  
+.cart-btn, .chat-btn, .profile-btn {
+    background: none;
+    border: none;
+}
+
+.chat-btn img {
+    width: 24px;
+    height: 24px;
+}
+  
+/* hover */
+.cart-btn:hover img,
+.chat-btn:hover img,
+.profile-btn:hover img,
+.camera-btn:hover img {
+    opacity: 0.7;
+}
+  
+.search-icon:hover,
+.search:hover {
+    opacity: 0.7;
+}
+  
+/*  Mobile nav */
+@media (max-width: 768px) {
+    
+}
+  
