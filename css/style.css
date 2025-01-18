@@ -7,6 +7,7 @@
 }
 
 body {
+    font-family: 'Onest', sans-serif;
     background-color: #F8FCFF;
 }
 
@@ -14,8 +15,4 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Desktop Nav - to be added */
-
-/* #desktop-nav {
-
-} */
+/* Desktop nav */
