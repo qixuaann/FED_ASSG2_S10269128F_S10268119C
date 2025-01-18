@@ -102,6 +102,7 @@ a {
     border: none;
 }
 
+/* fix the background of chat-btn */
 .chat-btn img {
     width: 24px;
     height: 24px;

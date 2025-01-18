@@ -1,0 +1,139 @@
+.product-page {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+  
+.main-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+  
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+  
+.thumbnails img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+  
+.content {
+    display: flex;
+    gap: 20px;
+}
+  
+/* product */
+.product-details {
+    flex: 2;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.title-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title-section h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.chat-btn {
+    background: #f1f1f1;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #27ae60;
+    margin: 10px 0;
+}
+  
+hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 15px 0;
+}
+  
+.info-container {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.buy-actions {
+    display: flex;
+    gap: 10px;
+}
+  
+.buy-btn, .add-to-cart-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+.buy-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+  
+.add-to-cart-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+/* side */
+.sidebar {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+  
+.profile-icon {
+    background-color: #f39c12;
+    color: white;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.policies h2 {
+    margin: 10px 0;
+}
