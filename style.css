@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F8FCFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Desktop Nav - to be added */
+
+/* #desktop-nav {
+
+} */
