@@ -63,6 +63,34 @@
         </div>
     </div>
     
-  <script src="../script.js"></script>
-  </body>
+    <script type="module">
+      import { sendMessage, listenForMessages } from '../js/chat.js';
+
+      const messageInput = document.getElementById('messageInput');
+      const sendMessageButton = document.getElementById('sendMessageButton');
+      const messagesDiv = document.getElementById('messages');
+
+      // send msg when button is clicked
+      sendMessageButton.addEventListener('click', () => {
+          const message = messageInput.value.trim();
+          if (message) {
+              sendMessage(message);  // send msg to Firebase
+              messageInput.value = '';  // clear input after sending
+          }
+      });
+
+      // listen for new msgs in real-time
+      listenForMessages((messages) => {
+          messagesDiv.innerHTML = '';  // clear existing messages
+          messages.forEach((messageData) => {
+              const messageDiv = document.createElement('div');
+              messageDiv.classList.add('message', messageData.sender === 'user' ? 'user' : 'other');
+              messageDiv.textContent = `${messageData.sender}: ${messageData.message}`;
+              messagesDiv.appendChild(messageDiv);
+          });
+          messagesDiv.scrollTop = messagesDiv.scrollHeight;  // scroll to latest message
+      });
+    </script>
+    <script type="module" src="../js/chat.js"></script>
+    </body>
 </html>
