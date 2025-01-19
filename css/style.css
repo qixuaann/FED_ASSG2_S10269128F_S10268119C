@@ -80,12 +80,7 @@ a {
     top: 50%;
     transform: translateY(-50%);
 }
-  
-.camera-btn img {
-    width: 24px;
-    height: 24px;
-}
-  
+
 /* Icons */
 .icons {
     display: flex;
@@ -96,16 +91,16 @@ a {
 .icons a {
     margin-left: 15px;
 }
-  
-.cart-btn, .chat-btn, .profile-btn {
-    background: none;
+
+
+.chat-btn, .cart-btn, .profile-btn {
+    background: none !important;
     border: none;
 }
 
-/* fix the background of chat-btn */
-.chat-btn img {
-    width: 24px;
-    height: 24px;
+.chat-btn img, .camera-btn img {
+   width: 24px;
+   height: 24px;
 }
   
 /* hover */
@@ -120,7 +115,7 @@ a {
 .search:hover {
     opacity: 0.7;
 }
-  
+
 /*  Mobile nav */
 @media (max-width: 768px) {
     
