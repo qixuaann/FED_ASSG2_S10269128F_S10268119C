@@ -64,6 +64,7 @@ a {
     border: 1px solid #ccc;
     border-radius: 25px;
     font-size: 14px;
+    background-color: #F5F5F5;
 }
   
 .search:focus {

@@ -92,13 +92,25 @@ hr {
 .product-specifics {
     display: flex;
     gap: 50px;
+    align-items: center;
+}
+
+.light-text {
+    font-weight: lighter;
+    color: #707070; 
+}
+
+.deal-method img {
+    width: 20px;
+    height: 20px;
+
 }
 
 .buy-actions {
     display: flex;
     gap: 10px;
 }
-  
+
 .buy-btn, .add-to-cart-btn {
     padding: 10px 20px;
     border: none;
@@ -129,13 +141,47 @@ hr {
     border-radius: 50px;
 }
 
-/* side */
+/* suggested products */
+.suggested-products {
+    margin-top: 20px;
+}
+  
+.suggested-products .product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.suggested-products h3 {
+    margin-bottom: 15px;
+}
+  
+.suggested-products img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.image-suggestions {
+    display: flex;
+}
+  
+/* policies side */
 .sidebar {
     flex: 1;
     background: white;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.chat-response p {
+    color: #707070; 
+    font-size: 13px;  
+}
+
+.profile-info p {
+    color: #707070; 
+    font-size: 15px;  
 }
   
 .profile-section {
@@ -156,22 +202,15 @@ hr {
     justify-content: center;
 }
 
-
 .chat-response {
     display: flex;
     align-items: center; 
-    gap: 10px; 
     margin-left: 40px; 
 }
 
 .arrow-icon, .padlock-icon, .dollar-icon {
     width: 50px;
     height: 50px;
-}
-
-.payment-icons {
-    display: flex;
-    gap: 10px;
 }
 
 .payment-icons {
