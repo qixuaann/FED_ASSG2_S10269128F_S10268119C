@@ -1,0 +1,15 @@
+{
+  "name": "fed_assg2_s10269128f_s10268119c",
+  "version": "1.0.0",
+  "description": "Qi Xuan & Joyce FED Assignment 2",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^11.2.0"
+  }
+}
