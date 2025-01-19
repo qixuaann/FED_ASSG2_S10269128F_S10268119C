@@ -47,10 +47,13 @@
         <div class="sidebar">
             <ul class="chat-list">
                 <li>@auther_03</li>
+                <li id="listingTitle">Product Name</li>
+                <li id="listingPrice">$100</li>
             </ul>
         </div>
         <div class="chat-section">
             <div class="header">Club Shirts Cute</div>
+            <div class="header" id="listingDescription">Product Description</div>
 
             <div class="messages" id="messages">
                 <!-- msgs will appear here -->
@@ -64,23 +67,28 @@
     </div>
     
     <script type="module">
-      import { sendMessage, listenForMessages } from '../js/chat.js';
+      import { sendMessage, listenForMessages, resetBotResponseFlag } from '../js/chat.js';
 
       const messageInput = document.getElementById('messageInput');
       const sendMessageButton = document.getElementById('sendMessageButton');
       const messagesDiv = document.getElementById('messages');
+      const listingTitle = document.getElementById('listingTitle');
+      const listingPrice = document.getElementById('listingPrice');
+      const listingDescription = document.getElementById('listingDescription');
 
+      const productName = listingTitle.textContent.trim();
       // send msg when button is clicked
       sendMessageButton.addEventListener('click', () => {
           const message = messageInput.value.trim();
           if (message) {
-              sendMessage(message);  // send msg to Firebase
+              sendMessage(productName, message, 'user');  // send msg to Firebase
               messageInput.value = '';  // clear input after sending
+              resetBotResponseFlag();   
           }
       });
 
       // listen for new msgs in real-time
-      listenForMessages((messages) => {
+      listenForMessages(productName, (messages) => {
           messagesDiv.innerHTML = '';  // clear existing messages
           messages.forEach((messageData) => {
               const messageDiv = document.createElement('div');
@@ -90,6 +98,20 @@
           });
           messagesDiv.scrollTop = messagesDiv.scrollHeight;  // scroll to latest message
       });
+
+      sendMessageButton.addEventListener('click', () => {
+        const message = messageInput.value.trim();
+        if (message) {
+            sendMessage(listingId, message, 'user');  // send msg from user
+            messageInput.value = '';  // clear input field after sending
+            resetBotResponseFlag();  
+        }
+    });
+
+      // static for now, will change
+      // listingTitle.textContent = "Amazing Product!";
+      // listingPrice.textContent = "$100";
+      // listingDescription.textContent = "This is a great product! Get it now while stock lasts.";
     </script>
     <script type="module" src="../js/chat.js"></script>
     </body>
