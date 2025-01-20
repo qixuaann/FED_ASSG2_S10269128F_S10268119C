@@ -46,23 +46,54 @@
     <div class="chat-container">
         <div class="sidebar">
             <ul class="chat-list">
-                <li>@auther_03</li>
-                <li id="listingTitle">Product Name</li>
-                <li id="listingPrice">$100</li>
+              <a href="chat.html" class="chat-section">
+                <button class="convo">
+                  <img src="/assets/auther.png" alt="auther-icon">
+                  <div class="chat-info">
+                    <li>@auther_03</li>
+                    <li id="listingTitle"><strong>Club Shirts Cute</strong></li>
+                    <li class="light-text">Start chatting...</li>
+                  </div>
+                </button>
+              </a>
             </ul>
         </div>
         <div class="chat-section">
-            <div class="header">Club Shirts Cute</div>
-            <div class="header" id="listingDescription">Product Description</div>
+          <hr>
+          <div class="profile-info">
+            <img src="/assets/auther.png" alt="auther-icon">
+            <h4>@auther_03</h4>
+            <img src="/assets/seller-setting.png" alt="seller-setting-icon" class="seller-setting-icon">
+            <hr>
+          </div>
+          <hr>
 
-            <div class="messages" id="messages">
-                <!-- msgs will appear here -->
+          <div class="listing-selected">
+            <img src="/assets/tee.jpeg" alt="Suggested product 1" class="listing-img">
+            <div class="product-info">
+              <p>Club Shirts Cute<p>
+                <div id="listingPrice">S$13</div>
+                <!-- <div id="listingDescription">Product Description</div> -->
+                <div class="buy-actions">
+                  <a href="buy.html" class="chat">
+                    <button class="buy-btn">Buy</button>
+                  </a>
+                  <a href="cart.html" class="chat">
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </a>
+                </div>          
             </div>
+          </div>
+          
+        
 
-            <div class="input-container">
-                <input type="text" id="messageInput" placeholder="Type a message...">
-                <button id="sendMessageButton">Send</button>
-            </div>
+          <div class="messages" id="messages">
+              <!-- msgs will appear here -->
+          </div>
+          <div class="input-container">
+              <input type="text" id="messageInput" placeholder="Start chatting...">
+              <button id="sendMessageButton">Send</button>
+          </div>
         </div>
     </div>
     
