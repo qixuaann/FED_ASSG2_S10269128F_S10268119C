@@ -56,4 +56,4 @@ const fetchPopularListings = (callback) => {
       });
 };
   
-export { fetchPopularListings, setPopularListings };
+export { fetchPopularListings, setPopularListings, database, ref, push, get, set, serverTimestamp, onValue};

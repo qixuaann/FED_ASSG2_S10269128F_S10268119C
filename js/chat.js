@@ -1,3 +1,5 @@
+import { database, ref, set, push, onValue, serverTimestamp } from '../js/firebase.js';
+
 let botHasResponded = false;  
 
 // helper func, bot responses based on user input
