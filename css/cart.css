@@ -1,0 +1,39 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 38%;
+    gap: 10px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.indication {
+    font-size: 20px;
+}
+
+p {
+    font-size: 13px;
+}
+
+.shopping-btn, .login-btn {
+    border-radius: 20px;
+    width: 250px;
+    height: 38px;
+    font-size: 19px;
+}
+
+.shopping-btn {
+    background-color: #F8FCFF;
+    border: 2px solid #1b52e7;
+    color: #1b52e7;
+}
+
+.login-btn {
+    color: white;
+    background-color: #1b52e7;
+}
