@@ -42,3 +42,16 @@ fetchPopularListings((listings) => {
       listingsContainer.appendChild(listingItem);
     }
 });
+
+// for users when they click on the categories 
+const categoryContainers = document.querySelectorAll(".circle-container");
+
+// event listeners to all circle-container elements
+categoryContainers.forEach((container) => {
+  container.addEventListener("click", () => {
+    const categoryName = container.dataset.category; 
+    if (categoryName) {
+      window.location.href = `category.html?category=${encodeURIComponent(categoryName)}`;
+    }
+  });
+});
