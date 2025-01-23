@@ -24,13 +24,18 @@ const setPopularListings = () => {
     set(popularListingsRef, {
       listingID1: {
         title: "Chaps Ralph Lauren Coat Man",
-        price: "80",
+        price: "80.00",
         imageURL: "/assets/jacket1.jpg"
       },
       listingID2: {
         title: "SEVENTEEN 4th Album Repackage 'SECTOR 17'",
-        price: "28",
+        price: "28.00",
         imageURL: "/assets/listing-kpop1.jpg"
+      },
+      listingID3: {
+        title: "Club Shirts Cute",
+        price: "13.00",
+        imageURL: "/assets/tee.jpeg"
       }
     })
     .then(() => {
