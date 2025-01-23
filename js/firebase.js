@@ -81,7 +81,7 @@ const setCategoryListings = () => {
             },
         },
         "Women's Fashion": {
-            bgImage: "/assets/women-bg.jpg",
+            bgImage: "/assets/women-fashion-bg.jpg",
             listings: {
                 listingID3: {
                     title: "Summer Dress",
