@@ -25,6 +25,7 @@ const setPopularListings = () => {
     set(popularListingsRef, {
       listingID1: {
         title: "Chaps Ralph Lauren Coat Man",
+        category: "Men's Fashion",
         price: "80.00",
         imageURL: "/assets/jacket1.jpg"
       },
@@ -37,7 +38,17 @@ const setPopularListings = () => {
         title: "Club Shirts Cute",
         price: "13.00",
         imageURL: "/assets/tee.jpeg"
-      }
+      },
+      listingID4: {
+        title: "Sony WHCH520/B Bluetooth Headphones",
+        price: "13.00",
+        imageURL: "/assets/headphones.jpg"
+      },
+      listingID5: {
+        title: "Ralph Lauren Jacket",
+        price: "13.00",
+        imageURL: "/assets/jacket2.jpg"
+      },
     })
     .then(() => {
       console.log("Data has been written successfully.");
