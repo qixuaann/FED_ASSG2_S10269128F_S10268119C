@@ -33,6 +33,10 @@ fetchPopularListings((listings) => {
       title.innerHTML = listing.title;
       listingContent.appendChild(title);
 
+      const category = document.createElement('h4');
+      category.innerHTML = `${listing.category}`;
+      listingContent.appendChild(category);
+
       const price = document.createElement('h4');
       price.innerHTML = `$${listing.price}`;
       listingContent.appendChild(price);
