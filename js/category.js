@@ -30,7 +30,7 @@ const renderCategoryPage = async () => {
         const listingIds = Object.keys(listings);
         const treasureCount = Math.min(3, listingIds.length); // up to 3 treasures
         const treasureIndices = new Set();
-        
+
         while (treasureIndices.size < treasureCount) {
             treasureIndices.add(Math.floor(Math.random() * listingIds.length));
         }
@@ -62,7 +62,7 @@ const renderCategoryPage = async () => {
               lottiePlayer.setAttribute("src", "https://lottie.host/e40b6f55-979c-426c-8d8f-3511d48db81f/nZm2cy8K9I.lottie");
               lottiePlayer.setAttribute("background", "transparent");
               lottiePlayer.setAttribute("speed", "1");
-              lottiePlayer.setAttribute("style", "width: 100px; height: 100px;");
+              lottiePlayer.setAttribute("style", "width: 50px; height: 50px;");
               lottiePlayer.setAttribute("loop", "");
               lottiePlayer.setAttribute("autoplay", "");
 

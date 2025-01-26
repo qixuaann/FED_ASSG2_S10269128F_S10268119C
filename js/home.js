@@ -1,12 +1,4 @@
 import { fetchPopularListings, setPopularListings } from '../js/firebase.js';  
-// import { DotLottie } from '@lottiefiles/dotlottie-web';
-
-// const dotLottie = new DotLottie({
-//     autoplay: true,
-//     loop: true,
-//     canvas: document.querySelector('#dotlottie-canvas'),
-//     src: "<https://lottie.host/e40b6f55-979c-426c-8d8f-3511d48db81f/nZm2cy8K9I.lottie>", // my .lottie url
-// });
 
 window.onload = () => {
     setPopularListings();
