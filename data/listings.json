@@ -1,0 +1,79 @@
+{
+    "listingID3": {
+        "title": "Club Shirts Cute",
+        "price": "$13",
+        "condition": "Like new",
+        "type": "Shirts",
+        "bumped": "5 moments ago",
+        "location": "Jewel Changi Airport",
+        "mailing": "Free",
+        "description": "Very nice. Good for casual wear. It is recommended to buy.",
+        "mainImage": "/assets/tee.jpeg",
+        "thumbnails": [
+          "/assets/tee.jpeg",
+          "/assets/tee.jpeg",
+          "/assets/tee.jpeg"
+        ],
+        "suggestedProducts": [
+          {
+            "image": "/assets/tee.jpeg",
+            "name": "Suggested Product 1"
+          },
+          {
+            "image": "/assets/tee.jpeg",
+            "name": "Suggested Product 2"
+          }
+        ],
+        "reviews": [
+          {
+            "username": "peter_lim",
+            "review": "Seller is really friendly. Would love to deal with him again!",
+            "profileImage": "/assets/peter.png"
+          }
+        ],
+        "seller": {
+          "username": "author_03",
+          "joined": "5 years ago",
+          "profileIcon": "A"
+        }
+      },
+    "listingID1": {
+        "title": "Trendy Sneakers",
+        "price": "$45",
+        "condition": "Brand new",
+        "type": "Shoes",
+        "bumped": "10 moments ago",
+        "location": "Orchard Road",
+        "mailing": "$5",
+        "description": "Comfortable and stylish sneakers. Perfect for daily wear.",
+        "mainImage": "/assets/sneakers.jpeg",
+        "thumbnails": [
+          "/assets/sneakers.jpeg",
+          "/assets/sneakers2.jpeg",
+          "/assets/sneakers3.jpeg"
+        ],
+        "suggestedProducts": [
+          {
+            "image": "/assets/sneakers4.jpeg",
+            "name": "Sneaker Cleaner"
+          },
+          {
+            "image": "/assets/socks.jpeg",
+            "name": "Comfy Socks"
+          }
+        ],
+        "reviews": [
+          {
+            "username": "shoe_lover",
+            "review": "Amazing quality. Highly recommend!",
+            "profileImage": "/assets/user1.png"
+          }
+        ],
+        "seller": {
+          "username": "sneaker_fan",
+          "joined": "2 years ago",
+          "profileIcon": "S"
+        }
+      }
+}
+  

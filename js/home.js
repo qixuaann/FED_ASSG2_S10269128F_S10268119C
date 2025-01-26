@@ -19,6 +19,7 @@ fetchPopularListings((listings) => {
       // create listing
       const listingItem = document.createElement('div');
       listingItem.classList.add('listing-item');  // from css
+      // listingItem.dataset.id = listingId;
 
       // create image
       const listingImage = document.createElement('img');
@@ -43,9 +44,17 @@ fetchPopularListings((listings) => {
 
       listingItem.appendChild(listingContent);
 
-      listingsContainer.appendChild(listingItem);
-    }
+      // event listener for listings
+      listingItem.addEventListener('click', () => {
+        window.location.href = `listings.html?id=${listingId}`;
+      // window.location.href = `listing.html?id=${listingId}`;
+
+    });
+
+    listingsContainer.appendChild(listingItem);
+}
 });
+
 
 // for users when they click on the categories 
 const categoryContainers = document.querySelectorAll(".circle-container");

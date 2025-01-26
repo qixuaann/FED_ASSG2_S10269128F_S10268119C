@@ -354,3 +354,6 @@ const fetchCategoryListings = async (categoryName) => {
 };
 
 export { fetchPopularListings, setPopularListings, fetchCategoryListings,  database, ref, push, get, set, serverTimestamp, onValue};
+// export function fetchListingById(id) {
+//   return firebase.database().ref(`listings/${id}`).once('value').then(snapshot => snapshot.val());
+// }
