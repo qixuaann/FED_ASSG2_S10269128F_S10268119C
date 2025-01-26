@@ -80,6 +80,31 @@ const fetchPopularListings = (callback) => {
 // category listings
 const setCategoryListings = () => {
     const categoryListings = {
+        "Car": {
+          bgImage: "/assets/car-banner.jpg",
+          listings: {
+            listingID1: {
+              title: "Jaguar XE 2.0 14D TSS Auto",
+              price: "52, 800",
+              imageURL:"/assets/jaguar-car.jpg"
+            },
+            listingID2: {
+              title: "Hyundai i30 Wagon 14.A T-GDi DCT Auto",
+              price: "50, 800",
+              imageURL:"/assets/hyundai-car.jpg"
+            },
+            listingID3: {
+              title: "Toyota Mark X 2.5 Auto",
+              price: "38, 500",
+              imageURL:"/assets/toyota-car.jpg"
+            },
+            listingID4: {
+              title: "BMW X2 MSport 2.0D XDrive AWD",
+              price: "80, 450",
+              imageURL:"/assets/bmw-car.jpg"
+            }
+          }
+        },
         "Mobile & Gadgets": {
             bgImage: "/assets/mobile-gadget-bg.png",
             listings: {
