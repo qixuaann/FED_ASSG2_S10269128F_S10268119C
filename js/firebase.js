@@ -155,20 +155,180 @@ const setCategoryListings = () => {
                 }
             },
         },
+        "Home Services": {
+            bgImage: "/assets/homeservices-banner.jpg",
+            listings: {
+                listingID13: {
+                    title: "Handyman, Home Services, Home Repairs, Handyman and Drilling Services",
+                    price: "50.00",
+                    imageURL: "/assets/handyman-service.jpg",
+                },
+                listingID14: {
+                    title: "Painting Services",
+                    price: "35.00",
+                    imageURL: "/assets/painting-service.jpg",
+                },
+                listingID15: {
+                  title: "Repair Fan Services",
+                  price: "83.00",
+                  imageURL:"/assets/repair-service.jpg"
+                },
+                listingID16: {
+                  title: "Post Renovation Clean Up Services",
+                  price: "42.00",
+                  imageURL: "/assets/postreno-service.jpg"
+                }
+            },
+        },
+        "Hobbies & Toys": {
+            bgImage: "/assets/hobbiesntoys-banner.jpg",
+            listings: {
+                listingID17: {
+                    title: "BN Jellycat Bashful Bunny Soft Toy",
+                    price: "30.00",
+                    imageURL: "/assets/jellycat.jpg",
+                },
+                listingID18: {
+                    title: "75% Custom-built Mechanical Keyboard",
+                    price: "210.00",
+                    imageURL: "/assets/keyboard.jpg",
+                },
+                listingID19: {
+                  title: "Lesserafim Japan Fearless eunchae sealed album",
+                  price: "15.00",
+                  imageURL:"/assets/lessarafim-album.jpg"
+                },
+                listingID20: {
+                  title: "(All for $8) Plush Toys / Soft Toy (Average 15cm Height)",
+                  price: "8.00",
+                  imageURL: "/assets/plush-toy.jpg"
+                }
+            },
+        },
+        "Property": {
+            bgImage: "/assets/property-banner.jpg",
+            listings: {
+                listingID21: {
+                    title: "HDB 4 room unit (Open for viewing)",
+                    price: "300,000.00",
+                    imageURL: "/assets/house1.jpg",
+                },
+                listingID22: {
+                    title: "Bungalow D21 8 rooms",
+                    price: "11,239,300.00",
+                    imageURL: "/assets/bungalow.jpg",
+                },
+                listingID23: {
+                  title: "Rental 3 bedrooms Condo Riversound",
+                  price: "4,200.00",
+                  imageURL:"/assets/condo1.jpg"
+                },
+                listingID24: {
+                  title: "Condo For Rent Singapore (3 rooms)",
+                  price: "5,302.00",
+                  imageURL: "/assets/condo2.jpg"
+                }
+            },
+        },
+        "Computers & Tech": {
+            bgImage: "/assets/computerntech-banner.avif",
+            listings: {
+                listingID25: {
+                    title: "Apple Macbook Pro M13 (NO NEGO)",
+                    price: "4375.00",
+                    imageURL: "/assets/apple-macbook.jpg",
+                },
+                listingID26: {
+                    title: "Thinkpad Lenovo X1 Carbon 7 | Intel i5-8th",
+                    price: "484.00",
+                    imageURL: "/assets/lenovo.jpg",
+                },
+                listingID27: {
+                  title: "23 inch Apple Cinema Display Monitor",
+                  price: "232.00",
+                  imageURL:"/assets/apple-display.jpg"
+                },
+                listingID28: {
+                  title: "Brand New VR Headset Meta Quest 3S",
+                  price: "421.00",
+                  imageURL: "/assets/vr-headsert.jpg"
+                }
+            },
+        },
         "Women's Fashion": {
             bgImage: "/assets/women-fashion-bg.jpg",
             listings: {
-                listingID11: {
+                listingID29: {
                     title: "Summer Dress",
                     price: "50.00",
                     imageURL: "/assets/dress.jpeg",
                 },
-                listingID12: {
+                listingID30: {
                     title: "Lana Shoulder Bag 23",
                     price: "700.00",
                     imageURL: "/assets/lana-bag.png",
                 },
-            },
+                listingID31: {
+                  title: "zara satin slip dress",
+                  price: "48.00",
+                  imageURL: "/assets/zara-dress.jpg",
+                },
+                listingID32: {
+                  title: "LOVET Merlynn Eyelet Dress (Dusty Pink)",
+                  price: "17.00",
+                  imageURL: "/assets/lovet-dress.jpg",
+                },
+              },
+        },
+        "Men's Fashion": {
+            bgImage: "/assets/menfashion-banner.jpg",
+            listings: {
+                listingID33: {
+                    title: "Men Suit Jackets Blazer Coat Slim Fit",
+                    price: "50.00",
+                    imageURL: "/assets/men-jackrt.jpg",
+                },
+                listingID34: {
+                    title: "Oversized T-Shirt Men MAKE&WEAR",
+                    price: "18.00",
+                    imageURL: "/assets/men-shirt.jpg",
+                },
+                listingID35: {
+                  title: "Men white short sleeve clothes",
+                  price: "48.00",
+                  imageURL: "/assets/men-shirt2.jpg",
+                },
+                listingID36: {
+                  title: "Men's Shirt Harajuku Streetwear Long Sleeve Shirt",
+                  price: "30.00",
+                  imageURL: "/assets/men-shirt3.jpg",
+                },
+              },
+        },
+        "Beauty & Personal Care": {
+            bgImage: "/assets/skincare-banner.jpg",
+            listings: {
+                listingID29: {
+                    title: "Brand new / Preloved Skincare Products to clear",
+                    price: "5.00",
+                    imageURL: "/assets/skincare1.jpg",
+                },
+                listingID30: {
+                    title: "sakura skincare set brand new",
+                    price: "10.00",
+                    imageURL: "/assets/sakura-skincare.jpg",
+                },
+                listingID31: {
+                  title: "BEST Face Reality Toner Cooling Moisturizer",
+                  price: "38.00",
+                  imageURL: "/assets/moisturizer.jpg",
+                },
+                listingID32: {
+                  title: "COSRX Gel Cleanser - A Women's Confidence",
+                  price: "20.00",
+                  imageURL: "/assets/cosrx-gelcleanser.jpg",
+                },
+              },
         },
     };
 
