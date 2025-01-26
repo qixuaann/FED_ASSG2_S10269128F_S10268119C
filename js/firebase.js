@@ -85,50 +85,85 @@ const setCategoryListings = () => {
           listings: {
             listingID1: {
               title: "Jaguar XE 2.0 14D TSS Auto",
-              price: "52, 800",
+              price: "52,800.00",
               imageURL:"/assets/jaguar-car.jpg"
             },
             listingID2: {
               title: "Hyundai i30 Wagon 14.A T-GDi DCT Auto",
-              price: "50, 800",
+              price: "50,800.00",
               imageURL:"/assets/hyundai-car.jpg"
             },
             listingID3: {
               title: "Toyota Mark X 2.5 Auto",
-              price: "38, 500",
+              price: "38,500.00",
               imageURL:"/assets/toyota-car.jpg"
             },
             listingID4: {
               title: "BMW X2 MSport 2.0D XDrive AWD",
-              price: "80, 450",
+              price: "80,450.00",
               imageURL:"/assets/bmw-car.jpg"
             }
           }
         },
+        "Luxury": {
+          bgImage: "/assets/luxury-banner.jpg",
+          listings: {
+            listingID5: {
+              title: "LV Bag",
+              price: "700.00",
+              imageURL:"/assets/lv-bag.jpg"
+            },
+            listingID6: {
+              title: "Chanel Necklace",
+              price: "980.00",
+              imageURL:"/assets/chanel-necklace.jpg"
+            },
+            listingID7: {
+              title: "Toyota Mark X 2.5 Auto",
+              price: "6,300.00",
+              imageURL:"/assets/vancleef-bracelet.jpg"
+            },
+            listingID8: {
+              title: "Dior 30 Montaigne Dahlia Wallet",
+              price: "750.00",
+              imageURL:"/assets/dior-wallet.jpg"
+            }
+          }
+        },
         "Mobile & Gadgets": {
-            bgImage: "/assets/mobile-gadget-bg.png",
+            bgImage: "/assets/mobilengadgets-banner.jpg",
             listings: {
-                listingID1: {
+                listingID9: {
                     title: "iPhone 13",
-                    price: "1200.00",
+                    price: "1,200.00",
                     imageURL: "/assets/iphone-13.jpg",
                 },
-                listingID2: {
+                listingID10: {
                     title: "Samsung Galaxy S22",
-                    price: "1000.00",
+                    price: "1,000.00",
                     imageURL: "/assets/samsung.jpeg",
                 },
+                listingID11: {
+                  title: "Brand New iPhone 15 Pro Max",
+                  price: "1,700.00",
+                  imageURL:"/assets/iphone-15.jpg"
+                },
+                listingID12: {
+                  title: "Samsung z flip 5 (512GB)",
+                  price: "1,200.00",
+                  imageURL: "/assets/samsung2.jpg"
+                }
             },
         },
         "Women's Fashion": {
             bgImage: "/assets/women-fashion-bg.jpg",
             listings: {
-                listingID3: {
+                listingID11: {
                     title: "Summer Dress",
                     price: "50.00",
                     imageURL: "/assets/dress.jpeg",
                 },
-                listingID4: {
+                listingID12: {
                     title: "Lana Shoulder Bag 23",
                     price: "700.00",
                     imageURL: "/assets/lana-bag.png",
