@@ -3,12 +3,7 @@ import { fetchCategoryListings } from "../js/firebase.js";
 const renderCategoryPage = async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryName = urlParams.get("category");
-    console.log("Category Name:", categoryName); 
-
-    if (!categoryName) {
-        console.error("Category not specified.");
-        return;
-    }
+   
     const categoryData = await fetchCategoryListings(categoryName);
     if (categoryData) {
         const banner = document.getElementById("category-banner");

@@ -2,8 +2,8 @@
     "listings": {
       "Car": {
         "listingID1": {
-          "title": "Chaps Ralph Lauren Coat Man",
-          "price": "$80.00",
+          "title": "Jaguar XE 2.0 14D TSS Auto",
+          "price": "$52,800.00",
           "condition": "Brand new",
           "type": "Car",
           "bumped": "10 minutes ago",
@@ -11,13 +11,13 @@
           "location": "Orchard Road",
           "mailing": "$5",
           "description": "Comfortable and stylish coat. Perfect for daily wear.",
-          "mainImage": "/assets/jacket1.jpg",
+          "mainImage": "/assets/jaguar-car.jpg",
           "thumbnails": [
-            "/assets/apple-display.jpg",
-            "/assets/jacket1.jpg",
-            "/assets/jacket1.jpg",
-            "/assets/jacket1.jpg",
-            "/assets/jacket1.jpg"
+            "/assets/jaguar-car.jpg",
+            "/assets/jaguar-car.jpg",
+            "/assets/jaguar-car.jpg",
+            "/assets/jaguar-car.jpg",
+            "/assets/jaguar-car.jpg"
           ],
           "suggestedProducts": [
             {
@@ -27,40 +27,126 @@
             },
             {
               "id": "listingID3",
-              "image": "/assets/tee.jpeg",
+              "image": "/assets/men-shirt2.jpg",
               "name": "Club Shirt Cute"
             }
           ],
           "reviews": [
             {
-              "username": "coat_lover",
-              "review": "Amazing quality. Highly recommend!",
+              "username": "car_lover",
+              "review": "Crazy cars bought from this seller. Highly recommend!",
               "profileImage": "/assets/peter.png"
             }
           ],
           "seller": {
-            "username": "coat_fan",
+            "username": "crazy_rich_asian",
             "joined": "2 years ago",
-            "profileIcon": "S"
+            "profileIcon": "A"
           }
         },
-        "listingID5": {
-          "title": "Ralph Lauren Jacket",
-          "price": "$13.00",
-          "condition": "Well Used",
-          "type": "Men's Fashion",
+        "listingID2": {
+          "title": "Hyundai i30 Wagon 14.A T-GDi DCT Auto",
+          "price": "$50,800.00",
+          "condition": "Like New",
+          "type": "Car",
           "bumped": "5 days ago",
-          "category": "Men's Fashion",
+          "category": "Car",
           "location": "Lot One Shopping Mall",
           "mailing": "Free",
-          "description": "You will be attractive after wearing this jacket.",
-          "mainImage": "/assets/jacket2.jpg",
+          "description": "You will look super rich with this car.",
+          "mainImage": "/assets/hyundai-car.jpg",
           "thumbnails": [
-            "/assets/jacket2.jpg",
-            "/assets/jacket2.jpg",
-            "/assets/jacket2.jpg",
-            "/assets/jacket2.jpg",
-            "/assets/jacket2.jpg"
+            "/assets/hyundai-car.jpg",
+            "/assets/hyundai-car.jpg",
+            "/assets/hyundai-car.jpg",
+            "/assets/hyundai-car.jpg",
+            "/assets/hyundai-car.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID1",
+              "image": "/assets/jacket1.jpg",
+              "name": "Chaps Ralph Lauren Coat Man"
+            },
+            {
+              "id": "listingID2",
+              "image": "/assets/listing-kpop1.jpg",
+              "name": "SEVENTEEN 4th Album..."
+            }
+          ],
+          "reviews": [
+            {
+              "username": "bobby_oh",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "kennedy",
+            "joined": "10 years ago",
+            "profileIcon": "K"
+          }
+        },
+        "listingID3": {
+          "title": "Toyota Mark X 2.5 Auto",
+          "price": "$38,500.00",
+          "condition": "Like New",
+          "type": "Car",
+          "bumped": "5 days ago",
+          "category": "Car",
+          "location": "Lot One Shopping Mall",
+          "mailing": "Free",
+          "description": "You will look super rich with this car.",
+          "mainImage": "/assets/toyota-car.jpg",
+          "thumbnails": [
+            "/assets/toyota-car.jpg",
+            "/assets/toyota-car.jpg",
+            "/assets/toyota-car.jpg",
+            "/assets/toyota-car.jpg",
+            "/assets/toyota-car.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID1",
+              "image": "/assets/jacket1.jpg",
+              "name": "Chaps Ralph Lauren Coat Man"
+            },
+            {
+              "id": "listingID2",
+              "image": "/assets/listing-kpop1.jpg",
+              "name": "SEVENTEEN 4th Album..."
+            }
+          ],
+          "reviews": [
+            {
+              "username": "bobby_oh",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "kennedy",
+            "joined": "10 years ago",
+            "profileIcon": "K"
+          }
+        },
+        "listingID4": {
+          "title": "BMW X2 MSport 2.0D XDrive AWD",
+          "price": "$80,450.00",
+          "condition": "Like New",
+          "type": "Car",
+          "bumped": "5 days ago",
+          "category": "Car",
+          "location": "Lot One Shopping Mall",
+          "mailing": "Free",
+          "description": "You will look super rich with this car.",
+          "mainImage": "/assets/bmw-car.jpg",
+          "thumbnails": [
+            "/assets/bmw-car.jpg",
+            "/assets/bmw-car.jpg",
+            "/assets/bmw-car.jpg",
+            "/assets/bmw-car.jpg",
+            "/assets/bmw-car.jpg"
           ],
           "suggestedProducts": [
             {
@@ -88,24 +174,24 @@
           }
         }
       },
-      "Hobbies & Toys": {
-        "listingID2": {
-          "title": "SEVENTEEN 4th Album Repackage 'SECTOR 17'",
-          "price": "$28.00",
+      "Luxury": {
+        "listingID5": {
+          "title": "LV Bag'",
+          "price": "$700.00",
           "condition": "Brand new",
-          "type": "Hobbies & Toys",
+          "type": "Luxury",
           "bumped": "5 hours ago",
-          "category": "Hobbies & Toys",
+          "category": "Luxury",
           "location": "Orchard Road",
           "mailing": "$5",
-          "description": "Best for KPOP fans!",
-          "mainImage": "/assets/listing-kpop1.jpg",
+          "description": "Best for people who love atas!",
+          "mainImage": "/assets/lv-bag.jpg",
           "thumbnails": [
-            "/assets/listing-kpop1.jpg",
-            "/assets/listing-kpop1.jpg",
-            "/assets/listing-kpop1.jpg",
-            "/assets/listing-kpop1.jpg",
-            "/assets/listing-kpop1.jpg"
+            "/assets/lv-bag.jpg",
+            "/assets/lv-bag.jpg",
+            "/assets/lv-bag.jpg",
+            "/assets/lv-bag.jpg",
+            "/assets/lv-bag.jpg"
           ],
           "suggestedProducts": [
             {
@@ -115,42 +201,474 @@
             },
             {
               "id": "listingID3",
-              "image": "/assets/tee.jpeg",
+              "image": "/assets/men-shirt2.jpg",
               "name": "Club Shirt Cute"
             }
           ],
           "reviews": [
             {
-              "username": "kpop_love",
+              "username": "atas_person",
               "review": "Amazing quality. Highly recommend!",
               "profileImage": "/assets/peter.png"
             }
           ],
           "seller": {
-            "username": "obsessed_fan",
+            "username": "the_rich_asian",
             "joined": "8 years ago",
-            "profileIcon": "O"
+            "profileIcon": "A"
+          }
+        },
+        "listingID6": {
+          "title": "Chanel Necklace'",
+          "price": "$980.00",
+          "condition": "Brand new",
+          "type": "Luxury",
+          "bumped": "5 hours ago",
+          "category": "Luxury",
+          "location": "Orchard Road",
+          "mailing": "$5",
+          "description": "Best for people who love atas!",
+          "mainImage": "/assets/chanel-necklace.jpg",
+          "thumbnails": [
+            "/assets/chanel-necklace.jpg",
+            "/assets/chanel-necklace.jpg",
+            "/assets/chanel-necklace.jpg",
+            "/assets/chanel-necklace.jpg",
+            "/assets/chanel-necklace.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID1",
+              "image": "/assets/jacket1.jpg",
+              "name": "Chaps Ralph Lauren Coat Man"
+            },
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "atas_person",
+              "review": "Amazing quality. Highly recommend!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "the_rich_asian",
+            "joined": "8 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID7": {
+          "title": "Van Cleef brand new blue bracelet'",
+          "price": "$6,300.00",
+          "condition": "Brand new",
+          "type": "Luxury",
+          "bumped": "5 hours ago",
+          "category": "Luxury",
+          "location": "Orchard Road",
+          "mailing": "$5",
+          "description": "Best for people who love atas!",
+          "mainImage": "/assets/vancleef-bracelet.jpg",
+          "thumbnails": [
+            "/assets/vancleef-bracelet.jpg",
+            "/assets/vancleef-bracelet.jpg",
+            "/assets/vancleef-bracelet.jpg",
+            "/assets/vancleef-bracelet.jpg",
+            "/assets/vancleef-bracelet.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID1",
+              "image": "/assets/jacket1.jpg",
+              "name": "Chaps Ralph Lauren Coat Man"
+            },
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "atas_person",
+              "review": "Amazing quality. Highly recommend!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "the_rich_asian",
+            "joined": "8 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID8": {
+          "title": "Dior 30 Montaigne Dahlia Wallet'",
+          "price": "$750.00",
+          "condition": "Brand new",
+          "type": "Luxury",
+          "bumped": "5 hours ago",
+          "category": "Luxury",
+          "location": "Orchard Road",
+          "mailing": "$5",
+          "description": "Best for people who love atas!",
+          "mainImage": "/assets/dior-wallet.jpg",
+          "thumbnails": [
+            "/assets/dior-wallet.jpg",
+            "/assets/dior-wallet.jpg",
+            "/assets/dior-wallet.jpg",
+            "/assets/dior-wallet.jpg",
+            "/assets/dior-wallet.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID1",
+              "image": "/assets/jacket1.jpg",
+              "name": "Chaps Ralph Lauren Coat Man"
+            },
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "atas_person",
+              "review": "Amazing quality. Highly recommend!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "the_rich_asian",
+            "joined": "8 years ago",
+            "profileIcon": "A"
           }
         }
       },
-      "Shirts": {
-        "listingID3": {
-          "title": "Club Shirts Cute",
-          "price": "$13",
-          "condition": "Like new",
-          "type": "Shirts",
-          "bumped": "5 moments ago",
-          "category": "Women's Fashion",
-          "location": "Jewel Changi Airport",
+      "Mobile & Gadgets": {
+        "listingID10": {
+          "title": "Samsung Galaxy S22",
+          "price": "$1,000.00",
+          "condition": "Brand New",
+          "type": "Computers & Tech",
+          "bumped": "1 day ago",
+          "category": "Computers & Tech",
+          "location": "Bukit Panjang MRT/LRT Interchange",
           "mailing": "Free",
-          "description": "Very nice. Good for casual wear. It is recommended to buy.",
-          "mainImage": "/assets/tee.jpeg",
+          "description": "Super pretty, you would love this.",
+          "mainImage": "/assets/samsung.jpeg",
           "thumbnails": [
-            "/assets/tee.jpeg",
-            "/assets/tee.jpeg",
-            "/assets/tee.jpeg",
-            "/assets/tee.jpeg",
-            "/assets/tee.jpeg"
+            "/assets/samsung.jpeg",
+            "/assets/samsung.jpeg",
+            "/assets/samsung.jpeg",
+            "/assets/samsung.jpeg",
+            "/assets/samsung.jpeg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "bobby_oh",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "kennedy",
+            "joined": "10 years ago",
+            "profileIcon": "K"
+          }
+        },
+        "listingID9": {
+          "title": "iPhone 13",
+          "price": "$1,200.00",
+          "condition": "Like new",
+          "type": "Computers & Tech",
+          "bumped": "1 day ago",
+          "category": "Computers & Tech",
+          "location": "Bukit Panjang MRT/LRT Interchange",
+          "mailing": "Free",
+          "description": "Super pretty, you would love this.",
+          "mainImage": "/assets/iphone-13.jpg",
+          "thumbnails": [
+            "/assets/iphone-13.jpg",
+            "/assets/iphone-13.jpg",
+            "/assets/iphone-13.jpg",
+            "/assets/iphone-13.jpg",
+            "/assets/iphone-13.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "bobby_oh",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "kennedy",
+            "joined": "10 years ago",
+            "profileIcon": "K"
+          }
+        },
+        "listingID11": {
+          "title": "Brand New iPhone 15 Pro Max",
+          "price": "$1,700.00",
+          "condition": "Brand New",
+          "type": "Computers & Tech",
+          "bumped": "1 day ago",
+          "category": "Computers & Tech",
+          "location": "Bukit Panjang MRT/LRT Interchange",
+          "mailing": "Free",
+          "description": "Super pretty, you would love this.",
+          "mainImage": "/assets/iphone-15.jpg",
+          "thumbnails": [
+            "/assets/iphone-15.jpg",
+            "/assets/iphone-15.jpg",
+            "/assets/iphone-15.jpg",
+            "/assets/iphone-15.jpg",
+            "/assets/iphone-15.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "bobby_oh",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "kennedy",
+            "joined": "10 years ago",
+            "profileIcon": "K"
+          }
+        },
+        "listingID12": {
+          "title": "Samsung z flip 5 (512GB)",
+          "price": "$1,200.00",
+          "condition": "Brand New",
+          "type": "Computers & Tech",
+          "bumped": "1 day ago",
+          "category": "Computers & Tech",
+          "location": "Bukit Panjang MRT/LRT Interchange",
+          "mailing": "Free",
+          "description": "Super pretty, you would love this.",
+          "mainImage": "/assets/vr-headsert.jpg",
+          "thumbnails": [
+            "/assets/vr-headsert.jpg",
+            "/assets/vr-headsert.jpg",
+            "/assets/vr-headsert.jpg",
+            "/assets/vr-headsert.jpg",
+            "/assets/vr-headsert.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "bobby_oh",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "kennedy",
+            "joined": "10 years ago",
+            "profileIcon": "K"
+          }
+        }
+      },
+      "Home Services": {
+        "listingID13": {
+          "title": "Handyman, Home Services, Home Repairs, Handyman and Drilling Services",
+          "price": "$50.00",
+          "condition": "-",
+          "type": "Home Services",
+          "bumped": "5 hours ago",
+          "category": "Home Services",
+          "location": "Based on your location",
+          "mailing": "-",
+          "description": "Over 20 years of experience.",
+          "mainImage": "/assets/handyman-service.jpg",
+          "thumbnails": [
+            "/assets/handyman-service.jpg",
+            "/assets/handyman-service.jpg",
+            "/assets/handyman-service.jpg",
+            "/assets/handyman-service.jpg",
+            "/assets/handyman-service.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID14": {
+          "title": "Painting Services",
+          "price": "$35.00",
+          "condition": "-",
+          "type": "Home Services",
+          "bumped": "5 hours ago",
+          "category": "Home Services",
+          "location": "Based on your location",
+          "mailing": "-",
+          "description": "Over 20 years of experience.",
+          "mainImage": "/assets/painting-service.jpg",
+          "thumbnails": [
+            "/assets/painting-service.jpg",
+            "/assets/painting-service.jpg",
+            "/assets/painting-service.jpg",
+            "/assets/painting-service.jpg",
+            "/assets/painting-service.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID15": {
+          "title": "Repair Fan Services",
+          "price": "$83.00",
+          "condition": "-",
+          "type": "Home Services",
+          "bumped": "5 hours ago",
+          "category": "Home Services",
+          "location": "Based on your location",
+          "mailing": "-",
+          "description": "Over 20 years of experience.",
+          "mainImage": "/assets/repair-service.jpg",
+          "thumbnails": [
+            "/assets/repair-service.jpg",
+            "/assets/repair-service.jpg",
+            "/assets/repair-service.jpg",
+            "/assets/repair-service.jpg",
+            "/assets/repair-service.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID16": {
+          "title": "Post Renovation Clean Up Services",
+          "price": "$42.00",
+          "condition": "-",
+          "type": "Home Services",
+          "bumped": "5 hours ago",
+          "category": "Home Services",
+          "location": "Based on your location",
+          "mailing": "-",
+          "description": "Over 20 years of experience.",
+          "mainImage": "/assets/postreno-service.jpg",
+          "thumbnails": [
+            "/assets/postreno-service.jpg",
+            "/assets/postreno-service.jpg",
+            "/assets/postreno-service.jpg",
+            "/assets/postreno-service.jpg",
+            "/assets/postreno-service.jpg"
           ],
           "suggestedProducts": [
             {
@@ -178,29 +696,377 @@
           }
         }
       },
-      "Mobile's & Gadget": {
-        "listingID4": {
-          "title": "Sony WHCH520/B Bluetooth Headphones",
-          "price": "$13.00",
+      "Hobbies & Toys": {
+        "listingID17": {
+          "title": "BN Jellycat Bashful Bunny Soft Toy",
+          "price": "$30.00",
+          "condition": "Brand new",
+          "type": "Hobbies & Toys",
+          "bumped": "5 hours ago",
+          "category": "Hobbies & Toys",
+          "location": "Orchard Road",
+          "mailing": "$5",
+          "description": "Your niece, nephew, daughter, son, or even yourself, will love it!",
+          "mainImage": "/assets/jellycat.jpg",
+          "thumbnails": [
+            "/assets/jellycat.jpg",
+            "/assets/jellycat.jpg",
+            "/assets/jellycat.jpg",
+            "/assets/jellycat.jpg",
+            "/assets/jellycat.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID1",
+              "image": "/assets/jacket1.jpg",
+              "name": "Chaps Ralph Lauren Coat Man"
+            },
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "cute_stuff",
+              "review": "Amazing quality. Highly recommend!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "toy_collector",
+            "joined": "8 years ago",
+            "profileIcon": "T"
+          }
+        },
+        "listingID18": {
+          "title": "75% Custom-built Mechanical Keyboard",
+          "price": "$210.00",
+          "condition": "Brand new",
+          "type": "Hobbies & Toys",
+          "bumped": "5 hours ago",
+          "category": "Hobbies & Toys",
+          "location": "Orchard Road",
+          "mailing": "$5",
+          "description": "Your niece, nephew, daughter, son, or even yourself, will love it!",
+          "mainImage": "/assets/keyboard.jpg",
+          "thumbnails": [
+            "/assets/keyboard.jpg",
+            "/assets/keyboard.jpg",
+            "/assets/keyboard.jpg",
+            "/assets/keyboard.jpg",
+            "/assets/keyboard.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID1",
+              "image": "/assets/jacket1.jpg",
+              "name": "Chaps Ralph Lauren Coat Man"
+            },
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "cute_stuff",
+              "review": "Amazing quality. Highly recommend!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "toy_collector",
+            "joined": "8 years ago",
+            "profileIcon": "T"
+          }
+        },
+        "listingID19": {
+          "title": "Lesserafim Japan Fearless eunchae sealed album",
+          "price": "$15.00",
+          "condition": "Brand new",
+          "type": "Hobbies & Toys",
+          "bumped": "5 hours ago",
+          "category": "Hobbies & Toys",
+          "location": "Orchard Road",
+          "mailing": "$5",
+          "description": "Your niece, nephew, daughter, son, or even yourself, will love it!",
+          "mainImage": "/assets/lessarafim-album.jpg",
+          "thumbnails": [
+            "/assets/lessarafim-album.jpg",
+            "/assets/lessarafim-album.jpg",
+            "/assets/lessarafim-album.jpg",
+            "/assets/lessarafim-album.jpg",
+            "/assets/lessarafim-album.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID1",
+              "image": "/assets/jacket1.jpg",
+              "name": "Chaps Ralph Lauren Coat Man"
+            },
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "cute_stuff",
+              "review": "Amazing quality. Highly recommend!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "toy_collector",
+            "joined": "8 years ago",
+            "profileIcon": "T"
+          }
+        },
+        "listingID20": {
+          "title": "(All for $8) Plush Toys / Soft Toy (Average 15cm Height)",
+          "price": "$8.00",
+          "condition": "Brand new",
+          "type": "Hobbies & Toys",
+          "bumped": "5 hours ago",
+          "category": "Hobbies & Toys",
+          "location": "Orchard Road",
+          "mailing": "$5",
+          "description": "Your niece, nephew, daughter, son, or even yourself, will love it!",
+          "mainImage": "/assets/plush-toy.jpg",
+          "thumbnails": [
+            "/assets/plush-toy.jpg",
+            "/assets/plush-toy.jpg",
+            "/assets/plush-toy.jpg",
+            "/assets/plush-toy.jpg",
+            "/assets/plush-toy.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID1",
+              "image": "/assets/jacket1.jpg",
+              "name": "Chaps Ralph Lauren Coat Man"
+            },
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "cute_stuff",
+              "review": "Amazing quality. Highly recommend!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "toy_collector",
+            "joined": "8 years ago",
+            "profileIcon": "T"
+          }
+        }
+      },
+      "Property": {
+        "listingID21": {
+          "title": "HDB 4 room unit (Open for viewing)",
+          "price": "$300,000.00",
           "condition": "Like new",
-          "type": "Mobile's & Gadget",
+          "type": "Property",
+          "bumped": "5 moments ago",
+          "category": "Property",
+          "location": "Choa Chu Kang Blk 307",
+          "mailing": "-",
+          "description": "Very spacious, pretty.",
+          "mainImage": "/assets/house1.jpg",
+          "thumbnails": [
+            "/assets/house1.jpg",
+            "/assets/house1.jpg",
+            "/assets/house1.jpg",
+            "/assets/house1.jpg",
+            "/assets/house1.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID22": {
+          "title": "Bungalow D21 8 rooms",
+          "price": "$300,000.00",
+          "condition": "Like new",
+          "type": "Property",
+          "bumped": "5 moments ago",
+          "category": "Property",
+          "location": "Sentosa Cove",
+          "mailing": "-",
+          "description": "Very spacious, pretty.",
+          "mainImage": "/assets/bungalow.jpg",
+          "thumbnails": [
+            "/assets/bungalow.jpg",
+            "/assets/bungalow.jpg",
+            "/assets/bungalow.jpg",
+            "/assets/bungalow.jpg",
+            "/assets/bungalow.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID23": {
+          "title": "Rental 3 bedrooms Condo Riversound",
+          "price": "$4,200.00",
+          "condition": "Like new",
+          "type": "Property",
+          "bumped": "5 moments ago",
+          "category": "Property",
+          "location": "Riversound Condo",
+          "mailing": "-",
+          "description": "Very spacious, pretty.",
+          "mainImage": "/assets/condo1.jpg",
+          "thumbnails": [
+            "/assets/condo1.jpg",
+            "/assets/condo1.jpg",
+            "/assets/condo1.jpg",
+            "/assets/condo1.jpg",
+            "/assets/condo1.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID24": {
+          "title": "Condo For Rent Singapore (3 rooms)",
+          "price": "$5,302.00",
+          "condition": "Like new",
+          "type": "Property",
+          "bumped": "5 moments ago",
+          "category": "Property",
+          "location": "Riversound Condo",
+          "mailing": "-",
+          "description": "Very spacious, pretty.",
+          "mainImage": "/assets/condo2.jpg",
+          "thumbnails": [
+            "/assets/condo2.jpg",
+            "/assets/condo2.jpg",
+            "/assets/condo2.jpg",
+            "/assets/condo2.jpg",
+            "/assets/condo2.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        }
+      },
+      "Computers & Tech": {
+        "listingID25": {
+          "title": "Apple Macbook Pro M13 (NO NEGO)",
+          "price": "$4375.00",
+          "condition": "Brand New",
+          "type": "Computers & Tech",
           "bumped": "1 day ago",
-          "category": "Mobile's & Gadget",
+          "category": "Computers & Tech",
           "location": "Bukit Panjang MRT/LRT Interchange",
           "mailing": "Free",
-          "description": "The beats are awesome. Listen music with this gadget.",
-          "mainImage": "/assets/headphones.jpg",
+          "description": "Super pretty, you would love this.",
+          "mainImage": "/assets/apple-macbook.jpg",
           "thumbnails": [
-            "/assets/headphones.jpg",
-            "/assets/headphones.jpg",
-            "/assets/headphones.jpg",
-            "/assets/headphones.jpg",
-            "/assets/headphones.jpg"
+            "/assets/apple-macbook.jpg",
+            "/assets/apple-macbook.jpg",
+            "/assets/apple-macbook.jpg",
+            "/assets/apple-macbook.jpg",
+            "/assets/apple-macbook.jpg"
           ],
           "suggestedProducts": [
             {
               "id": "listingID3",
-              "image": "/assets/tee.jpeg",
+              "image": "/assets/men-shirt2.jpg",
               "name": "Club Shirt Cute"
             },
             {
@@ -220,6 +1086,657 @@
             "username": "kennedy",
             "joined": "10 years ago",
             "profileIcon": "K"
+          }
+        },
+        "listingID26": {
+          "title": "Thinkpad Lenovo X1 Carbon 7 | Intel i5-8th",
+          "price": "$484.00",
+          "condition": "Like new",
+          "type": "Computers & Tech",
+          "bumped": "1 day ago",
+          "category": "Computers & Tech",
+          "location": "Bukit Panjang MRT/LRT Interchange",
+          "mailing": "Free",
+          "description": "Super pretty, you would love this.",
+          "mainImage": "/assets/lenovo.jpg",
+          "thumbnails": [
+            "/assets/lenovo.jpg",
+            "/assets/lenovo.jpg",
+            "/assets/lenovo.jpg",
+            "/assets/lenovo.jpg",
+            "/assets/lenovo.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "bobby_oh",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "kennedy",
+            "joined": "10 years ago",
+            "profileIcon": "K"
+          }
+        },
+        "listingID27": {
+          "title": "23 inch Apple Cinema Display Monitor",
+          "price": "$232.00",
+          "condition": "Brand New",
+          "type": "Computers & Tech",
+          "bumped": "1 day ago",
+          "category": "Computers & Tech",
+          "location": "Bukit Panjang MRT/LRT Interchange",
+          "mailing": "Free",
+          "description": "Super pretty, you would love this.",
+          "mainImage": "/assets/apple-display.jpg",
+          "thumbnails": [
+            "/assets/apple-display.jpg",
+            "/assets/apple-display.jpg",
+            "/assets/apple-display.jpg",
+            "/assets/apple-display.jpg",
+            "/assets/apple-display.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "bobby_oh",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "kennedy",
+            "joined": "10 years ago",
+            "profileIcon": "K"
+          }
+        },
+        "listingID28": {
+          "title": "Brand New VR Headset Meta Quest 3S",
+          "price": "$421.00",
+          "condition": "Brand New",
+          "type": "Computers & Tech",
+          "bumped": "1 day ago",
+          "category": "Computers & Tech",
+          "location": "Bukit Panjang MRT/LRT Interchange",
+          "mailing": "Free",
+          "description": "Super pretty, you would love this.",
+          "mainImage": "/assets/vr-headsert.jpg",
+          "thumbnails": [
+            "/assets/vr-headsert.jpg",
+            "/assets/vr-headsert.jpg",
+            "/assets/vr-headsert.jpg",
+            "/assets/vr-headsert.jpg",
+            "/assets/vr-headsert.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID3",
+              "image": "/assets/men-shirt2.jpg",
+              "name": "Club Shirt Cute"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "bobby_oh",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "kennedy",
+            "joined": "10 years ago",
+            "profileIcon": "K"
+          }
+        }
+      },
+      "Women's Fashion": {
+        "listingID29": {
+          "title": "Summer Dress",
+          "price": "$13",
+          "condition": "Like new",
+          "type": "Dress",
+          "bumped": "5 moments ago",
+          "category": "Women's Fashion",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/dress.jpeg",
+          "thumbnails": [
+            "/assets/dress.jpeg",
+            "/assets/dress.jpeg",
+            "/assets/dress.jpeg",
+            "/assets/dress.jpeg",
+            "/assets/dress.jpeg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID30": {
+          "title": "Lana Shoulder Bag 23",
+          "price": "$700.00",
+          "condition": "Like new",
+          "type": "Dress",
+          "bumped": "5 moments ago",
+          "category": "Women's Fashion",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/lana-bag.png",
+          "thumbnails": [
+            "/assets/lana-bag.png",
+            "/assets/lana-bag.png",
+            "/assets/lana-bag.png",
+            "/assets/lana-bag.png",
+            "/assets/lana-bag.png"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID31": {
+          "title": "zara satin slip dress",
+          "price": "$48.00",
+          "condition": "Like new",
+          "type": "Dress",
+          "bumped": "5 moments ago",
+          "category": "Women's Fashion",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/zara-dress.jpg",
+          "thumbnails": [
+            "/assets/zara-dress.jpg",
+            "/assets/zara-dress.jpg",
+            "/assets/zara-dress.jpg",
+            "/assets/zara-dress.jpg",
+            "/assets/zara-dress.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID32": {
+          "title": "LOVET Merlynn Eyelet Dress (Dusty Pink)",
+          "price": "$17.00",
+          "condition": "Like new",
+          "type": "Dress",
+          "bumped": "5 moments ago",
+          "category": "Women's Fashion",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/lovet-dress.jpg",
+          "thumbnails": [
+            "/assets/lovet-dress.jpg",
+            "/assets/lovet-dress.jpg",
+            "/assets/lovet-dress.jpg",
+            "/assets/lovet-dress.jpg",
+            "/assets/lovet-dress.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        }
+      },
+      "Men's Fashion": {
+        "listingID33": {
+          "title": "Men Suit Jackets Blazer Coat Slim Fit",
+          "price": "$50.00",
+          "condition": "Like new",
+          "type": "Blazer",
+          "bumped": "5 moments ago",
+          "category": "Men's Fashion",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/men-jackrt.jpg",
+          "thumbnails": [
+            "/assets/men-jackrt.jpg",
+            "/assets/men-jackrt.jpg",
+            "/assets/men-jackrt.jpg",
+            "/assets/men-jackrt.jpg",
+            "/assets/men-jackrt.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID34": {
+          "title": "Oversized T-Shirt Men MAKE&WEAR",
+          "price": "$18.00",
+          "condition": "Like new",
+          "type": "Shirt",
+          "bumped": "5 moments ago",
+          "category": "Men's Fashion",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/men-shirt.jpg",
+          "thumbnails": [
+            "/assets/men-shirt.jpg",
+            "/assets/men-shirt.jpg",
+            "/assets/men-shirt.jpg",
+            "/assets/men-shirt.jpg",
+            "/assets/men-shirt.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID35": {
+          "title": "Men white short sleeve clothes",
+          "price": "$48.00",
+          "condition": "Like new",
+          "type": "Shirt",
+          "bumped": "5 moments ago",
+          "category": "Men's Fashion",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/men-shirt2.jpg",
+          "thumbnails": [
+            "/assets/men-shirt2.jpg",
+            "/assets/men-shirt2.jpg",
+            "/assets/men-shirt2.jpg",
+            "/assets/men-shirt2.jpg",
+            "/assets/men-shirt2.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID36": {
+          "title": "Men's Shirt Harajuku Streetwear Long Sleeve Shirt",
+          "price": "$30.00",
+          "condition": "Like new",
+          "type": "Dress",
+          "bumped": "5 moments ago",
+          "category": "Men's Fashion",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/men-shirt3.jpg",
+          "thumbnails": [
+            "/assets/men-shirt3.jpg",
+            "/assets/men-shirt3.jpg",
+            "/assets/men-shirt3.jpg",
+            "/assets/men-shirt3.jpg",
+            "/assets/men-shirt3.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        }
+      },
+      "Beauty & Personal Care": {
+        "listingID29": {
+          "title": "Brand new / Preloved Skincare Products to clear",
+          "price": "$5.00",
+          "condition": "Like new",
+          "type": "Skincare",
+          "bumped": "5 moments ago",
+          "category": "Beauty & Personal Care",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/skincare1.jpg",
+          "thumbnails": [
+            "/assets/skincare1.jpg",
+            "/assets/skincare1.jpg",
+            "/assets/skincare1.jpg",
+            "/assets/skincare1.jpg",
+            "/assets/skincare1.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID30": {
+          "title": "sakura skincare set brand new",
+          "price": "$10.00",
+          "condition": "Like new",
+          "type": "Skincare",
+          "bumped": "5 moments ago",
+          "category": "Beauty & Personal Care",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/sakura-skincare.jpg",
+          "thumbnails": [
+            "/assets/sakura-skincare.jpg",
+            "/assets/sakura-skincare.jpg",
+            "/assets/sakura-skincare.jpg",
+            "/assets/sakura-skincare.jpg",
+            "/assets/sakura-skincare.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID31": {
+          "title": "BEST Face Reality Toner Cooling Moisturizer",
+          "price": "$38.00",
+          "condition": "Like new",
+          "type": "Moisturizer",
+          "bumped": "5 moments ago",
+          "category": "Beauty & Personal Care",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/moisturizer.jpg",
+          "thumbnails": [
+            "/assets/moisturizer.jpg",
+            "/assets/moisturizer.jpg",
+            "/assets/moisturizer.jpg",
+            "/assets/moisturizer.jpg",
+            "/assets/moisturizer.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        },
+        "listingID32": {
+          "title": "COSRX Gel Cleanser - A Women's Confidence",
+          "price": "$20.00",
+          "condition": "Like new",
+          "type": "Cleanser",
+          "bumped": "5 moments ago",
+          "category": "Beauty & Personal Care",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/cosrx-gelcleanser.jpg",
+          "thumbnails": [
+            "/assets/cosrx-gelcleanser.jpg",
+            "/assets/cosrx-gelcleanser.jpg",
+            "/assets/cosrx-gelcleanser.jpg",
+            "/assets/cosrx-gelcleanser.jpg",
+            "/assets/cosrx-gelcleanser.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
           }
         }
       }

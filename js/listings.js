@@ -1,46 +1,3 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    const params = new URLSearchParams(window.location.search);
-    const listingId = params.get("id");
-    const category = params.get("category");
-  
-    if (!listingId && !category) {
-      console.error("No listing ID or category provided");
-      return;
-    }
-  
-    try {
-      const [listingsResponse, categoryResponse] = await Promise.all([
-        fetch("/data/listings.json"),
-        fetch("/data/categoryListings.json"),
-      ]);
-  
-      const [listingsData, categoryData] = await Promise.all([
-        listingsResponse.json(),
-        categoryResponse.json(),
-      ]);
-  
-      // merge data
-      const allListings = {
-        ...listingsData.listings,
-        ...(categoryData.listings[category] || {}),
-      };
-  
-      if (listingId) {
-        const listing = allListings[listingId];
-        if (!listing) {
-          console.error("Listing not found");
-          return;
-        }
-        populateListingDetails(listing);
-      } else if (category) {
-        const categoryListings = Object.values(categoryData.listings[category] || {});
-        populateCategoryListings(categoryListings);
-      }
-    } catch (error) {
-      console.error("Error loading listings:", error);
-    }
-  });
-  
 function populateListingDetails(listing) {
     document.querySelector(".title-section h1").textContent = listing.title;
     document.querySelector(".price").textContent = listing.price;
@@ -112,3 +69,44 @@ function populateListingDetails(listing) {
     document.querySelector(".profile-info strong").textContent = listing.seller.username;
     document.querySelector(".profile-info p").textContent = `Since ${listing.seller.joined}`;
   } 
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const params = new URLSearchParams(window.location.search);
+    const listingId = params.get("id");
+    const category = params.get("category");
+  
+    if (!listingId && !category) {
+      console.error("No listing ID or category provided");
+      return;
+    }
+  
+    try {
+      const [listingsResponse, categoryResponse] = await Promise.all([
+        fetch("/data/listings.json"),
+        fetch("/data/categoryListings.json"),
+      ]);
+  
+      const [listingsData, categoryData] = await Promise.all([
+        listingsResponse.json(),
+        categoryResponse.json(),
+      ]);
+  
+      // merge data
+      const allListings = {
+        ...listingsData.listings,
+        ...(categoryData.listings[category] || {}),
+      };
+  
+      if (listingId) {
+        const listing = allListings[listingId];
+        if (!listing) {
+          console.error("Listing not found");
+          return;
+        }
+        populateListingDetails(listing);
+      } else if (category) {
+      }
+    } catch (error) {
+      console.error("Error loading listings:", error);
+    }
+  });
