@@ -18,10 +18,12 @@
         ],
         "suggestedProducts": [
           {
+            "id": "listingID2",
             "image": "/assets/listing-kpop1.jpg",
             "name": "SEVENTEEN 4th Album..."
           },
           {
+            "id": "listingID3",
             "image": "/assets/tee.jpeg",
             "name": "Club Shirt Cute"
           }
@@ -57,10 +59,12 @@
         ],
         "suggestedProducts": [
           {
+            "id": "listingID1",
             "image": "/assets/jacket1.jpg",
             "name": "Chaps Ralph Lauren Coat Man"
           },
           {
+            "id": "listingID3",
             "image": "/assets/tee.jpeg",
             "name": "Club Shirt Cute"
           }
@@ -98,10 +102,12 @@
         ],
         "suggestedProducts": [
           {
+            "id": "listingID4",
             "image": "/assets/headphones.jpg",
             "name": "Sony WHCH520/B Bluetooth Headphones"
           },
           {
+            "id": "listingID5",
             "image": "/assets/jacket2.jpg",
             "name": "Ralph Lauren Jacket"
           }
@@ -139,10 +145,12 @@
         ],
         "suggestedProducts": [
           {
+            "id": "listingID3",
             "image": "/assets/tee.jpeg",
             "name": "Club Shirt Cute"
           },
           {
+            "id": "listingID5",
             "image": "/assets/jacket2.jpg",
             "name": "Ralph Lauren Jacket"
           }
@@ -180,10 +188,12 @@
         ],
         "suggestedProducts": [
           {
+            "id": "listingID1",
             "image": "/assets/jacket1.jpg",
             "name": "Chaps Ralph Lauren Coat Man"
           },
           {
+            "id": "listingID2",
             "image": "/assets/listing-kpop1.jpg",
             "name": "SEVENTEEN 4th Album..."
           }

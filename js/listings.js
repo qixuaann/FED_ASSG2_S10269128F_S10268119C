@@ -49,8 +49,10 @@ document.addEventListener("DOMContentLoaded", async () => {
           .map(
             (product) => `
           <div class="product">
-            <img src="${product.image}" alt="${product.name}">
-            <p>${product.name}</p>
+            <a href="listings.html?id=${product.id}">
+                <img src="${product.image}" alt="${product.name}">
+                <p>${product.name}</p>
+             </a>
           </div>
         `
           )
