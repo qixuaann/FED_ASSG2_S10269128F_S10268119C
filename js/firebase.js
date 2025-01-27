@@ -119,7 +119,7 @@ const setCategoryListings = () => {
               imageURL:"/assets/chanel-necklace.jpg"
             },
             listingID7: {
-              title: "Toyota Mark X 2.5 Auto",
+              title: "Van Cleef brand new blue bracelet",
               price: "6,300.00",
               imageURL:"/assets/vancleef-bracelet.jpg"
             },
