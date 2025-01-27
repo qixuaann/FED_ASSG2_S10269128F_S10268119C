@@ -32,7 +32,6 @@ const renderCategoryPage = async () => {
 
             const listingLink = document.createElement('a');
             listingLink.href = `listings.html?id=${listingId}&category=${encodeURIComponent(categoryName)}`;
-            listingLink.innerText = listing.title;
             
             const listingElement = document.createElement("div");
             listingElement.className = "listing-item";

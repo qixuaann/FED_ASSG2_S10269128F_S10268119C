@@ -77,6 +77,7 @@ const fetchPopularListings = (callback) => {
       });
 };
 
+
 // category listings
 const setCategoryListings = () => {
     const categoryListings = {
@@ -352,6 +353,7 @@ const fetchCategoryListings = async (categoryName) => {
     return snapshot.val();
   }
 };
+
 
 export { fetchPopularListings, setPopularListings, fetchCategoryListings,  database, ref, push, get, set, serverTimestamp, onValue};
 export function fetchListingById(id) {
