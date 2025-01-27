@@ -1,5 +1,83 @@
 {
     "listings": {
+    "listingID1": {
+        "title": "Chaps Ralph Lauren Coat Man",
+        "price": "$80.00",
+        "condition": "Brand new",
+        "type": "Men's Fashion",
+        "bumped": "10 minutes ago",
+        "category": "Men's Fashion",
+        "location": "Orchard Road",
+        "mailing": "$5",
+        "description": "Comfortable and stylish coat. Perfect for daily wear.",
+        "mainImage": "/assets/jacket1.jpg",
+        "thumbnails": [
+          "/assets/jacket1.jpg",
+          "/assets/jacket1.jpg",
+          "/assets/jacket1.jpg"
+        ],
+        "suggestedProducts": [
+          {
+            "image": "/assets/listing-kpop1.jpg",
+            "name": "SEVENTEEN 4th Album..."
+          },
+          {
+            "image": "/assets/tee.jpeg",
+            "name": "Club Shirt Cute"
+          }
+        ],
+        "reviews": [
+          {
+            "username": "coat_lover",
+            "review": "Amazing quality. Highly recommend!",
+            "profileImage": "/assets/peter.png"
+          }
+        ],
+        "seller": {
+          "username": "coat_fan",
+          "joined": "2 years ago",
+          "profileIcon": "S"
+        }
+      },
+      "listingID2": {
+        "title": "SEVENTEEN 4th Album Repackage 'SECTOR 17'",
+        "price": "$28.00",
+        "condition": "Brand new",
+        "type": "Hobbies & Toys",
+        "bumped": "5 hours ago",
+        "category": "Hobbies & Toys",
+        "location": "Orchard Road",
+        "mailing": "$5",
+        "description": "Best for KPOP fans!",
+        "mainImage": "/assets/listing-kpop1.jpg",
+        "thumbnails": [
+          "/assets/listing-kpop1.jpg",
+          "/assets/listing-kpop1.jpg",
+          "/assets/listing-kpop1.jpg"
+        ],
+        "suggestedProducts": [
+          {
+            "image": "/assets/jacket1.jpg",
+            "name": "Chaps Ralph Lauren Coat Man"
+          },
+          {
+            "image": "/assets/tee.jpeg",
+            "name": "Club Shirt Cute"
+          }
+        ],
+        "reviews": [
+          {
+            "username": "kpop_love",
+            "review": "Amazing quality. Highly recommend!",
+            "profileImage": "/assets/peter.png"
+          }
+        ],
+        "seller": {
+          "username": "obsessed_fan",
+          "joined": "8 years ago",
+          "profileIcon": "O"
+        }
+      },
       "listingID3": {
         "title": "Club Shirts Cute",
         "price": "$13",
@@ -20,12 +98,12 @@
         ],
         "suggestedProducts": [
           {
-            "image": "/assets/tee.jpeg",
-            "name": "Suggested Product 1"
+            "image": "/assets/headphones.jpg",
+            "name": "Sony WHCH520/B Bluetooth Headphones"
           },
           {
-            "image": "/assets/tee.jpeg",
-            "name": "Suggested Product 2"
+            "image": "/assets/jacket2.jpg",
+            "name": "Ralph Lauren Jacket"
           }
         ],
         "reviews": [
@@ -41,42 +119,86 @@
           "profileIcon": "A"
         }
       },
-      "listingID1": {
-        "title": "Trendy Sneakers",
-        "price": "$45",
-        "condition": "Brand new",
-        "type": "Shoes",
-        "bumped": "10 moments ago",
-        "location": "Orchard Road",
-        "mailing": "$5",
-        "description": "Comfortable and stylish sneakers. Perfect for daily wear.",
-        "mainImage": "/assets/sneakers.jpeg",
+      "listingID4": {
+        "title": "Sony WHCH520/B Bluetooth Headphones",
+        "price": "$13.00",
+        "condition": "Like new",
+        "type": "Mobile's & Gadget",
+        "bumped": "1 day ago",
+        "category": "Mobile's & Gadget",
+        "location": "Bukit Panjang MRT/LRT Interchange",
+        "mailing": "Free",
+        "description": "The beats are awesome. Listen music with this gadget.",
+        "mainImage": "/assets/headphones.jpg",
         "thumbnails": [
-          "/assets/sneakers.jpeg",
-          "/assets/sneakers2.jpeg",
-          "/assets/sneakers3.jpeg"
+          "/assets/headphones.jpg",
+          "/assets/headphones.jpg",
+          "/assets/headphones.jpg",
+          "/assets/headphones.jpg",
+          "/assets/headphones.jpg"
         ],
         "suggestedProducts": [
           {
-            "image": "/assets/sneakers4.jpeg",
-            "name": "Sneaker Cleaner"
+            "image": "/assets/tee.jpeg",
+            "name": "Club Shirt Cute"
           },
           {
-            "image": "/assets/socks.jpeg",
-            "name": "Comfy Socks"
+            "image": "/assets/jacket2.jpg",
+            "name": "Ralph Lauren Jacket"
           }
         ],
         "reviews": [
           {
-            "username": "shoe_lover",
-            "review": "Amazing quality. Highly recommend!",
-            "profileImage": "/assets/user1.png"
+            "username": "bobby_oh",
+            "review": "Seller is really friendly. Would love to deal with him again!",
+            "profileImage": "/assets/peter.png"
           }
         ],
         "seller": {
-          "username": "sneaker_fan",
-          "joined": "2 years ago",
-          "profileIcon": "S"
+          "username": "kennedy",
+          "joined": "10 years ago",
+          "profileIcon": "K"
+        }
+      },
+      "listingID5": {
+        "title": "Ralph Lauren Jacket",
+        "price": "$13.00",
+        "condition": "Well Used",
+        "type": "Men's Fashion",
+        "bumped": "5 days ago",
+        "category": "Men's Fashion",
+        "location": "Lot One Shopping Mall",
+        "mailing": "Free",
+        "description": "You will be attractive after wearing this jacket.",
+        "mainImage": "/assets/jacket2.jpg",
+        "thumbnails": [
+          "/assets/jacket2.jpg",
+          "/assets/jacket2.jpg",
+          "/assets/jacket2.jpg",
+          "/assets/jacket2.jpg",
+          "/assets/jacket2.jpg"
+        ],
+        "suggestedProducts": [
+          {
+            "image": "/assets/jacket1.jpg",
+            "name": "Chaps Ralph Lauren Coat Man"
+          },
+          {
+            "image": "/assets/listing-kpop1.jpg",
+            "name": "SEVENTEEN 4th Album..."
+          }
+        ],
+        "reviews": [
+          {
+            "username": "bobby_oh",
+            "review": "Seller is really friendly. Would love to deal with him again!",
+            "profileImage": "/assets/peter.png"
+          }
+        ],
+        "seller": {
+          "username": "kennedy",
+          "joined": "10 years ago",
+          "profileIcon": "K"
         }
       }
     }
