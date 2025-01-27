@@ -1,0 +1,228 @@
+{
+    "listings": {
+      "Car": {
+        "listingID1": {
+          "title": "Chaps Ralph Lauren Coat Man",
+          "price": "$80.00",
+          "condition": "Brand new",
+          "type": "Car",
+          "bumped": "10 minutes ago",
+          "category": "Car",
+          "location": "Orchard Road",
+          "mailing": "$5",
+          "description": "Comfortable and stylish coat. Perfect for daily wear.",
+          "mainImage": "/assets/jacket1.jpg",
+          "thumbnails": [
+            "/assets/apple-display.jpg",
+            "/assets/jacket1.jpg",
+            "/assets/jacket1.jpg",
+            "/assets/jacket1.jpg",
+            "/assets/jacket1.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID2",
+              "image": "/assets/listing-kpop1.jpg",
+              "name": "SEVENTEEN 4th Album..."
+            },
+            {
+              "id": "listingID3",
+              "image": "/assets/tee.jpeg",
+              "name": "Club Shirt Cute"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "coat_lover",
+              "review": "Amazing quality. Highly recommend!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "coat_fan",
+            "joined": "2 years ago",
+            "profileIcon": "S"
+          }
+        },
+        "listingID5": {
+          "title": "Ralph Lauren Jacket",
+          "price": "$13.00",
+          "condition": "Well Used",
+          "type": "Men's Fashion",
+          "bumped": "5 days ago",
+          "category": "Men's Fashion",
+          "location": "Lot One Shopping Mall",
+          "mailing": "Free",
+          "description": "You will be attractive after wearing this jacket.",
+          "mainImage": "/assets/jacket2.jpg",
+          "thumbnails": [
+            "/assets/jacket2.jpg",
+            "/assets/jacket2.jpg",
+            "/assets/jacket2.jpg",
+            "/assets/jacket2.jpg",
+            "/assets/jacket2.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID1",
+              "image": "/assets/jacket1.jpg",
+              "name": "Chaps Ralph Lauren Coat Man"
+            },
+            {
+              "id": "listingID2",
+              "image": "/assets/listing-kpop1.jpg",
+              "name": "SEVENTEEN 4th Album..."
+            }
+          ],
+          "reviews": [
+            {
+              "username": "bobby_oh",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "kennedy",
+            "joined": "10 years ago",
+            "profileIcon": "K"
+          }
+        }
+      },
+      "Hobbies & Toys": {
+        "listingID2": {
+          "title": "SEVENTEEN 4th Album Repackage 'SECTOR 17'",
+          "price": "$28.00",
+          "condition": "Brand new",
+          "type": "Hobbies & Toys",
+          "bumped": "5 hours ago",
+          "category": "Hobbies & Toys",
+          "location": "Orchard Road",
+          "mailing": "$5",
+          "description": "Best for KPOP fans!",
+          "mainImage": "/assets/listing-kpop1.jpg",
+          "thumbnails": [
+            "/assets/listing-kpop1.jpg",
+            "/assets/listing-kpop1.jpg",
+            "/assets/listing-kpop1.jpg",
+            "/assets/listing-kpop1.jpg",
+            "/assets/listing-kpop1.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID1",
+              "image": "/assets/jacket1.jpg",
+              "name": "Chaps Ralph Lauren Coat Man"
+            },
+            {
+              "id": "listingID3",
+              "image": "/assets/tee.jpeg",
+              "name": "Club Shirt Cute"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "kpop_love",
+              "review": "Amazing quality. Highly recommend!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "obsessed_fan",
+            "joined": "8 years ago",
+            "profileIcon": "O"
+          }
+        }
+      },
+      "Shirts": {
+        "listingID3": {
+          "title": "Club Shirts Cute",
+          "price": "$13",
+          "condition": "Like new",
+          "type": "Shirts",
+          "bumped": "5 moments ago",
+          "category": "Women's Fashion",
+          "location": "Jewel Changi Airport",
+          "mailing": "Free",
+          "description": "Very nice. Good for casual wear. It is recommended to buy.",
+          "mainImage": "/assets/tee.jpeg",
+          "thumbnails": [
+            "/assets/tee.jpeg",
+            "/assets/tee.jpeg",
+            "/assets/tee.jpeg",
+            "/assets/tee.jpeg",
+            "/assets/tee.jpeg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID4",
+              "image": "/assets/headphones.jpg",
+              "name": "Sony WHCH520/B Bluetooth Headphones"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "peter_lim",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "author_03",
+            "joined": "5 years ago",
+            "profileIcon": "A"
+          }
+        }
+      },
+      "Mobile's & Gadget": {
+        "listingID4": {
+          "title": "Sony WHCH520/B Bluetooth Headphones",
+          "price": "$13.00",
+          "condition": "Like new",
+          "type": "Mobile's & Gadget",
+          "bumped": "1 day ago",
+          "category": "Mobile's & Gadget",
+          "location": "Bukit Panjang MRT/LRT Interchange",
+          "mailing": "Free",
+          "description": "The beats are awesome. Listen music with this gadget.",
+          "mainImage": "/assets/headphones.jpg",
+          "thumbnails": [
+            "/assets/headphones.jpg",
+            "/assets/headphones.jpg",
+            "/assets/headphones.jpg",
+            "/assets/headphones.jpg",
+            "/assets/headphones.jpg"
+          ],
+          "suggestedProducts": [
+            {
+              "id": "listingID3",
+              "image": "/assets/tee.jpeg",
+              "name": "Club Shirt Cute"
+            },
+            {
+              "id": "listingID5",
+              "image": "/assets/jacket2.jpg",
+              "name": "Ralph Lauren Jacket"
+            }
+          ],
+          "reviews": [
+            {
+              "username": "bobby_oh",
+              "review": "Seller is really friendly. Would love to deal with him again!",
+              "profileImage": "/assets/peter.png"
+            }
+          ],
+          "seller": {
+            "username": "kennedy",
+            "joined": "10 years ago",
+            "profileIcon": "K"
+          }
+        }
+      }
+    }
+  }
+  

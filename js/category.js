@@ -9,10 +9,6 @@ const renderCategoryPage = async () => {
         console.error("Category not specified.");
         return;
     }
-
-    // const encodedCategoryName = encodeURIComponent(categoryName);  
-    // console.log("Encoded category name:", encodedCategoryName);
-
     const categoryData = await fetchCategoryListings(categoryName);
     if (categoryData) {
         const banner = document.getElementById("category-banner");
@@ -39,6 +35,10 @@ const renderCategoryPage = async () => {
             const listing = listings[listingId];
             const isTreasure = treasureIndices.has(listingIds.indexOf(listingId));
 
+            const listingLink = document.createElement('a');
+            listingLink.href = `listings.html?id=${listingId}&category=${encodeURIComponent(categoryName)}`;
+            listingLink.innerText = listing.title;
+            
             const listingElement = document.createElement("div");
             listingElement.className = "listing-item";
             if (isTreasure) {
@@ -62,7 +62,7 @@ const renderCategoryPage = async () => {
               lottiePlayer.setAttribute("src", "https://lottie.host/e40b6f55-979c-426c-8d8f-3511d48db81f/nZm2cy8K9I.lottie");
               lottiePlayer.setAttribute("background", "transparent");
               lottiePlayer.setAttribute("speed", "1");
-              lottiePlayer.setAttribute("style", "width: 50px; height: 50px;");
+              lottiePlayer.setAttribute("style", "width: 50px ; height: 50px;");
               lottiePlayer.setAttribute("loop", "");
               lottiePlayer.setAttribute("autoplay", "");
 
@@ -74,7 +74,9 @@ const renderCategoryPage = async () => {
               });
             }
 
-          listingContainer.appendChild(listingElement);
+          listingLink.appendChild(listingElement);
+          listingContainer.appendChild(listingLink);
+
           }
         } else {
           console.error("Category data not found.");      
