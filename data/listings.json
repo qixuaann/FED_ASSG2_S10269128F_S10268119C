@@ -1,15 +1,19 @@
 {
-    "listingID3": {
+    "listings": {
+      "listingID3": {
         "title": "Club Shirts Cute",
         "price": "$13",
         "condition": "Like new",
         "type": "Shirts",
         "bumped": "5 moments ago",
+        "category": "Women's Fashion",
         "location": "Jewel Changi Airport",
         "mailing": "Free",
         "description": "Very nice. Good for casual wear. It is recommended to buy.",
         "mainImage": "/assets/tee.jpeg",
         "thumbnails": [
+          "/assets/tee.jpeg",
+          "/assets/tee.jpeg",
           "/assets/tee.jpeg",
           "/assets/tee.jpeg",
           "/assets/tee.jpeg"
@@ -37,7 +41,7 @@
           "profileIcon": "A"
         }
       },
-    "listingID1": {
+      "listingID1": {
         "title": "Trendy Sneakers",
         "price": "$45",
         "condition": "Brand new",
@@ -75,5 +79,5 @@
           "profileIcon": "S"
         }
       }
-}
-  
+    }
+  }  
