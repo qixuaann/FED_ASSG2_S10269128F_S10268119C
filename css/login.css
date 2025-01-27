@@ -31,18 +31,22 @@ background-container {
     position: absolute;
     top: 50%;
     right: 10%;
-    margin-top: -100px;
+    margin-top: -8%;
     background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    z-index: 1; 
-    width: 500px;
+    padding: 2%;
+    border-radius: 2%;
+    z-index: 1;
+    width: 38%;
     text-align: center;
+}
+
+.login-container p {
+    padding: 4%;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     font-size: 14px;
     color: #555;    
 }
