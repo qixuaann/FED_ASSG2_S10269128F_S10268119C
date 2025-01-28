@@ -42,7 +42,6 @@ const chats = [
     const convoButton = document.createElement('button');
     convoButton.classList.add('convo');
  
- 
     const avatarImg = document.createElement('img');
     avatarImg.src = chat.avatar;
     avatarImg.alt = `${chat.user} icon`;
