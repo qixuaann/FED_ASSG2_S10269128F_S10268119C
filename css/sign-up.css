@@ -129,6 +129,19 @@ a:hover {
     text-decoration: underline;
 }
 
+
+.lottie-wrapper {
+    position: absolute;  
+    left: -4%;
+    top: -4%;       
+}
+
+#lottie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* media queries */
 @media only screen and (max-width: 768px) {
     .login-container {
