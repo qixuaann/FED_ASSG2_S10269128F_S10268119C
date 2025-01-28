@@ -68,6 +68,10 @@ function populateListingDetails(listing) {
     document.querySelector(".profile-icon").textContent = listing.seller.profileIcon;
     document.querySelector(".profile-info strong").textContent = listing.seller.username;
     document.querySelector(".profile-info p").textContent = `Since ${listing.seller.joined}`;
+
+    const chatLink = document.getElementById('chat-link');
+    const chatUrl = `chat.html?listingTitle=${encodeURIComponent(listing.title)}`;
+    chatLink.href = chatUrl;  
   } 
 
   document.addEventListener("DOMContentLoaded", async () => {

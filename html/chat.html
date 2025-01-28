@@ -85,7 +85,7 @@
           <div class="chat-container">
             <div class="sidebar">
                 <ul class="chat-list">
-                  <a href="chat.html" class="chat-section">
+                  <a href="" class="chat-section">
                     <button class="convo">
                       <img src="/assets/auther.png" alt="auther-icon">
                       <div class="chat-info">
@@ -109,7 +109,7 @@
               <div class="listing-selected">
                 <img src="" alt="Suggested product 1" class="listing-img">
                 <div class="product-info">
-                  <p><p>
+                  <p id="listingDescription"><p>
                     <div id="listingPrice"></div>
                     <div class="buy-actions">
                       <a href="buy.html" class="chat">
@@ -134,7 +134,7 @@
     </div>
     
     <script type="module">
-      import { sendMessage, listenForMessages, resetBotResponseFlag } from '../js/chat.js';
+      import { sendMessage, listenForMessages, resetBotResponseFlag, createListingButton } from '../js/chat.js';
 
       const messageInput = document.getElementById('messageInput');
       const sendMessageButton = document.getElementById('sendMessageButton');
@@ -173,12 +173,21 @@
             messageInput.value = '';  // clear input field after sending
             resetBotResponseFlag();  
         }
-    });
+      });
+      const container = document.querySelector('.chat-list'); 
 
-      // static for now, will change
-      // listingTitle.textContent = "Amazing Product!";
-      // listingPrice.textContent = "$100";
-      // listingDescription.textContent = "This is a great product! Get it now while stock lasts.";
+      // fetch from Firebase 
+      async function fetchListings() {
+        const response = await fetch('/data/listings.json');
+        const data = await response.json();
+
+        // `listings` is an object with listing IDs as keys
+        for (const [listingID, listingData] of Object.entries(data.listings)) {
+          createListingButton(container, listingID, listingData);
+        }
+      }
+      fetchListings().catch(console.error);
+      
     </script>
     <script type="module" src="../js/firebase.js"></script>
     <script type="module" src="../js/chat.js"></script>

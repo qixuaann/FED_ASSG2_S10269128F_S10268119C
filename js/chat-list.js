@@ -1,34 +1,34 @@
-const chats = [
-    {
-      id: 1,
-      user: "@auther_03",
-      listing: "Club Shirts Cute",
-      lastMessage: "Start chatting...",
-      avatar: "/assets/auther.png"
-    },
-    {
-      id: 2,
-      user: "@bobbylim",
-      listing: "Summer Jackets",
-      lastMessage: "How about a discount?",
-      avatar: "/assets/auther.png"
-    },
-    {
-      id: 3,
-      user: "@toria",
-      listing: "Chaps Ralph Lauren Coat Man",
-      lastMessage: "Can negotiate?",
-      avatar: "/assets/auther.png"
-    },
-    {
-      id: 3,
-      user: "@auther_03",
-      listing: "SEVENTEEN 4th Album Repackage 'SECTOR 17'",
-      lastMessage: "When can we meet?",
-      avatar: "/assets/auther.png"
-    },
-    // will add more chats
-  ];
+// const chats = [
+//     {
+//       id: 1,
+//       user: "@auther_03",
+//       listing: "Club Shirts Cute",
+//       lastMessage: "Start chatting...",
+//       avatar: "/assets/auther.png"
+//     },
+//     {
+//       id: 2,
+//       user: "@bobbylim",
+//       listing: "Summer Jackets",
+//       lastMessage: "How about a discount?",
+//       avatar: "/assets/auther.png"
+//     },
+//     {
+//       id: 3,
+//       user: "@toria",
+//       listing: "Chaps Ralph Lauren Coat Man",
+//       lastMessage: "Can negotiate?",
+//       avatar: "/assets/auther.png"
+//     },
+//     {
+//       id: 3,
+//       user: "@auther_03",
+//       listing: "SEVENTEEN 4th Album Repackage 'SECTOR 17'",
+//       lastMessage: "When can we meet?",
+//       avatar: "/assets/auther.png"
+//     },
+//     // will add more chats
+//   ];
  
   const chatList = document.getElementById('chat-list');
   chats.forEach(chat => {

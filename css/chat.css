@@ -29,6 +29,13 @@
     margin-top: 20px;
 }
 
+.chat-btn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin-left: 20px;
+}
 /* profile-info */
 .profile-info {
     display: flex;

@@ -71,3 +71,53 @@ export function listenForMessages(productName, callback) {
 export function resetBotResponseFlag() {
     botHasResponded = false;
 }
+
+// chat UI with selected listing data
+export function populateChatUI(listingData) {
+    // listing title
+    const listingTitleElement = document.getElementById('listingTitle');
+    if (listingTitleElement) {
+      listingTitleElement.textContent = listingData.title;
+    }
+  
+    // listing price
+    const listingPriceElement = document.getElementById('listingPrice');
+    if (listingPriceElement) {
+      listingPriceElement.textContent = `$${listingData.price}`;
+    }
+  
+    // listing description
+    const listingDescriptionElement = document.getElementById('listingDescription');
+    if (listingDescriptionElement) {
+      listingDescriptionElement.textContent = listingData.description;
+    }
+  
+    // update image for selected listing 
+    const listingImageElement = document.querySelector('.listing-img');
+    if (listingImageElement) {
+      listingImageElement.src = listingData.mainImage || '';
+      listingImageElement.alt = listingData.title || 'Listing Image';
+    }
+}
+
+  
+// create a button for each listing
+export function createListingButton(container, listingID, listingData) {
+    const button = document.createElement('button');
+    button.classList.add('chat-btn');
+  
+    // data attributes 
+    button.setAttribute('data-listing-id', listingID);
+    button.setAttribute('data-listing-title', listingData.title);
+    button.setAttribute('data-listing-price', listingData.price);
+    button.setAttribute('data-listing-description', listingData.description);
+    button.setAttribute('data-listing-image', listingData.mainImage);
+  
+    button.textContent = `${listingData.title}`;
+  
+    // append
+    container.appendChild(button);
+      button.addEventListener('click', () => {
+      populateChatUI(listingData);
+    });
+}
