@@ -129,6 +129,18 @@ a:hover {
     text-decoration: underline;
 }
 
+.lottie-wrapper {
+    position: absolute;  
+    bottom: 10%;          
+    left: 2%;       
+}
+
+/* If you want to center it on the page */
+#lottie-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* media queries */
 @media only screen and (max-width: 768px) {
     .login-container {
