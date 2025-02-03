@@ -24,11 +24,6 @@ function generateBotResponse(userMessage) {
     }
 }
 
-function getListingTitleFromURL() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('listingTitle');
-}
-
 export function sendMessage(productName, message, sender = 'user') {
     // create a ref to the 'messages' node in the database
     const messagesRef = ref(database, 'messages/' + productName);  
@@ -149,29 +144,50 @@ export function createListingButton(container, listingID, listingData) {
     });
 }
 
-// main func to load the selected listing's chat page
-window.addEventListener('DOMContentLoaded', (event) => {
-    const listingTitle = getListingTitleFromURL();
-    if (listingTitle) {
-        // fetch listing data based on the title 
-        const listingData = fetchListingData(listingTitle);
-        if (listingData) {
-            populateChatUI(listingData);
-            displayMessagesForListing(listingTitle);
+document.addEventListener("DOMContentLoaded", async () => {
+    // Retrieve the 'category' and 'listingID' from the query string
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    const listingID = params.get('id');
+
+    if (!listingID) {
+        console.error('No listingID found in the URL.');
+        return;
+    }
+
+    try {
+        let listing;
+
+        // If there's a category, fetch from category listings, else fetch from popular listings
+        if (category) {
+            listing = await fetchListingData(category, listingID);
+        } else {
+            listing = await fetchPopularListingData(listingID); 
         }
+    } catch (error) {
+        console.error('Error loading listing:', error);
     }
 });
 
-function fetchListingData(listingTitle) {
-    const listingsRef = ref(database, 'listings');
-    const snapshot = get(listingsRef);
-    
-    snapshot.then((snapshotData) => {
-        const listings = snapshotData.val();
-        for (let listingID in listings) {
-            if (listings[listingID].title === listingTitle) {
-                return listings[listingID]; 
-            }
-        }
-    });
+// Function to fetch listing data from a category
+async function fetchListingData(category, listingID) {
+    const categoryListingsRef = ref(database, 'categoryListings/' + category + '/listings');  // Reference to the category listings
+
+    const snapshot = await get(categoryListingsRef);  // Fetch data from Firebase
+    if (snapshot.exists()) {
+        const listings = snapshot.val();  // get all listings in that category
+        return listings[listingID] || null;  // return listing that matches the given listingID
+    }
+    return null;  
+}
+
+async function fetchPopularListingData(listingID) {
+    const popularListingsRef = ref(database, 'listings');  
+
+    const snapshot = await get(popularListingsRef);  
+    if (snapshot.exists()) {
+        const listings = snapshot.val();  
+        return listings[listingID] || null;  
+    }
+    return null;  
 }

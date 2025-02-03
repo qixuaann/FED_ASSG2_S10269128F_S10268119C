@@ -10,7 +10,7 @@ window.onload = () => {
 
 fetchPopularListings((listings) => {
     const listingsContainer = document.getElementById('listings-container');
-    listingsContainer.innerHTML = '';
+    // listingsContainer.innerHTML = '';
     
     // loop thru listings and generate html for each
     for (const listingId in listings) {
@@ -47,10 +47,10 @@ fetchPopularListings((listings) => {
       // event listener for listings
       listingItem.addEventListener('click', () => {
         window.location.href = `listings.html?id=${listingId}`;
-    });
+      });
 
-    listingsContainer.appendChild(listingItem);
-}
+      listingsContainer.appendChild(listingItem);
+    }
 });
 
 
