@@ -1,4 +1,4 @@
-import { database, ref, set, push, onValue, serverTimestamp } from '../js/firebase.js';
+import { database, get, ref, set, push, onValue, serverTimestamp } from '../js/firebase.js';
 
 let botHasResponded = false;  
 
@@ -22,6 +22,11 @@ function generateBotResponse(userMessage) {
     } else {
         return "I'm not sure I understand that. Could you clarify your question?";
     }
+}
+
+function getListingTitleFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('listingTitle');
 }
 
 export function sendMessage(productName, message, sender = 'user') {
@@ -98,9 +103,30 @@ export function populateChatUI(listingData) {
       listingImageElement.src = listingData.mainImage || '';
       listingImageElement.alt = listingData.title || 'Listing Image';
     }
+    const messagesDiv = document.getElementById('messages');
+    messagesDiv.innerHTML = '';
 }
 
-  
+export function displayMessagesForListing(listingID) {
+    const messagesDiv = document.getElementById('messages');
+    listenForMessages(listingID, (messages) => {
+        if (messages.length === 0) {
+            const initialMessage = document.createElement('div');
+            initialMessage.classList.add('message');
+            initialMessage.textContent = "Start chatting with the seller!";
+            messagesDiv.appendChild(initialMessage);
+        } else {
+            messages.forEach((msg) => {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message', msg.sender === 'user' ? 'user' : 'seller');
+                messageDiv.textContent = `${msg.sender}: ${msg.message}`;
+                messagesDiv.appendChild(messageDiv);
+            });
+        }
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    });
+}
+
 // create a button for each listing
 export function createListingButton(container, listingID, listingData) {
     const button = document.createElement('button');
@@ -119,5 +145,33 @@ export function createListingButton(container, listingID, listingData) {
     container.appendChild(button);
       button.addEventListener('click', () => {
       populateChatUI(listingData);
+      displayMessagesForListing(listingID)
+    });
+}
+
+// main func to load the selected listing's chat page
+window.addEventListener('DOMContentLoaded', (event) => {
+    const listingTitle = getListingTitleFromURL();
+    if (listingTitle) {
+        // fetch listing data based on the title 
+        const listingData = fetchListingData(listingTitle);
+        if (listingData) {
+            populateChatUI(listingData);
+            displayMessagesForListing(listingTitle);
+        }
+    }
+});
+
+function fetchListingData(listingTitle) {
+    const listingsRef = ref(database, 'listings');
+    const snapshot = get(listingsRef);
+    
+    snapshot.then((snapshotData) => {
+        const listings = snapshotData.val();
+        for (let listingID in listings) {
+            if (listings[listingID].title === listingTitle) {
+                return listings[listingID]; 
+            }
+        }
     });
 }
