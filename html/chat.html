@@ -84,19 +84,23 @@
           </div> -->
           <div class="chat-container">
             <div class="sidebar">
-                <ul class="chat-list">
-                  <a href="" class="chat-section">
-                    <button class="convo">
-                      <img src="/assets/auther.png" alt="auther-icon">
-                      <div class="chat-info">
-                        <li></li>
-                        <li id="listingTitle"><strong></strong></li>
-                        <li class="light-text">Start chatting...</li>
-                      </div>
-                    </button>
-                  </a>
-                </ul>
+              <a href="" class="chat-section">
+                <button class="convo">
+                  <img src="/assets/auther.png" alt="auther-icon">
+                  <div class="chat-info">
+                    <li></li>
+                    <li id="listingTitle"><strong></strong></li>
+                    <li class="light-text">Start chatting...</li>
+                  </div>
+                </button>
+              </a>
+              <ul class="chat-list"></ul>
+              <div class="pagination">
+                <button id="prev-button">Previous</button>
+                <button id="next-button">Next</button>
+              </div>  
             </div>
+          
             <div class="chat-section">
               <div class="profile-info">
                 <img src="/assets/auther.png" alt="auther-icon">
@@ -119,7 +123,7 @@
                         <button class="add-to-cart-btn">Add to Cart</button>
                       </a>
                     </div>          
-                </div>
+                </div>             
               </div>
         
 
@@ -175,19 +179,26 @@
             resetBotResponseFlag();  
         }
       });
-      const container = document.querySelector('.chat-list'); 
 
-      // fetch from Firebase 
+      // fetch from Firebase + pagination
+      let listingsPerPage = 10; 
+      let currentPage = 1;
+      let listingsArray = []; 
+      const container = document.querySelector('.chat-list'); 
+      const prevButton = document.querySelector("#prev-button");
+      const nextButton = document.querySelector("#next-button");
+
+        // fetch data from both listings.json and categoryListings.json
+    
       async function fetchListings() {
         const response = await fetch('/data/listings.json');
         const data = await response.json();
 
         // `listings` is an object with listing IDs as keys
         for (const [listingID, listingData] of Object.entries(data.listings)) {
-          createListingButton(container, listingID, listingData);
+          listingsArray.push({ listingID, listingData });
         }
       }
-      fetchListings().catch(console.error);
 
       async function fetchCategoryListings() {
         const response = await fetch('/data/categoryListings.json');
@@ -195,11 +206,68 @@
 
         for (const [category, listings] of Object.entries(data.listings)) {
           for (const [listingID, listingData] of Object.entries(listings)) {
-              createListingButton(container, listingID, listingData);
+            listingsArray.push({ listingID, listingData });
           }
         }
       }
-      fetchCategoryListings().catch(console.error);
+
+      async function fetchAllListings() {
+        listingsArray = []; 
+
+        await fetchListings();
+        await fetchCategoryListings();
+        
+        renderListings();
+      }
+
+      function renderListings() {
+        container.innerHTML = ""; // clear existing listings 
+        const startIndex = (currentPage - 1) * listingsPerPage;
+        const endIndex = startIndex + listingsPerPage;
+        const listingsToShow = listingsArray.slice(startIndex, endIndex);
+
+        listingsToShow.forEach(({ listingID, listingData }) => {
+          createListingButton(container, listingID, listingData);
+        });
+
+        updatePaginationControls();
+      }
+
+      function updatePaginationControls() {
+        prevButton.style.display = currentPage === 1 ? "none" : "inline-block";
+        nextButton.style.display = (currentPage * listingsPerPage >= listingsArray.length) ? "none" : "inline-block";
+      }
+
+      document.querySelector("#prev-button").addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderListings();
+        }
+      });
+
+      prevButton.addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            animateSlide("prev");
+        }
+     });
+
+      nextButton.addEventListener("click", () => {
+          if (currentPage * listingsPerPage < listingsArray.length) {
+              currentPage++;
+              animateSlide("next");
+          }
+      });
+
+      function animateSlide(direction) {
+        container.style.opacity = "0"; // fade out effect
+        setTimeout(() => {
+            renderListings(); // new slide
+            container.style.opacity = "1"; // fade in effect
+        }, 300); // delay 
+      }
+      fetchAllListings().catch(console.error);
+      
     </script>
     <script type="module" src="../js/firebase.js"></script>
     <script type="module" src="../js/chat.js"></script>
