@@ -1,5 +1,5 @@
 # FED_ASSG2_S10269128F_S10268119C
-#H1 MokeSell: A Gamified and Interactive Consumer-to-Consumer Marketplace
+MokeSell: A Gamified and Interactive Consumer-to-Consumer Marketplace
 
 Project Overview
 
