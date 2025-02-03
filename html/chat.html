@@ -139,6 +139,7 @@
       const messageInput = document.getElementById('messageInput');
       const sendMessageButton = document.getElementById('sendMessageButton');
       const messagesDiv = document.getElementById('messages');
+      const listingImg = document.getElementsByClassName('listing-img');
       const listingTitle = document.getElementById('listingTitle');
       const listingPrice = document.getElementById('listingPrice');
       const listingDescription = document.getElementById('listingDescription');
@@ -187,7 +188,18 @@
         }
       }
       fetchListings().catch(console.error);
-      
+
+      async function fetchCategoryListings() {
+        const response = await fetch('/data/categoryListings.json');
+        const data = await response.json();
+
+        for (const [category, listings] of Object.entries(data.listings)) {
+          for (const [listingID, listingData] of Object.entries(listings)) {
+              createListingButton(container, listingID, listingData);
+          }
+        }
+      }
+      fetchCategoryListings().catch(console.error);
     </script>
     <script type="module" src="../js/firebase.js"></script>
     <script type="module" src="../js/chat.js"></script>

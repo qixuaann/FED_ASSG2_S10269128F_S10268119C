@@ -47,8 +47,6 @@ fetchPopularListings((listings) => {
       // event listener for listings
       listingItem.addEventListener('click', () => {
         window.location.href = `listings.html?id=${listingId}`;
-      // window.location.href = `listing.html?id=${listingId}`;
-
     });
 
     listingsContainer.appendChild(listingItem);
