@@ -1,197 +1,175 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Onest', sans-serif;
-    background-color: #ffff;
+  font-family: 'Onest', sans-serif;
+  background-color: #ffff;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-  
-/* main login part */
 
-background-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
+/* ORIGINAL SIGN-UP STYLES (kept) */
+
+/* Note: Corrected selector by adding a dot before background-container */
+.background-container {
+  /* Changed to flex for the half-and-half layout */
+  display: flex;
+  height: 100vh;
+  width: 100%;
 }
 
 .background_img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    max-width: 100%
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  max-width: 100%;
 }
 
+/* You can leave the absolute positioning for now,
+   or later adjust if you want the sign-up box to be centered in the right section */
 .signup-container {
-    position: absolute;
-    top: 40%;
-    right: 10%;
-    margin-top: -10%;
-    padding: 2%;
-    border-radius: 2%;
-    z-index: 1;
-    width: 38%;
-    text-align: center;
+  position: absolute;
+  top: 30%;
+  margin-top: -10%;
+  padding: 2%;
+  border-radius: 2%;
+  z-index: 1;
+  width: 38%;
+  text-align: center;
 }
 
 .signup-container p {
-    padding: 4%;
+    margin-top: 4%;
+    text-align: left;
+    color: #7e7e7e;  
+}
+
+h1 {
+    text-align: left;
+    font-size: 280%;
+    margin-bottom: 8%;
 }
 
 label {
-    display: block;
-    margin-bottom: 0px;
-    font-size: 14px;
-    color: #555;    
+  display: block;
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: #555;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .form-group {
-    margin-bottom: 15px;
-    text-align: left;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: black;
+  background-color: #FDD788;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 button:hover {
+    color: white;
     background-color: #0056b3;
 }
 
 a {
-    color: #007BFF;
-    text-decoration: none;
+  color: #007BFF;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-
 .lottie-wrapper {
-    position: absolute;  
-    left: -4%;
-    bottom: -5%;       
+  position: absolute;
+  left: 3%;
+  bottom: 18%;
 }
 
 #lottie-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* media queries */
+/* NEW STYLES FOR LEFT & RIGHT SECTIONS (replicating the login page look) */
+
+.left-section {
+  flex: 1.9;
+  background: linear-gradient(135deg,#f4f4de, #f7f2ee );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-section {
+  flex: 1.45;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff;
+}
+
+/* MEDIA QUERIES */
+
 @media only screen and (max-width: 768px) {
-    .login-container {
-        position: absolute;
-        top: 50%;
-        left: 5%; 
-        margin-top: -150px;
-        width: 70%; 
-    }
+  .signup-container {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    margin-top: -150px;
+    width: 70%;
+    padding: 15px;
+  }
 
-    .top-bar {
-        padding: 10px 0;
-        font-size: 14px; 
-    }
+  input {
+    padding: 8px;
+    font-size: 14px;
+  }
 
-    .logo img {
-        width: 130px; 
-        margin-left: 20px;
-    }
-
-    .login {
-        font-size: 20px; 
-        margin-left: 10px;
-    }
-
-    .faq {
-        margin-left: auto;
-        margin-right: 20px; 
-        font-size: 13px;
-    }
-
-    .signup {
-        font-size: 18px;
-    }
-
-    .login-container {
-        padding: 15px;
-        width: 75%; 
-        margin-top: -120px;
-    }
-
-    input {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    button {
-        padding: 10px; 
-        font-size: 14px; 
-    }
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-    .login-container {
-        width: 85%; 
-        margin-top: -100px;
-    }
+  .signup-container {
+    width: 85%;
+    margin-top: -100px;
+  }
 
-    .top-bar {
-        padding: 8px 0;
-        font-size: 12px; 
-    }
+  input {
+    font-size: 12px;
+  }
 
-    .logo img {
-        width: 120px; 
-    }
-
-    .faq {
-        font-size: 12px;
-    }
-
-    .login {
-        font-size: 18px; 
-    }
-
-    .signup {
-        font-size: 16px; 
-    }
-
-    input {
-        font-size: 12px;
-    }
-
-    button {
-        font-size: 12px; 
-        padding: 8px; 
-    }
+  button {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
-    

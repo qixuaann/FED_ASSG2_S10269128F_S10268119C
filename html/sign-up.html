@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sign Up</title>
-        <link href="../css/sign-up.css" rel="stylesheet" type="text/css">
-    </head>
-
-    <body>
-          <div class="background-container">
-            <div id="lottie-container"></div>
-            <div class="signup-container">
-                <h1>Sign Up</h1>
-                <form id="signupForm" action="index.html" method="get">
-                    <div class="form-group">
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirm-password">Confirm Password:</label>
-                        <input type="password" id="confirm-password" required>
-                    </div>
-                    <button type="submit">Sign Up</button>
-                </form>
-                <p>Already have an account? <a href="login.html">Login here</a>.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link href="../css/sign-up.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- New half-and-half background container -->
+    <div class="background-container">
+      <!-- Left Section (customize as desired) -->
+      <div class="left-section">
+        <!-- You can add an image or any content here -->
+      </div>
+      <!-- Right Section: holds the sign-up form -->
+      <div class="right-section">
+        <div class="signup-container">
+          <h1>Hello, <br>Welcome!</h1>
+          <form id="signupForm" action="index.html" method="get">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" required />
             </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" required />
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" required />
+            </div>
+            <button type="submit">Sign Up</button>
+          </form>
+          <p>Already have an account? <a href="login.html">Login here</a>.</p>
         </div>
-        <script type="module" src="../js/sign-up.js"></script>
-        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-    </body>
+      </div>
+    </div>
+    <div id="lottie-container"></div>
+    <script type="module" src="../js/sign-up.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  </body>
 </html>

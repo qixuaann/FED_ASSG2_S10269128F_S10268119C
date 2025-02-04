@@ -18,26 +18,24 @@ html {
 /* main login part */
 .login-container {
     position: absolute;
-    top: 48%;
-    right: 10%;
-    margin-top: -12%;
+    top: 43%;
+    margin-top: -13%;
     padding: 2%;
     border-radius: 2%;
     z-index: 1;
     width: 38%;
     text-align: center;
-    background-color: #ffff;
 }
 
 .login-container p {
     margin-top: 2.5%;
-    text-align: left;
     color: #7e7e7e;  
 }
 
 h1 {
     text-align: left;
     font-size: 280%;
+    margin-bottom: 8%;
 }
 
 label {
@@ -117,7 +115,8 @@ a:hover {
 
 .lottie-wrapper {
     position: absolute;  
-    bottom: 14%;          
+    bottom: 14%;
+    left: 2%;          
 }
 
 #lottie-container {
@@ -244,7 +243,7 @@ a:hover {
 
 /* Left section with a distinct color/gradient background */
 .left-section {
-    flex: 1.5;
+    flex: 1.9;
     background: linear-gradient(135deg, #f4f4de, #f7f2ee);
     display: flex;
     justify-content: center;
