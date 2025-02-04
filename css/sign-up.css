@@ -121,7 +121,7 @@ a:hover {
 
 .left-section {
   flex: 1.9;
-  background: linear-gradient(135deg,#f4f4de, #f7f2ee );
+  background: linear-gradient(135deg,#ffffee, #fcf8f5);
   display: flex;
   justify-content: center;
   align-items: center;
