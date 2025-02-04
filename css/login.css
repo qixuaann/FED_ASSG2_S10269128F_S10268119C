@@ -20,7 +20,7 @@ html {
     position: absolute;
     top: 48%;
     right: 10%;
-    margin-top: -10%;
+    margin-top: -12%;
     padding: 2%;
     border-radius: 2%;
     z-index: 1;
@@ -30,17 +30,20 @@ html {
 }
 
 .login-container p {
-    padding: 4%;
+    margin-top: 2.5%;
+    text-align: left;
+    color: #7e7e7e;  
 }
 
 h1 {
-    font-size: 190%;
+    text-align: left;
+    font-size: 280%;
 }
 
 label {
     display: block;
     font-size: 14px;
-    color: #555;    
+    color: #6f6f6f;    
 }
 
 input {
@@ -56,18 +59,50 @@ input {
     text-align: left;
 }
 
+/* Styling for Remember Me and Forgot Password */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.form-options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.form-options input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+}
+
+.forgot-password {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
 button {
-    width: 30%;
+    width: 100%;
     padding: 10px;
     font-size: 16px;
-    color:  black;
+    color: black;
     background-color: #FDD788;
     border: none;
-    border-radius: 4rem;
+    border-radius: 0.5rem;
     cursor: pointer;
 }
 
 button:hover {
+    color: white;
     background-color: #0056b3;
 }
 
@@ -141,6 +176,15 @@ a:hover {
         padding: 10px; 
         font-size: 14px; 
     }
+
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .forgot-password {
+        margin-top: 5px;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -178,6 +222,15 @@ a:hover {
         font-size: 12px; 
         padding: 8px; 
     }
+
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .forgot-password {
+        margin-top: 5px;
+    }
 }
 
 /* BEGIN: New styles for left and right sections */
@@ -192,7 +245,7 @@ a:hover {
 /* Left section with a distinct color/gradient background */
 .left-section {
     flex: 1.5;
-    background: linear-gradient(135deg, #f4f4de, #f7f2ee); /* Adjust the colors as needed */
+    background: linear-gradient(135deg, #f4f4de, #f7f2ee);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,7 +263,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffff; /* Matches your login-container background */
+    background-color: #ffff;
 }
 
 /* END: New styles for left and right sections */
