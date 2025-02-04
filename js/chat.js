@@ -122,6 +122,47 @@ export function displayMessagesForListing(listingID) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", async () => {
+    const params = new URLSearchParams(window.location.search);
+    const listingId = params.get("id");
+    const category = params.get("category");
+
+    if (!listingId || !category) {
+        console.error("No listing ID or category provided.");
+        return;
+    }
+
+    try {
+        const [listingsResponse, categoryResponse] = await Promise.all([
+            fetch("/data/listings.json"),
+            fetch("/data/categoryListings.json"),
+        ]);
+
+        const [listingsData, categoryData] = await Promise.all([
+            listingsResponse.json(),
+            categoryResponse.json(),
+        ]);
+
+        // Merge the listings data
+        const allListings = {
+            ...listingsData.listings,
+            ...(categoryData.listings[category] || {}),
+        };
+
+        const listing = allListings[listingId];
+        if (!listing) {
+            console.error("Listing not found");
+            return;
+        }
+        populateChatUI(listing);
+        displayMessagesForListing(listingId);
+
+    } catch (error) {
+        console.error("Error loading listings:", error);
+    }
+});
+
+
 // create a button for each listing
 export function createListingButton(container, listingID, listingData) {
     const button = document.createElement('button');
@@ -139,9 +180,10 @@ export function createListingButton(container, listingID, listingData) {
     // append
     container.appendChild(button);
       button.addEventListener('click', () => {
-      populateChatUI(listingData);
-      displayMessagesForListing(listingID)
+        const chatUrl = `chat.html?category=${encodeURIComponent(listingData.category)}&id=${encodeURIComponent(listingID)}`;
+        window.location.href = chatUrl;
     });
+    
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -157,7 +199,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     try {
         let listing;
-
         // if there's a category, fetch from category listings, else fetch from popular listings
         if (category) {
             listing = await fetchListingData(category, listingID);
@@ -191,4 +232,3 @@ async function fetchPopularListingData(listingID) {
         return listings[listingID] || null;  
     }
     return null;  
-}

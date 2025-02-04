@@ -104,19 +104,23 @@ function populateListingDetails(listing) {
         }
         populateListingDetails(listing);
 
-        const chatButton = document.querySelector(".chat-btn"); 
-        const chatLink = document.querySelector(".chat"); 
+        const chatLink = document.querySelector(".chatlink"); 
 
-        if (chatButton && chatLink) {
+        if (chatLink) {
           chatLink.href = `chat.html?category=${encodeURIComponent(listing.category)}&id=${encodeURIComponent(listingId)}`;
 
+          chatLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent any default behavior that might be interfering
+            window.location.href = chatLink.href; // Manually trigger navigation to chat page
+          });
+        
           console.log("Chat button updated with link:", chatLink.href);
         } else {
           console.error("Chat button not found in the DOM.");
         }  
 
       } else if (!category) {
-        console.log("Category found, but no listing ID.");
+        console.log("Category not found");
       }
     } catch (error) {
       console.error("Error loading listings:", error);
