@@ -145,7 +145,7 @@ export function createListingButton(container, listingID, listingData) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    // Retrieve the 'category' and 'listingID' from the query string
+    // retrieve the 'category' and 'listingID' from the query string
     const params = new URLSearchParams(window.location.search);
     const category = params.get('category');
     const listingID = params.get('id');
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         let listing;
 
-        // If there's a category, fetch from category listings, else fetch from popular listings
+        // if there's a category, fetch from category listings, else fetch from popular listings
         if (category) {
             listing = await fetchListingData(category, listingID);
         } else {
@@ -169,11 +169,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 });
 
-// Function to fetch listing data from a category
+//  fetch listing data from a category
 async function fetchListingData(category, listingID) {
     const categoryListingsRef = ref(database, 'categoryListings/' + category + '/listings');  // Reference to the category listings
 
-    const snapshot = await get(categoryListingsRef);  // Fetch data from Firebase
+    const snapshot = await get(categoryListingsRef);  // fetch data from Firebase
     if (snapshot.exists()) {
         const listings = snapshot.val();  // get all listings in that category
         return listings[listingID] || null;  // return listing that matches the given listingID

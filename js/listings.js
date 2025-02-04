@@ -71,14 +71,13 @@ function populateListingDetails(listing) {
 
       const chatUrl = listing.category
     ? `chat.html?category=${encodeURIComponent(listing.category)}&id=${encodeURIComponent(listing.id)}`
-    : `chat.html?listingID=${encodeURIComponent(listing.id)}`;
+    : `chat.html?id=${encodeURIComponent(listing.id)}`;
 
     const chatLink = document.getElementById('chat-link');
     if (chatLink) {
         chatLink.href = chatUrl;
     }
   } 
-
   document.addEventListener("DOMContentLoaded", async () => {
     const params = new URLSearchParams(window.location.search);
     const listingId = params.get("id");

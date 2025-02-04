@@ -19,7 +19,9 @@ fetchPopularListings((listings) => {
       // create listing
       const listingItem = document.createElement('div');
       listingItem.classList.add('listing-item');  // from css
-      // listingItem.dataset.id = listingId;
+      // store
+      listingItem.dataset.id = listingId;
+      listingItem.dataset.category = listing.category;
 
       // create image
       const listingImage = document.createElement('img');
@@ -42,13 +44,17 @@ fetchPopularListings((listings) => {
       price.innerHTML = `$${listing.price}`;
       listingContent.appendChild(price);
 
-      listingItem.appendChild(listingContent);
+      const chatButton = document.createElement('a');
+      chatButton.classList.add("chat");
+      chatButton.href = `chat.html?category=${encodeURIComponent(listing.category)}&id=${encodeURIComponent(listingId)}`;
+      chatButton.innerHTML = `<button class="chat-btn">Chat here</button>`;
+      listingContent.appendChild(chatButton);
 
-      // event listener for listings
       listingItem.addEventListener('click', () => {
-        window.location.href = `listings.html?id=${listingId}`;
+          window.location.href = `listings.html?id=${listingId}`;
       });
 
+      listingItem.appendChild(listingContent);
       listingsContainer.appendChild(listingItem);
     }
 });
