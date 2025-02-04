@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         } else {
             listing = await fetchPopularListingData(listingID); 
         }
+
     } catch (error) {
         console.error('Error loading listing:', error);
     }

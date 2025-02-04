@@ -68,21 +68,12 @@ function populateListingDetails(listing) {
     document.querySelector(".profile-icon").textContent = listing.seller.profileIcon;
     document.querySelector(".profile-info strong").textContent = listing.seller.username;
     document.querySelector(".profile-info p").textContent = `Since ${listing.seller.joined}`;
-
-      const chatUrl = listing.category
-    ? `chat.html?category=${encodeURIComponent(listing.category)}&id=${encodeURIComponent(listing.id)}`
-    : `chat.html?id=${encodeURIComponent(listing.id)}`;
-
-    const chatLink = document.getElementById('chat-link');
-    if (chatLink) {
-        chatLink.href = chatUrl;
-    }
   } 
   document.addEventListener("DOMContentLoaded", async () => {
     const params = new URLSearchParams(window.location.search);
     const listingId = params.get("id");
     const category = params.get("category");
-  
+
     if (!listingId && !category) {
       console.error("No listing ID or category provided");
       return;
@@ -112,7 +103,20 @@ function populateListingDetails(listing) {
           return;
         }
         populateListingDetails(listing);
-      } else if (category) {
+
+        const chatButton = document.querySelector(".chat-btn"); 
+        const chatLink = document.querySelector(".chat"); 
+
+        if (chatButton && chatLink) {
+          chatLink.href = `chat.html?category=${encodeURIComponent(listing.category)}&id=${encodeURIComponent(listingId)}`;
+
+          console.log("Chat button updated with link:", chatLink.href);
+        } else {
+          console.error("Chat button not found in the DOM.");
+        }  
+
+      } else if (!category) {
+        console.log("Category found, but no listing ID.");
       }
     } catch (error) {
       console.error("Error loading listings:", error);
