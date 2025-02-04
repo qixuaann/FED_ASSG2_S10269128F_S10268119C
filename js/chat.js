@@ -83,7 +83,7 @@ export function populateChatUI(listingData) {
     // listing price
     const listingPriceElement = document.getElementById('listingPrice');
     if (listingPriceElement) {
-      listingPriceElement.textContent = `$${listingData.price}`;
+      listingPriceElement.textContent = `${listingData.price}`;
     }
   
     // listing description
@@ -127,39 +127,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     const listingId = params.get("id");
     const category = params.get("category");
 
-    if (!listingId || !category) {
-        console.error("No listing ID or category provided.");
+    const [listingsResponse, categoryResponse] = await Promise.all([
+        fetch("/data/listings.json"),
+        fetch("/data/categoryListings.json"),
+    ]);
+
+    const [listingsData, categoryData] = await Promise.all([
+        listingsResponse.json(),
+        categoryResponse.json(),
+    ]);
+
+    // Merge the listings data
+    const allListings = {
+        ...listingsData.listings,
+        ...(categoryData.listings[category] || {}),
+    };
+
+    const listing = allListings[listingId];
+    if (!listing) {
+        console.error("Listing not found");
         return;
     }
-
-    try {
-        const [listingsResponse, categoryResponse] = await Promise.all([
-            fetch("/data/listings.json"),
-            fetch("/data/categoryListings.json"),
-        ]);
-
-        const [listingsData, categoryData] = await Promise.all([
-            listingsResponse.json(),
-            categoryResponse.json(),
-        ]);
-
-        // Merge the listings data
-        const allListings = {
-            ...listingsData.listings,
-            ...(categoryData.listings[category] || {}),
-        };
-
-        const listing = allListings[listingId];
-        if (!listing) {
-            console.error("Listing not found");
-            return;
-        }
-        populateChatUI(listing);
-        displayMessagesForListing(listingId);
-
-    } catch (error) {
-        console.error("Error loading listings:", error);
-    }
+    populateChatUI(listing);
+    displayMessagesForListing(listingId);
 });
 
 
@@ -232,3 +222,4 @@ async function fetchPopularListingData(listingID) {
         return listings[listingID] || null;  
     }
     return null;  
+}
