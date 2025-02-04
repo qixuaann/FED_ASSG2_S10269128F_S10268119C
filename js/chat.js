@@ -24,10 +24,12 @@ function generateBotResponse(userMessage) {
     }
 }
 
-export function sendMessage(productName, message, sender = 'user') {
-    // create a ref to the 'messages' node in the database
-    const messagesRef = ref(database, 'messages/' + productName);  
+export function sendMessage(message, sender = 'user') {
+    const params = new URLSearchParams(window.location.search);
+    const listingId = params.get('id');
 
+    // create a ref to the 'messages' node in the database
+    const messagesRef = ref(database, `messages/${listingId}`);  
     // use push() to add new msg with unique ID
     const newMessageRef = push(messagesRef);  // generate unique key
     set(newMessageRef, {
@@ -38,10 +40,10 @@ export function sendMessage(productName, message, sender = 'user') {
         console.log("Message sent successfully!");
 
         
-        if (!botHasResponded) {
+        if (!botHasResponded && sender === 'user') {
             setTimeout(() => {
                 const botResponse = generateBotResponse(message);
-                sendMessage(productName, botResponse, 'seller'); // send bot response
+                sendMessage(botResponse, 'seller'); // send bot response
                 botHasResponded = true;
             }, 1000);
         }
@@ -51,17 +53,23 @@ export function sendMessage(productName, message, sender = 'user') {
     });
 }
 
-export function listenForMessages(productName, callback) {
-    const messagesRef = ref(database, 'messages/' + productName); 
+export function listenForMessages(listingId, callback) {
+    const messagesRef = ref(database, `messages/${listingId}`); 
 
     // listen for changes in the msgs node
     onValue(messagesRef, (snapshot) => {
         const data = snapshot.val();  // get data from snapshot
         const messages = [];
 
-        // if messages exist, iterate through them and store them in an array
-        for (let id in data) {
-            messages.push(data[id]);
+        if (data) {
+            Object.keys(data).forEach((messageId) => {
+                const messageData = data[messageId];
+                messages.push({
+                    sender: messageData.sender,
+                    message: messageData.message,
+                    timestamp: messageData.timestamp
+                });
+            });
         }
         // pass array of msgs to callback func
         callback(messages);
@@ -74,6 +82,9 @@ export function resetBotResponseFlag() {
 
 // chat UI with selected listing data
 export function populateChatUI(listingData) {
+    const messagesDiv = document.getElementById('messages');
+    messagesDiv.innerHTML = '';
+
     // listing title
     const listingTitleElement = document.getElementById('listingTitle');
     if (listingTitleElement) {
@@ -98,26 +109,18 @@ export function populateChatUI(listingData) {
       listingImageElement.src = listingData.mainImage || '';
       listingImageElement.alt = listingData.title || 'Listing Image';
     }
-    const messagesDiv = document.getElementById('messages');
-    messagesDiv.innerHTML = '';
 }
 
-export function displayMessagesForListing(listingID) {
+export function displayMessagesForListing(listingId) {
     const messagesDiv = document.getElementById('messages');
-    listenForMessages(listingID, (messages) => {
+
+    listenForMessages(listingId, (messages) => {
         if (messages.length === 0) {
             const initialMessage = document.createElement('div');
             initialMessage.classList.add('message');
             initialMessage.textContent = "Start chatting with the seller!";
             messagesDiv.appendChild(initialMessage);
-        } else {
-            messages.forEach((msg) => {
-                const messageDiv = document.createElement('div');
-                messageDiv.classList.add('message', msg.sender === 'user' ? 'user' : 'seller');
-                messageDiv.textContent = `${msg.sender}: ${msg.message}`;
-                messagesDiv.appendChild(messageDiv);
-            });
-        }
+        } 
         messagesDiv.scrollTop = messagesDiv.scrollHeight;
     });
 }
@@ -137,29 +140,26 @@ document.addEventListener("DOMContentLoaded", async () => {
         categoryResponse.json(),
     ]);
 
-    // Merge the listings data
+    // merge listings data
     const allListings = {
         ...listingsData.listings,
         ...(categoryData.listings[category] || {}),
     };
 
     const listing = allListings[listingId];
-    if (!listing) {
-        console.error("Listing not found");
-        return;
-    }
+
     populateChatUI(listing);
     displayMessagesForListing(listingId);
 });
 
 
 // create a button for each listing
-export function createListingButton(container, listingID, listingData) {
+export function createListingButton(container, listingId, listingData) {
     const button = document.createElement('button');
     button.classList.add('chat-btn');
   
     // data attributes 
-    button.setAttribute('data-listing-id', listingID);
+    button.setAttribute('data-listing-id', listingId);
     button.setAttribute('data-listing-title', listingData.title);
     button.setAttribute('data-listing-price', listingData.price);
     button.setAttribute('data-listing-description', listingData.description);
@@ -170,7 +170,7 @@ export function createListingButton(container, listingID, listingData) {
     // append
     container.appendChild(button);
       button.addEventListener('click', () => {
-        const chatUrl = `chat.html?category=${encodeURIComponent(listingData.category)}&id=${encodeURIComponent(listingID)}`;
+        const chatUrl = `chat.html?category=${encodeURIComponent(listingData.category)}&id=${encodeURIComponent(listingId)}`;
         window.location.href = chatUrl;
     });
     
@@ -180,46 +180,36 @@ document.addEventListener("DOMContentLoaded", async () => {
     // retrieve the 'category' and 'listingID' from the query string
     const params = new URLSearchParams(window.location.search);
     const category = params.get('category');
-    const listingID = params.get('id');
+    const listingId = params.get('id');
 
-    if (!listingID) {
-        console.error('No listingID found in the URL.');
-        return;
-    }
-
-    try {
-        let listing;
-        // if there's a category, fetch from category listings, else fetch from popular listings
-        if (category) {
-            listing = await fetchListingData(category, listingID);
-        } else {
-            listing = await fetchPopularListingData(listingID); 
-        }
-
-    } catch (error) {
-        console.error('Error loading listing:', error);
+    let listing;
+    // if there's a category, fetch from category listings, else fetch from popular listings
+    if (category) {
+        listing = await fetchListingData(category, listingId);
+    } else {
+        listing = await fetchPopularListingData(listingId); 
     }
 });
 
 //  fetch listing data from a category
-async function fetchListingData(category, listingID) {
+async function fetchListingData(category, listingId) {
     const categoryListingsRef = ref(database, 'categoryListings/' + category + '/listings');  // Reference to the category listings
 
     const snapshot = await get(categoryListingsRef);  // fetch data from Firebase
     if (snapshot.exists()) {
         const listings = snapshot.val();  // get all listings in that category
-        return listings[listingID] || null;  // return listing that matches the given listingID
+        return listings[listingId] || null;  // return listing that matches the given listingID
     }
     return null;  
 }
 
-async function fetchPopularListingData(listingID) {
+async function fetchPopularListingData(listingId) {
     const popularListingsRef = ref(database, 'listings');  
 
     const snapshot = await get(popularListingsRef);  
     if (snapshot.exists()) {
         const listings = snapshot.val();  
-        return listings[listingID] || null;  
+        return listings[listingId] || null;  
     }
     return null;  
 }
