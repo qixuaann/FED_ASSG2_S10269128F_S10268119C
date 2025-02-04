@@ -44,7 +44,7 @@ fetchPopularListings((listings) => {
       price.innerHTML = `$${listing.price}`;
       listingContent.appendChild(price);
 
-      const chatButton = document.createElement('a');
+      const chatButton = document.createElement('h4');
       chatButton.classList.add("chat");
       chatButton.href = `chat.html?category=${encodeURIComponent(listing.category)}&id=${encodeURIComponent(listingId)}`;
       chatButton.innerHTML = `<button class="chat-btn">Chat here</button>`;

@@ -93,10 +93,6 @@ function populateListingDetails(listing) {
   
       if (listingId) {
         const listing = allListings[listingId];
-        if (!listing) {
-          console.error("Listing not found");
-          return;
-        }
         populateListingDetails(listing);
 
         const chatLink = document.querySelector(".chatlink"); 
