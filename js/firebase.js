@@ -342,9 +342,6 @@ setCategoryListings();
 
 const fetchCategoryListings = async (categoryName) => {
   const categoryListingsRef = ref(database, `categoryListings/${categoryName}`);
-  // console.log("Querying Firebase at:", `categoryListings/${categoryName}`);
-  // console.log("Fetching data from Firebase:", categoryListingsRef.toString());
-
   const snapshot = await get(categoryListingsRef);
   if (snapshot.exists()) {
     // bgImage, listings

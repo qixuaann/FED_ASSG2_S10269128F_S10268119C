@@ -119,6 +119,7 @@ hr {
 #messageInput {
     height: 50px;
     width: 40%;
+    padding-left: 10px;
 }
 
 #sendMessageButton {

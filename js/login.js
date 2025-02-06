@@ -125,6 +125,10 @@ loginForm.addEventListener("submit", async (event) => {
             localStorage.removeItem("rememberedCredentials");
         }
 
+        // store login state and user info 
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("currentUser", JSON.stringify(user));
+
         // back to home page
         window.location.href = "home.html"; 
 

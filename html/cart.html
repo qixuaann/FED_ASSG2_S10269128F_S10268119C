@@ -34,27 +34,32 @@
               <img src="/assets/chat.png" alt="chat-icon">
             </button>
           </a>
-          <a href="signup.html" class="auth-button">Sign Up</a>
+          <a href="sign-up.html" class="auth-button">Sign Up</a>
           <a href="login.html" class="auth-button">Log In</a>
         </div>
       </div>
     </nav>
+    <div id="cart-container" class="cart-container"></div>
+      <div class="cart-details">
+        <div id="cart-items"></div>
+      </div>
+      <div class="payment-details">
+        <h2>Order Summary</h2>
+        <div class="payment-summary">
+            <p><span>Subtotal</span><span id="subtotal">$0.00</span></p>
+            <p><span>Shipping</span><span id="shipping">Free</span></p>
+            <p><span>Tax (VAT)</span><span id="tax">$0.00</span></p>
+            <p class="total"><span>Total</span><span id="total">$0.00</span></p>
+        </div>
+        <button id="checkout-btn" class="checkout-btn">Checkout</button>
+        <button id=".remove-btn"></button>
+    </div>    
 
-    <div id="cart-container" class="cart-container">
-        <!-- <p class="indication">You don't have any items in your cart.</p>
-        <p>Have an account? Sign in to see your items.</p>
-        <div class="buttons">
-            <a href="home.html" class="home">
-                <button class="shopping-btn">Start Shopping</button>
-            </a>
-            <a href="login.html" class="login">
-                <button class="login-btn"><strong>Sign in</strong></button>
-            </a>
-        </div> -->
-    </div>
-
-    <script type="module" src="../js/script.js">
-      // displayLoginPrompt()
-    </script>
+    <div id="lottie-box"></div>
+    <script type="module" src="../js/cart.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <dotlottie-player src="https://lottie.host/76e1d40c-2b08-403e-9d83-70e02d18dc0d/8jXTbHRRv4.lottie" background="transparent" speed="1" style="width: 1830px; height: 480px"  loop autoplay></dotlottie-player>
+    <!-- displayLoginPrompt() -->
  </body>
 </html>
+

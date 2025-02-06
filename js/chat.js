@@ -83,7 +83,6 @@ export function resetBotResponseFlag() {
 // chat UI with selected listing data
 export function populateChatUI(listingData) {
     const messagesDiv = document.getElementById('messages');
-    messagesDiv.innerHTML = '';
 
     // listing title
     const listingTitleElement = document.getElementById('listingTitle');
@@ -109,6 +108,7 @@ export function populateChatUI(listingData) {
       listingImageElement.src = listingData.mainImage || '';
       listingImageElement.alt = listingData.title || 'Listing Image';
     }
+    messagesDiv.innerHTML = '';
 }
 
 export function displayMessagesForListing(listingId) {
@@ -145,9 +145,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         ...listingsData.listings,
         ...(categoryData.listings[category] || {}),
     };
-
     const listing = allListings[listingId];
-
     populateChatUI(listing);
     displayMessagesForListing(listingId);
 });
