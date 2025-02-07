@@ -290,6 +290,20 @@ body {
     cursor: pointer;
 }
 
+#add-listing {
+    display: block;
+    margin-left: 1100px;
+    width: 100px;
+    padding: 13px;
+    background-color: #488ddb;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 48rem) {
     .navbar {
