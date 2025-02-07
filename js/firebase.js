@@ -76,7 +76,6 @@ const fetchPopularListings = (callback) => {
       });
 };
 
-
 // category listings
 const setCategoryListings = () => {
     const categoryListings = {
@@ -350,9 +349,66 @@ const fetchCategoryListings = async (categoryName) => {
   }
 };
 
-//
+// profile listings
+const setProfileListings = () => {
+  const profileListingsRef = ref(database, 'profileListings');
+  set(profileListingsRef, {
+    listingID1: {
+      title: "Chaps Ralph Lauren Coat Man",
+      category: "Men's Fashion",
+      price: "80.00",
+      imageURL: "/assets/jacket1.jpg"
+    },
+    listingID2: {
+      title: "SEVENTEEN 4th Album Repackage 'SECTOR 17'",
+      category: "Hobbies & Toys",
+      price: "28.00",
+      imageURL: "/assets/listing-kpop1.jpg"
+    },
+    listingID3: {
+      title: "Club Shirts Cute",
+      category: "Woman's Fashion",
+      price: "13.00",
+      imageURL: "/assets/tee.jpeg"
+    },
+    listingID4: {
+      title: "Sony WHCH520/B Bluetooth Headphones",
+      category: "Mobile & Gadgets",
+      price: "13.00",
+      imageURL: "/assets/headphones.jpg"
+    },
+    listingID5: {
+      title: "Ralph Lauren Jacket",
+      category: "Men's Fashion",
+      price: "13.00",
+      imageURL: "/assets/jacket2.jpg"
+    },
+  })
+  .then(() => {
+    console.log("Data has been written successfully.");
+  })
+  .catch((error) => {
+    console.log("Error writing data: ", error);
+  });
+};
 
-export { fetchPopularListings, setPopularListings, fetchCategoryListings,  database, ref, push, get, set, serverTimestamp, onValue};
+const fetchProfileListings = (callback) => {
+  const profileListingsRef = ref(database, 'profileListings');
+  get(profileListingsRef)
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        callback(snapshot.val());
+      } else {
+        console.log("No data available.");
+      }
+    })
+    .catch((error) => {
+      console.log("Error reading data: ", error);
+    });
+};
+
+
+export { fetchPopularListings, setPopularListings, fetchCategoryListings,  setProfileListings, fetchProfileListings, database, ref, push, get, set, serverTimestamp, onValue};
 export function fetchListingById(id) {
   return firebase.database().ref(`listings/${id}`).once('value').then(snapshot => snapshot.val());
 }
