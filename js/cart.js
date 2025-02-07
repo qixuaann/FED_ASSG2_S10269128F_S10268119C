@@ -1,11 +1,3 @@
-function logout() {
-    // Clear stored credentials and login state
-    localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("currentUser");
-    document.getElementById("username").value = "";
-    alert("You have been logged out.");
-    window.location.href = "home.html"; // Redirect to login page
-}
 document.addEventListener("DOMContentLoaded", () => {
     const cartContainer = document.getElementById("cart-container");
     const cartItemsContainer = document.getElementById("cart-items"); 
