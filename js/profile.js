@@ -11,6 +11,10 @@ window.onload = () => {
 
 fetchProfileListings((listings) => {
     const listingsContainer = document.getElementById('listings-container');
+    // calculation logic for number of listings
+    const numberOfListings = Object.keys(listings).length;
+    document.getElementById("calculate-listings").textContent = `${numberOfListings} listings`;
+
 
     for (const listingId in listings) {
         const listing = listings[listingId];
@@ -74,4 +78,3 @@ tabs.forEach(tab => {
         target.classList.add('active');
     });
 });
-

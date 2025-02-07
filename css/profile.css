@@ -304,6 +304,10 @@ body {
     cursor: pointer;
 }
 
+#calculate-listings {
+    margin-left: 49px;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 48rem) {
     .navbar {
