@@ -1,11 +1,23 @@
-/* .cart-container {
+.cart-container {
     display: flex;
     flex-direction: column;
     position: absolute;
     align-items: center;
-    top: 50%;
-    left: 35%;
+    width: 550px;
     gap: 10px;
+    top: 60%;
+    left: 35%;
+}
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .buttons {
@@ -20,7 +32,7 @@ p {
     font-size: 13px;
 }
 
-.shopping-btn, .login-btn {
+.shopping-btn, .sign-up-btn {
     border-radius: 20px;
     width: 250px;
     height: 38px;
@@ -33,29 +45,21 @@ p {
     color: #488ddb;
 }
 
-.login-btn {
+.sign-up-btn {
     color: white;
     background-color: #488ddb;
 
-} */
-
-#lottie-box {
-    left: 30%;
-}
-
-.checkout-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cart-details, .payment-details {
     width: 48%;
+}
+
+.payment-details {
+    margin: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 750px;
 }
 
 .cart-details h2, .payment-details h2 {
@@ -66,6 +70,8 @@ p {
 .cart-item {
     display: flex;
     justify-content: space-between;
+    margin: 50px;
+    width: 800px;
     align-items: center;
     margin-bottom: 15px;
     padding-bottom: 15px;
@@ -117,7 +123,7 @@ p {
     display: block;
     width: 100%;
     padding: 15px;
-    background-color: #007bff;
+    background-color: #0574eb;
     color: white;
     text-align: center;
     border: none;
@@ -128,4 +134,33 @@ p {
 
 .checkout-btn:hover {
     background-color: #0056b3;
+}
+
+.remove-btn {
+    background: #ff4d4d;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+    background: #cc0000;
+}
+
+#logoutForm button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #e88885;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logoutForm button:hover {
+    background-color: #c9302c;
 }

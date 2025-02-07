@@ -40,26 +40,39 @@
       </div>
     </nav>
     <div id="cart-container" class="cart-container"></div>
-      <div class="cart-details">
-        <div id="cart-items"></div>
-      </div>
-      <div class="payment-details">
-        <h2>Order Summary</h2>
-        <div class="payment-summary">
-            <p><span>Subtotal</span><span id="subtotal">$0.00</span></p>
-            <p><span>Shipping</span><span id="shipping">Free</span></p>
-            <p><span>Tax (VAT)</span><span id="tax">$0.00</span></p>
-            <p class="total"><span>Total</span><span id="total">$0.00</span></p>
+      <div class="checkout-container">
+        <div class="cart-details">
+          <div id="cart-items"></div>
         </div>
-        <button id="checkout-btn" class="checkout-btn">Checkout</button>
-        <button id=".remove-btn"></button>
+        <div class="payment-details">
+          <h2>Order Summary</h2>
+          <div class="payment-summary">
+              <p><span>Subtotal</span><span id="subtotal">$0.00</span></p>
+              <p><span>Shipping</span><span id="shipping">Free</span></p>
+              <p><span>Tax (VAT)</span><span id="tax">$0.00</span></p>
+              <p class="total"><span>Total</span><span id="total">$0.00</span></p>
+          </div>
+          <button id="checkout-btn" class="checkout-btn">Checkout</button>
+          <button id=".remove-btn"></button>
+          <form id="logoutForm">
+            <button type="button" onclick="logout()">Logout</button>
+        </form>
+      </div>
     </div>    
 
     <div id="lottie-box"></div>
     <script type="module" src="../js/cart.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-    <dotlottie-player src="https://lottie.host/76e1d40c-2b08-403e-9d83-70e02d18dc0d/8jXTbHRRv4.lottie" background="transparent" speed="1" style="width: 1830px; height: 480px"  loop autoplay></dotlottie-player>
+    <dotlottie-player src="https://lottie.host/76e1d40c-2b08-403e-9d83-70e02d18dc0d/8jXTbHRRv4.lottie" background="transparent" speed="1" style="width: 1890px; height: 290px"  loop autoplay></dotlottie-player>
     <!-- displayLoginPrompt() -->
+    <script>
+      function logout() {
+        // Clear stored credentials and login state
+        localStorage.removeItem("isLoggedIn");
+        alert("You have been logged out.");
+        window.location.href = "home.html"; // Redirect to login page
+      }
+    </script>
  </body>
 </html>
 

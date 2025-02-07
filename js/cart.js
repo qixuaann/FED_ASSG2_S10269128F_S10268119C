@@ -1,3 +1,11 @@
+function logout() {
+    // Clear stored credentials and login state
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser");
+    document.getElementById("username").value = "";
+    alert("You have been logged out.");
+    window.location.href = "home.html"; // Redirect to login page
+}
 document.addEventListener("DOMContentLoaded", () => {
     const cartContainer = document.getElementById("cart-container");
     const cartItemsContainer = document.getElementById("cart-items"); 
@@ -55,12 +63,23 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>Have an account? Sign in to see your items.</p>
             <div class="buttons">
                 <a href="home.html" class="home">
-                    <button class="shopping-btn">Start Shopping</button>
+                    <button id="shopping-btn" class="shopping-btn">Start Shopping</button>
                 </a>
-                <a href="login.html" class="login">
-                    <button class="login-btn"><strong>Sign in</strong></button>
+                <a href="sign-up.html" class="sign-up">
+                    <button id="sign-up-btn" class="sign-up-btn"><strong>Sign in</strong></button>
                 </a>
             </div>
         `;
     }
+});
+
+// need make it work
+document.addEventListener("click", function (event) {
+    if (event.target.id === "shopping-btn") {
+        window.location.href = "home.html";
+    }
+    if (event.target.id === "sign-up-btn") {
+        window.location.href = "sign-up.html";
+    }
+
 });
