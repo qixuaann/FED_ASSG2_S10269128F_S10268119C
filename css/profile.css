@@ -1,0 +1,318 @@
+/* remove the style.css blue background */
+body {
+    background-color: white;
+}
+
+.profile-card {
+    margin-left: 3%;
+    margin-top: 2%;
+    display: flex;
+    align-items: left;
+    gap: 1rem;
+    width: 75%;
+    padding: 2rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.75rem;
+    flex-wrap: wrap;         
+    align-items: flex-start; 
+    position: relative;      
+    overflow: hidden;      
+}
+
+.avatar {
+    background-color: #d97b75;
+    color: white;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.profile-info {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.profile-info p {
+    position: static;  
+    display: flex;    
+    align-items: center;
+    gap: 0.3rem;    
+    margin: 0.2rem 0;
+}
+
+.profile-info img[alt="mail-symbol"] {
+    position: relative;
+    top: -0.1rem;
+    left: 0.3rem;
+}
+
+.profile-info img[alt="facebook-logo"] {
+    position: relative;
+    top: -0.1rem;
+    left: 0.3rem;
+    width: 1.2rem;
+}
+
+.profile-info h3 {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+    gap: 0.1rem;
+    margin-right: 15rem;
+    margin-top: -1.65rem;
+}
+
+.profile-info img[alt="location-symbol"] {
+    position: relative;
+    margin-top: -0.2rem;
+}
+
+/* Profile Stats */
+.profile-stats {
+    display: flex;
+    align-items: center;
+    gap: 2rem;         
+    font-weight: normal;
+    margin-top: 1rem;
+}
+
+.rating, .joined {
+    text-align: center;
+}
+
+.rating h3, .joined h4 {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    gap: 0.3rem;     
+}
+
+.rating img {
+    width: 1rem;     
+    height: auto;
+}
+
+.rating p, .joined p {
+    font-size: 1rem;
+    color: #777;        
+    margin: 0;         
+}
+
+.profile-stats h4 {
+    font-weight: normal;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.edit-btn {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 0.1rem solid #333;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: -0.5rem; 
+}
+
+/* profile categories Section */
+.profile-categories {
+    display: flex;
+    gap: 1.5rem;           
+    margin-top: -0.5rem;    
+    margin-left: 6rem;   
+    width: 100%;          
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease;  
+    background-color: #eee;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    width: 5rem;           
+    height: 5rem;
+}
+
+.category img {
+    width: 2.5rem;     
+    height: 2.5rem;
+    object-fit: contain;
+    margin-bottom: 0.3rem;  
+}
+
+.category p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.category:hover {
+    transform: scale(1.1);   /* Slight zoom effect */
+}
+
+/* tabs */
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    border-bottom: 0.1rem solid #ccc;
+    width: 75%;
+    margin: 1rem 0 1rem 3.2%;
+    padding-bottom: 0.5rem;
+}
+
+.tab {
+    cursor: pointer;
+    font-weight: normal;
+    text-decoration: none;
+    color: #333;
+    padding-bottom: 0.3rem;
+}
+
+.tab.active {
+    border-radius: 0.1rem;
+    border-bottom: 0.2rem solid gray;
+}
+
+.tab-content {
+    display: none;  /* Hide content by default */
+    margin-top: 1rem;
+}
+
+.tab-content.active {
+    display: block;  /* Show active content */
+}
+
+.tab-content p {
+    margin-left: 3%;
+}
+
+/* listings */
+.listings {
+    display: flex;
+    margin-left: 2rem;
+    width: 88%;
+  }
+
+  .listing-item {
+    display: block;
+    width: 15%;
+    height: 20rem;
+    padding: 0.94rem;
+    background-color: #B0967F;
+    text-decoration: none;
+    margin: 1rem;
+    border-radius: 1%;
+  }
+
+  .listing-content {
+    display: block;
+    width: 100%;
+    height: 38%;
+    padding: 0.94rem;
+    margin-top: -2%;
+    background-color: white;
+    border-radius: 1%;
+  }
+
+  .listing-item:hover {
+      box-shadow: 0 0.5rem 0.8rem lightgray;
+  }
+
+  .listing-item img {
+    width: 100%;
+    height: 58%;
+    border-radius: 1%;
+    margin-top: 1rem;
+  }
+
+  .listing-content h1 {
+    font-weight: normal;
+    font-size: 0.5rem;
+    color: #707070;
+    margin-left: 0.2rem;
+  }
+
+  .listing-content h2,
+  .listing-content a {
+      font-weight: normal;
+      text-decoration: none;
+      color: black;
+      font-size: 0.70rem;
+  }
+
+  .listings h2:hover {
+    color: darkcyan;
+  }
+    
+  .listing-content h3 {
+    font-weight: normal;
+    font-size: 0.5rem;
+    color: #707070;
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-left: 0.05rem;
+  }
+
+  .listing-content h4 {
+    font-weight: normal;
+    font-size: 0.7rem;
+    color: #48A788;
+    text-align: right;
+    margin-top: 0.25rem;
+    margin-left: 0.15rem;
+  }
+
+  .chat-btn {
+    font-size: 0.6rem; /* Adjust this size as needed */
+    padding: 0.1rem 0.15rem; 
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 48rem) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .avatar {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+}
