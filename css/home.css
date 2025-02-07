@@ -112,14 +112,14 @@ body {
     padding: 0.94rem;
     background-color: #B0967F;
     text-decoration: none;
-    margin: 1rem;
+    margin: 1.2rem;
     border-radius: 1%;
   }
 
   .listing-content {
     display: block;
     width: 100%;
-    height: 38%;
+    height: 35%;
     padding: 0.94rem;
     margin-top: -2%;
     background-color: white;

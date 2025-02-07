@@ -22,15 +22,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 </a>
             `;
         } else {
-            const cartItemsHTML = cart.map((item) => `
-                <div class="cart-item">
-                    <img src="${item.image}" alt="${item.name}">
-                    <h3>${item.name}</h3>
-                    <p>Quantity: ${item.quantity}</p>
-                    <p>Price: $${item.price * item.quantity}</p>
-                    <button class="remove-btn" data-id="${item.id}">Remove</button>
-                </div>
-            `).join("");
+            const cartItemsHTML = cart.map((item) => {
+                // remove price symbol
+                const validPrice = parseFloat(item.price.toString().replace(/[^0-9.]/g, '')) || 0;
+                const itemTotal = (validPrice * item.quantity).toFixed(2); 
+                return `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <h3>${item.name}</h3>
+                        <p>Quantity: ${item.quantity}</p>
+                        <p>Price: $${itemTotal}</p>
+                        <button class="remove-btn" data-id="${item.id}">Remove</button>
+                    </div>
+                `;
+            }).join("");
+            
 
             cartItemsContainer.innerHTML = cartItemsHTML;
 

@@ -68,86 +68,71 @@ function populateListingDetails(listing) {
     document.querySelector(".profile-icon").textContent = listing.seller.profileIcon;
     document.querySelector(".profile-info strong").textContent = listing.seller.username;
     document.querySelector(".profile-info p").textContent = `Since ${listing.seller.joined}`;
-  } 
-  document.addEventListener("DOMContentLoaded", async () => {
-    const params = new URLSearchParams(window.location.search);
-    const listingId = params.get("id");
-    const category = params.get("category");
-  
-    try {
-      const [listingsResponse, categoryResponse] = await Promise.all([
-        fetch("/data/listings.json"),
-        fetch("/data/categoryListings.json"),
-      ]);
-  
-      const [listingsData, categoryData] = await Promise.all([
-        listingsResponse.json(),
-        categoryResponse.json(),
-      ]);
-  
-      // merge data
-      const allListings = {
-        ...listingsData.listings,
-        ...(categoryData.listings[category] || {}),
-      };
-  
-      if (listingId) {
-        const listing = allListings[listingId];
-        populateListingDetails(listing);
+} 
 
-        const chatLink = document.querySelector(".chatlink"); 
+document.addEventListener("DOMContentLoaded", async () => {
+  const params = new URLSearchParams(window.location.search);
+  const listingId = params.get("id");
+  const category = params.get("category");
 
-        if (chatLink) {
-          chatLink.href = `chat.html?category=${encodeURIComponent(listing.category)}&id=${encodeURIComponent(listingId)}`;
+  try {
+    const [listingsResponse, categoryResponse] = await Promise.all([
+      fetch("/data/listings.json"),
+      fetch("/data/categoryListings.json"),
+    ]);
 
-          chatLink.addEventListener('click', (event) => {
-            event.preventDefault(); 
-            window.location.href = chatLink.href; 
-          });
-        }
-        document.querySelector(".add-to-cart-btn").addEventListener("click", () => {
-          const cart = JSON.parse(localStorage.getItem("cart")) || [];
-          const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-          if (isLoggedIn) {
-            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-            const userCart = JSON.parse(localStorage.getItem(`cart_${currentUser.Username}`)) || [];
+    const [listingsData, categoryData] = await Promise.all([
+      listingsResponse.json(),
+      categoryResponse.json(),
+    ]);
 
-            const itemIndex = userCart.findIndex(item => item.id === listingId);
-            if (itemIndex === -1) {
-                userCart.push({ 
-                    id: listingId,
-                    name: listing.title,
-                    price: listing.price,
-                    image: listing.mainImage,
-                    quantity: 1,
-                });
-            } else {
-                userCart[itemIndex].quantity += 1; 
-            }
+    // merge data
+    const allListings = {
+      ...listingsData.listings,
+      ...(categoryData.listings[category] || {}),
+    };
 
-            localStorage.setItem(`cart_${currentUser.Username}`, JSON.stringify(userCart));
-            window.location.href = "cart.html";
-        } else {
-            // if not logged in, store in generic cart
-            const itemIndex = cart.findIndex(item => item.id === listingId);
-            if (itemIndex === -1) {
-                cart.push({ 
-                    id: listingId,
-                    name: listing.title,
-                    price: listing.price,
-                    image: listing.mainImage,
-                    quantity: 1,
-                });
-            } else {
-                cart[itemIndex].quantity += 1;
-            }
+    if (listingId) {
+      const listing = allListings[listingId];
+      populateListingDetails(listing);
 
-            localStorage.setItem("cart", JSON.stringify(cart));
-            window.location.href = "cart.html";
-        }
+      const chatLink = document.querySelector(".chatlink"); 
+
+      if (chatLink) {
+        chatLink.href = `chat.html?category=${encodeURIComponent(listing.category)}&id=${encodeURIComponent(listingId)}`;
+
+        chatLink.addEventListener('click', (event) => {
+          event.preventDefault(); 
+          window.location.href = chatLink.href; 
+        });
+      }
+      document.querySelector(".add-to-cart-btn").addEventListener("click", () => {
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+        if (isLoggedIn) {
+          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+          const userCart = JSON.parse(localStorage.getItem(`cart_${currentUser.Username}`)) || [];
+
+          const itemIndex = userCart.findIndex(item => item.id === listingId);
+          if (itemIndex === -1) {
+            // remove price symbol
+              const validPrice = parseFloat(listing.price.replace(/[^0-9.]/g, '')) || 0;
+              userCart.push({ 
+                  id: listingId,
+                  name: listing.title,
+                  price: validPrice,
+                  image: listing.mainImage,
+                  quantity: 1,
+              });
+          } else {
+              userCart[itemIndex].quantity += 1; 
+          }
+
+          localStorage.setItem(`cart_${currentUser.Username}`, JSON.stringify(userCart));
+          window.location.href = "cart.html";
+        } 
     });
-}
-    } catch (error) {
-      console.error("Error loading listings:", error);
-    }
-  });
+  }
+  } catch (error) {
+    console.error("Error loading listings:", error);
+  }
+});
