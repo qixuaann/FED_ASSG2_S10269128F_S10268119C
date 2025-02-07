@@ -35,10 +35,37 @@ document.addEventListener("DOMContentLoaded", () => {
                         <button class="remove-btn" data-id="${item.id}">Remove</button>
                     </div>
                 `;
+                
             }).join("");
-            
 
+            function calculateCartTotal(cart) {
+                let subtotal = 0;
+                // subtotal
+                cart.forEach(item => {
+                    const validPrice = parseFloat(item.price.toString().replace(/[^0-9.]/g, '')) || 0;
+                    subtotal += validPrice * item.quantity;
+                });
+              
+                const shipping = 0; 
+                const taxRate = 0.1; 
+                const tax = subtotal * taxRate;
+                const total = subtotal + shipping + tax;
+              
+                return {
+                    subtotal: subtotal.toFixed(2),
+                    shipping: shipping.toFixed(2),
+                    tax: tax.toFixed(2),
+                    total: total.toFixed(2),
+                };
+              }
+              
             cartItemsContainer.innerHTML = cartItemsHTML;
+            const { subtotal, shipping, tax, total } = calculateCartTotal(cart);
+
+            document.getElementById("subtotal").textContent = `$${subtotal}`;
+            document.getElementById("shipping").textContent = `$${shipping}`;
+            document.getElementById("tax").textContent = `$${tax}`;
+            document.getElementById("total").textContent = `$${total}`;
 
             document.querySelectorAll(".remove-btn").forEach(button => {
                 button.addEventListener("click", (event) => {
