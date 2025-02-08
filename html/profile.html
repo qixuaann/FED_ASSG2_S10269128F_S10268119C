@@ -81,7 +81,7 @@
             <div class="tab active" data-tab="listing-tab">Listings</div>
             <div class="tab" data-tab="reviews-tab">Reviews</div>
             <div class="tab" data-tab="about-tab">About</div>
-            <div class="tab">
+            <div class="add-listing-button">
                 <button id="add-listing">Add Listing</button>
                 <!-- add listing modal -->
                 <div id="add-listing-modal" class="modal hidden">
@@ -135,14 +135,30 @@
             <div class="listings" id="listings-container">
                 <!-- dynamically generate listings -->
             </div>
-        </div>
-        <div class="tab-content" id="reviews-tab">
+          </div>
+          <div class="tab-content" id="reviews-tab">
             <p>Reviews of seller</p>
-        </div>
-        <div class="tab-content" id="about-tab">
+          </div>
+          <div class="tab-content" id="about-tab">
             <p>Description of profile</p>
+          </div>
+      </main>
+     <!-- ad column on the right // related to main content but seperated from it so use aside -->
+     <aside class="ad-column"> 
+      <h1>Advertisement</h1>
+      <div class="ad-box">
+          <p>Your Ad Here</p>
+          <img src="/assets/ad-placeholder1.png" alt="Ad Placeholder">
+      </div>
+      <div class="ad-box">
+          <p>Your Ad Here</p>
+          <img src="/assets/ad-placeholder2.png" alt="Ad Placeholder">
+      </div>
+    </aside>
+  </div>
         </div>
-    </main>
+      </aside>
+    </div>
     <script type="module" src="../js/profile.js"></script>
     <script type="module" src="../js/firebase.js"></script>
 </body>
