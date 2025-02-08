@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile & Rewards</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/rewards.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <nav id="desktop-nav">
+        <div class="top-bar">
+          <a href="home.html" class="logo">
+            <img src="/assets/mokesell.png" alt="MokeSell">
+          </a>
+          <div class="search-bar">
+            <img src="/assets/search.png" alt="search-icon" class="search-icon">
+            <input type="text" placeholder="Search..." class="search">
+            <a href="camera.html" class="camera">
+              <button class="camera-btn">
+                <img src="/assets/camera.png" alt="camera-icon">
+              </button>
+            </a>
+          </div>      
+          <div class="icons">
+            <a href="cart.html" class="cart">
+              <button class="cart-btn">
+                <img src="/assets/cart.png" alt="cart-icon">
+              </button>
+            </a>
+            <a href="chat-list.html" class="chat">
+              <button class="chat-btn">
+                <img src="/assets/chat.png" alt="chat-icon">
+              </button>
+            </a>
+            <div class="buttons">
+              <a href="sign-up.html" class="auth-button">Sign Up</a>
+              <a href="login.html" class="auth-button">Log In</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+  
+    <section class="profile">
+        <div id="user-avatar" class="avatar"></div>
+        <h2 id="user-username"></h2>
+        <p>3/20 Badges Earned</p>
+        <div class="toggle-buttons">
+            <button class="active">Record</button>
+            <button>Vouchers Claimed</button>
+        </div>
+    </section>
+
+    <!-- Rewards Section -->
+    <section class="rewards">
+        <div class="reward-grid">
+            <div class="reward active">
+                <img src="badge1.png" alt="Badge">
+                <h4>5% discount off</h4>
+                <p>no min spend</p>
+                <button class="claim-btn">Claim reward</button>
+            </div>
+            <div class="reward">
+                <img src="badge2.png" alt="Badge">
+                <h4>$3 off</h4>
+                <p>no min spend</p>
+                <button class="claim-btn">Claim reward</button>
+            </div>
+            <div class="reward claimed">
+                <img src="badge3.png" alt="Badge">
+                <h4>Free mailing</h4>
+                <p>no min spend</p>
+                <button class="claimed-btn">Claimed</button>
+            </div>
+        </div>
+        <a href="#" class="see-all">See All ></a>
+    </section>
+    <script type="module" src="../js/rewards.js"></script>
+</body>
+</html>

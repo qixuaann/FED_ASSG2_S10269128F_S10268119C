@@ -1,0 +1,151 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    font-family: 'Onest', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 15px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.profile-icon {
+    background: #d9534f;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Profile Section */
+.profile {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.avatar {
+    background: #d9534f;
+    color: white;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+h2 {
+    margin: 10px 0 5px;
+}
+
+.toggle-buttons {
+    margin-top: 15px;
+}
+
+.toggle-buttons button {
+    padding: 10px 15px;
+    border: none;
+    background: #ddd;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-buttons .active {
+    background: black;
+    color: white;
+}
+
+/* Rewards Section */
+.rewards {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
+
+.reward-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.reward {
+    background: #eee;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.reward img {
+    width: 50px;
+    height: 50px;
+}
+
+.reward h4 {
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+.claim-btn {
+    background: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.claimed {
+    opacity: 0.5;
+}
+
+.claimed-btn {
+    background: #ccc;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+.see-all {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: green;
+}
