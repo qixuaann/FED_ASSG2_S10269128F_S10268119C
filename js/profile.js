@@ -87,7 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
                    bumped: "No",
                    reviews: []
                };
-
+               const storedListings = JSON.parse(localStorage.getItem("listings")) || [];
+               storedListings.push(newListing);
+               
                addLocalListing(newListing);
                displayListings();
                createListingForm.reset();

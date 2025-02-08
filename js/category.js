@@ -1,10 +1,30 @@
 import { fetchCategoryListings } from "../js/firebase.js";
 
+function getLocalProfileListings() {
+  const storedListings = JSON.parse(localStorage.getItem("listings")) || [];
+  return storedListings;
+}
+
 const renderCategoryPage = async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryName = urlParams.get("category");
    
     const categoryData = await fetchCategoryListings(categoryName);
+    // fetch listings from Firebase
+    let listings = categoryData ? categoryData.listings : {};
+
+    // Fetch local profile listings
+    const localListings = getLocalProfileListings();
+    
+    const filteredLocalListings = localListings.filter(
+      listing => listing.category === categoryName
+    );
+    
+    filteredLocalListings.forEach((localListing, index) => {
+      listings[`local-${index}`] = localListing;
+    });
+    
+
     if (categoryData) {
         const banner = document.getElementById("category-banner");
         banner.style.backgroundImage = `url(${categoryData.bgImage})`;
@@ -40,7 +60,7 @@ const renderCategoryPage = async () => {
           }
 
             listingElement.innerHTML = `
-              <img src="${listing.imageURL}" alt="${listing.title}" />
+              <img src="${listing.mainImage || listing.imageURL || '/assets/default-image.jpg'}" alt="${listing.title}" />
               <h3>${listing.title}</h3>
               <p>$${listing.price}</p>
             `;
