@@ -458,6 +458,103 @@ body {
     }
   }
 
+  /* for the reviews tab */
+  .reviews-section {
+    max-width: 67rem;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 2.8rem;
+}
+
+h2 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Rating Summary */
+.rating-summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.overall-rating h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.overall-rating span {
+    font-size: 1.5rem;
+    color: gray;
+}
+
+.stars {
+    color: gold;
+    font-size: 1.3rem;
+}
+
+.rating-bars {
+    flex: 1;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.progress {
+    flex: 1;
+    background: #ddd;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.fill {
+    background: gold;
+    height: 100%;
+}
+
+/* Review Cards */
+.review-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.review-card h4 {
+    margin: 0;
+}
+
+.review-card p {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.review-card .date {
+    font-size: 0.8rem;
+    color: gray;
+}
+
 .ad-column {
     width: 11.5%; /* Adjust width as needed */
     position: absolute; 
@@ -490,7 +587,7 @@ body {
 }
 
 .ad-box img {
-    width: 100%;
+    width: 125%;
     height: auto;
     border-radius: 5px;
 }
