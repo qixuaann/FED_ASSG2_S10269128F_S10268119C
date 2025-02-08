@@ -31,7 +31,7 @@ function populateListingDetails(listing) {
           .map((src) => `<img src="${src}" alt="Thumbnail">`)
           .join("");
     } else {
-        thumbnailsContainer.innerHTML = `<img src="${mainImageUrl}" alt="Thumbnail">`;
+      thumbnailsContainer.innerHTML = "";
     }
 
     // suggested products
@@ -53,8 +53,11 @@ function populateListingDetails(listing) {
         .join("")}
     `;
     else {
-      suggestedProducts.innerHTML = `<h3>Suggested Products</h3><p>No suggestions available.</p>`;
-    }
+      suggestedProducts.innerHTML = `
+      <h3 style="margin-left: 260px;">Suggested Products</h3>
+      <p style="margin-left: 260px;">No suggestions available.</p>
+  `;
+      }
     
     // deal methods
     document.querySelector("#location").textContent = listing.location;

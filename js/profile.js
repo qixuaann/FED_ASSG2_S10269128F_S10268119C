@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const description = document.getElementById("listing-description").value;
         const imageFiles = document.getElementById("listing-image").files;
         const category = document.getElementById("listing-category").value || "Uncategorized";
+        const type = document.getElementById("listing-type").value || "None";
         const condition = document.getElementById("listing-condition").value || "Unknown";
         const location = document.getElementById("listing-location").value || "Not specified";
         const mailing = document.getElementById("listing-mailing").value || "Not available";
@@ -78,11 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
                    description,
                    mainImage: imagesArray[0], // first image becomes the main image
                    category,
+                   type,
                    condition,
                    location,
                    mailing,
                    seller: { username: "CurrentUser", profileIcon: "👤", joined: "2025" },
-                   thumbnails: imagesArray,  // full array
                    suggestedProducts: [],
                    bumped: "No",
                    reviews: []
@@ -137,8 +138,9 @@ function displayListings() {
         listingsContainer.innerHTML = "<p>No listings available.</p>";
         return;
     }
+    const limitedListings = listings.slice(0, 30);
 
-    listings.forEach(listing => {
+    limitedListings.forEach(listing => {
         const listingItem = document.createElement("div");
         listingItem.classList.add("listing-item");
         listingItem.dataset.id = listing.id;
