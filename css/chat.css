@@ -1,3 +1,17 @@
+/* dynamic profile picture */
+.avatar {
+    background-color: #d97b75;
+    color: white;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
 /* sidebar */
 .convo {
     display: flex;

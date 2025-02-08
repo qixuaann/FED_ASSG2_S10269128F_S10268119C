@@ -107,3 +107,30 @@ document.addEventListener("click", function (event) {
     }
 
 });
+
+// dynamic profile
+// retrieve the logged-in user details from localstorage.
+const loggedinuser =
+  JSON.parse(localStorage.getItem("loggedInUser")) ||
+  { username: "guest", profilePic: "avatar" };
+
+// update the top-right (or top-bar) avatar icon (if the container exists)
+const topBarIcons = document.querySelector('.top-bar .loginsignup');
+if (topBarIcons) {
+  topBarIcons.innerHTML = "";
+  const profileLink = document.createElement('a');
+  profileLink.href = "profile.html";
+  const topRightAvatar = document.createElement("div");
+  topRightAvatar.classList.add("avatar");
+  topRightAvatar.style.width = "2.1rem";
+  topRightAvatar.style.height = "2.1rem";
+  topRightAvatar.style.fontSize = "1rem";
+  topRightAvatar.style.marginTop = "-1.7rem";
+  topRightAvatar.style.marginLeft = "0.7rem";
+
+  if (loggedinuser.profilePic) {
+    topRightAvatar.textContent = loggedinuser.username.slice(0, 2).toUpperCase();
+  }
+  profileLink.appendChild(topRightAvatar);
+  topBarIcons.appendChild(profileLink);
+}

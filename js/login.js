@@ -14,7 +14,7 @@ document.getElementById("username").addEventListener("input", function () {
                 document.getElementById("password").value = "";
             }
         } catch (e) {
-            console.error("error parsing remembered credentials", e);
+            console.error("Error parsing remembered credentials", e);
         }
     }
 });
@@ -60,7 +60,7 @@ loginForm.addEventListener("submit", async (event) => {
     // check if the user is currently locked out
     if (attemptData.blockTime > currentTime) {
         const remaining = Math.ceil((attemptData.blockTime - currentTime) / 1000);
-        alert(`too many failed attempts. please try again in ${remaining} seconds.`);
+        alert(`Too many failed attempts. Please try again in ${remaining} seconds.`);
         return;
     }
 
@@ -86,7 +86,7 @@ loginForm.addEventListener("submit", async (event) => {
 
         // check if a user was found
         if (users.length === 0) {
-            alert("no account found. please sign up.");
+            alert("No account found. Please sign up.");
             return;
         }
 
@@ -100,9 +100,9 @@ loginForm.addEventListener("submit", async (event) => {
             // 5 min cool down for user to try again
             if (attemptData.attempts >= 3) {
                 attemptData.blockTime = currentTime + 300000; // 5 minutes in milliseconds
-                alert("incorrect password. you have been locked out for 5 minutes.");
+                alert("Incorrect password. You have been locked out for 5 minutes.");
             } else {
-                alert(`incorrect password. you have ${3 - attemptData.attempts} attempt(s) remaining.`);
+                alert(`Incorrect password. You have ${3 - attemptData.attempts} attempt(s) remaining.`);
             }
 
             // save the updated attempt data back to localstorage
@@ -112,7 +112,7 @@ loginForm.addEventListener("submit", async (event) => {
 
         // if login successful --> clear the attempt data
         localStorage.removeItem(attemptKey);
-        alert("login successful!");
+        alert("Login successful!");
 
         // for the "remember me"
         if (rememberMeChecked) {
@@ -138,7 +138,7 @@ loginForm.addEventListener("submit", async (event) => {
         window.location.href = "home.html"; 
 
     } catch (error) {
-        console.error("error during login:", error);
-        alert("error during login: " + error.message);
+        console.error("Error during login:", error);
+        alert("Error during login: " + error.message);
     }
 });
