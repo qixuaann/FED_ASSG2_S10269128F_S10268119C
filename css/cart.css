@@ -200,6 +200,18 @@ dotlottie-player {
         height: 50px;
     }
 
+    .cart-details {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    .cart-item-details {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+    }
+
     .cart-details, .payment-details {
         width: 100%;
         margin-bottom: 20px;
@@ -256,8 +268,15 @@ dotlottie-player {
 
     .cart-item {
         width: 100%;
-        margin: 10px 0;
-        padding: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+        gap: 10px;
+    }
+    
+    .cart-item h3 {
+        font-size: 17px;
+        font-weight: 650;
     }
 
     .cart-item img {
