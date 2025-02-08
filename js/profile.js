@@ -118,6 +118,14 @@ function addLocalListing(newListing) {
     saveListingsToLocalStorage(listings);
 }
 
+// delete a listing by its id and update the UI
+function deleteListing(listingId) {
+    let listings = loadListingsFromLocalStorage();
+    listings = listings.filter(listing => listing.id !== listingId);
+    saveListingsToLocalStorage(listings);
+    displayListings();
+}
+
 function displayListings() {
     const listingsContainer = document.getElementById("listings-container");
     listingsContainer.innerHTML = ""; 
@@ -156,6 +164,18 @@ function displayListings() {
         const price = document.createElement("h4");
         price.textContent = `$${listing.price}`;
         listingContent.appendChild(price);
+
+        // added delete button 
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.classList.add("delete-btn");
+        deleteBtn.addEventListener("click", (e) => {
+            e.stopPropagation(); // prevent redirecting 
+            if (confirm("Are you sure you want to delete this listing?")) {
+                deleteListing(listing.id);
+            }
+        });
+        listingContent.appendChild(deleteBtn);
 
         listingItem.addEventListener("click", () => {
             window.location.href = `listings.html?id=${listing.id}`;
