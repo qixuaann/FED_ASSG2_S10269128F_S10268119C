@@ -67,7 +67,7 @@ const renderCategoryPage = async () => {
             
             if (isTreasure) {
               const lottiePlayerWrapper = document.createElement("a");
-              lottiePlayerWrapper.setAttribute("href", "profile.html");
+              lottiePlayerWrapper.setAttribute("href", "rewards.html");
               lottiePlayerWrapper.setAttribute("target", "_blank");
               lottiePlayerWrapper.classList.add("tuan");
       
