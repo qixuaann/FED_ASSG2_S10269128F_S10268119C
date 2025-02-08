@@ -57,17 +57,18 @@ document.addEventListener("DOMContentLoaded", () => {
             const newListing = {
                 id: listingID,
                 title,
-                price,
+                price: `$${price}`, // match the displayed format
                 description,
-                imageURL,
+                mainImage: imageURL, // changed from imageURL to mainImage
                 category,
                 condition,
                 location,
                 mailing,
-                seller: { username: "CurrentUser", profileIcon: "👤", joined: "2025" }, // Example user
-                thumbnails: [imageURL], // add thumbnail
-                suggestedProducts: [], // now put empty array first
-                bumped: "No"
+                seller: { username: "CurrentUser", profileIcon: "👤", joined: "2025" },
+                thumbnails: [imageURL], 
+                suggestedProducts: [], 
+                bumped: "No",
+                reviews: [] // optional
             };
 
             addLocalListing(newListing);
@@ -113,9 +114,9 @@ function displayListings() {
         listingItem.classList.add("listing-item");
         listingItem.dataset.id = listing.id;
         listingItem.dataset.category = listing.category || "Uncategorized";
-
+       
         const listingImage = document.createElement("img");
-        listingImage.src = listing.imageURL || "/assets/default-image.jpg";
+        listingImage.src = listing.mainImage || "/assets/default-image.jpg";
         listingImage.alt = listing.title;
         listingItem.appendChild(listingImage);
 
@@ -129,6 +130,9 @@ function displayListings() {
         const category = document.createElement("h4");
         category.textContent = listing.category || "No Category";
         listingContent.appendChild(category);
+        const condition = document.createElement("h4");
+        condition.innerHTML = `Condition: ${listing.condition || "Unknown"}`;
+        listingContent.appendChild(condition);
 
         const price = document.createElement("h4");
         price.textContent = `$${listing.price}`;

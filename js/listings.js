@@ -1,3 +1,7 @@
+function loadListingsFromLocalStorage() {
+  return JSON.parse(localStorage.getItem("listings")) || [];
+}
+
 function populateListingDetails(listing) {
     document.querySelector(".title-section h1").textContent = listing.title;
     document.querySelector(".price").textContent = listing.price;
@@ -74,7 +78,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const params = new URLSearchParams(window.location.search);
   const listingId = params.get("id");
   const category = params.get("category");
-
+ 
   try {
     const [listingsResponse, categoryResponse] = await Promise.all([
       fetch("/data/listings.json"),
@@ -86,11 +90,19 @@ document.addEventListener("DOMContentLoaded", async () => {
       categoryResponse.json(),
     ]);
 
+    const localListings = loadListingsFromLocalStorage();
+    const localListingsObj = localListings.reduce((acc, listing) => {
+      acc[listing.id] = listing;
+      return acc;
+    }, {});
+
     // merge data
     const allListings = {
       ...listingsData.listings,
       ...(categoryData.listings[category] || {}),
+      ...localListingsObj // include local listings
     };
+
 
     if (listingId) {
       const listing = allListings[listingId];
@@ -111,7 +123,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (isLoggedIn) {
           const currentUser = JSON.parse(localStorage.getItem("currentUser"));
           const userCart = JSON.parse(localStorage.getItem(`cart_${currentUser.Username}`)) || [];
-
+          
           const itemIndex = userCart.findIndex(item => item.id === listingId);
           if (itemIndex === -1) {
             // remove price symbol
