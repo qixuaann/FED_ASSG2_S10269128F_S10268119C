@@ -14,15 +14,15 @@ document.getElementById("username").addEventListener("input", function () {
                 document.getElementById("password").value = "";
             }
         } catch (e) {
-            console.error("Error parsing remembered credentials", e);
+            console.error("error parsing remembered credentials", e);
         }
     }
 });
 
-// -------------------- Lottie Animation Code  --------------------
+// lottie animation code 
 const lottieContainer = document.getElementById("lottie-container");
 
-// a new div for the Lottie player
+// a new div for the lottie player
 const lottieWrapper = document.createElement("div");
 lottieWrapper.classList.add("lottie-wrapper");
 
@@ -39,7 +39,7 @@ lottiePlayer.style.height = "20%";
 lottieWrapper.appendChild(lottiePlayer);
 lottieContainer.appendChild(lottieWrapper);
 
-// -------------------- Login Form Handling --------------------
+// login form handling
 const loginForm = document.getElementById("loginForm");
 
 loginForm.addEventListener("submit", async (event) => {
@@ -50,26 +50,25 @@ loginForm.addEventListener("submit", async (event) => {
     const password = document.getElementById("password").value;
     const rememberMeChecked = document.getElementById("rememberMe").checked;
 
-    // create a key for localStorage tracking (per username)
+    // create a key for localstorage tracking (per username)
     const attemptKey = `loginAttempts_${username}`;
     const currentTime = Date.now();
 
-    // retrieve any stored attempt data from localStorage
+    // retrieve any stored attempt data from localstorage
     let attemptData = JSON.parse(localStorage.getItem(attemptKey)) || { attempts: 0, blockTime: 0 };
 
     // check if the user is currently locked out
     if (attemptData.blockTime > currentTime) {
         const remaining = Math.ceil((attemptData.blockTime - currentTime) / 1000);
-        alert(`Too many failed attempts. Please try again in ${remaining} seconds.`);
+        alert(`too many failed attempts. please try again in ${remaining} seconds.`);
         return;
     }
-    // ----- Removed the reset of attemptData here so previous attempts are preserved -----
 
     try {
         const query = encodeURIComponent(JSON.stringify({ Username: username }));
         const endpoint = `https://usersdb-a538.restdb.io/rest/account-information?q=${query}`;
 
-        // send a GET request to fetch the user data
+        // fetch the user data
         const response = await fetch(endpoint, {
             method: "GET",
             headers: {
@@ -80,14 +79,14 @@ loginForm.addEventListener("submit", async (event) => {
         });
 
         if (!response.ok) {
-            throw new Error("Error fetching user data");
+            throw new Error("error fetching user data");
         }
 
         const users = await response.json();
 
         // check if a user was found
         if (users.length === 0) {
-            alert("No account found. Please sign up.");
+            alert("no account found. please sign up.");
             return;
         }
 
@@ -101,26 +100,25 @@ loginForm.addEventListener("submit", async (event) => {
             // 5 min cool down for user to try again
             if (attemptData.attempts >= 3) {
                 attemptData.blockTime = currentTime + 300000; // 5 minutes in milliseconds
-                alert("Incorrect password. You have been locked out for 5 minutes.");
+                alert("incorrect password. you have been locked out for 5 minutes.");
             } else {
-                alert(`Incorrect password. You have ${3 - attemptData.attempts} attempt(s) remaining.`);
+                alert(`incorrect password. you have ${3 - attemptData.attempts} attempt(s) remaining.`);
             }
 
-            // save the updated attempt data back to localStorage
+            // save the updated attempt data back to localstorage
             localStorage.setItem(attemptKey, JSON.stringify(attemptData));
             return;
         }
 
         // if login successful --> clear the attempt data
         localStorage.removeItem(attemptKey);
-        alert("Login successful!");
+        alert("login successful!");
 
         // for the "remember me"
         if (rememberMeChecked) {
-            // ----- Added Code Start: Store credentials for autofilling password -----
+            // store credentials for autofilling password
             const creds = { username: username, password: password };
             localStorage.setItem("rememberedCredentials", JSON.stringify(creds));
-            // ----- Added Code End
         } else {
             localStorage.removeItem("rememberedCredentials");
         }
@@ -129,11 +127,18 @@ loginForm.addEventListener("submit", async (event) => {
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("currentUser", JSON.stringify(user));
 
+        // store logged-in user details for profile display
+        localStorage.setItem("loggedInUser", JSON.stringify({
+            username: user.Username, 
+            email: user.Email, // if available in restdb
+            profilePic: user.ProfilePic || "/assets/default-avatar.png" // default image if none is set
+        }));
+
         // back to home page
         window.location.href = "home.html"; 
 
     } catch (error) {
-        console.error("Error during login:", error);
-        alert("Error during login: " + error.message);
+        console.error("error during login:", error);
+        alert("error during login: " + error.message);
     }
 });

@@ -1,4 +1,4 @@
-// for tabs (listings,reviews,about)
+// for tabs (listings, reviews, about)
 const tabs = document.querySelectorAll('.tab');
 const contents = document.querySelectorAll('.tab-content');
 
@@ -44,67 +44,102 @@ document.addEventListener("DOMContentLoaded", () => {
         const location = document.getElementById("listing-location").value || "Not specified";
         const mailing = document.getElementById("listing-mailing").value || "Not available";
 
-        if (!title || !price || !description || !imageFiles.length === 0) {
+        if (!title || !price || !description || imageFiles.length === 0) {
             alert("Please fill in all fields and upload at least one image.");
             return;
         }
 
-       // convert all image files to Base64 and collect them in an array.
-       const fileReaders = [];
-       const imagesArray = [];
+        // convert all image files to Base64 and collect them in an array.
+        const fileReaders = [];
+        const imagesArray = [];
 
-       for (let i = 0; i < imageFiles.length; i++) {
-           fileReaders.push(
-               new Promise((resolve, reject) => {
-                   const reader = new FileReader();
-                   reader.onloadend = function () {
-                       imagesArray.push(reader.result);
-                       resolve();
-                   };
-                   reader.onerror = reject;
-                   reader.readAsDataURL(imageFiles[i]);
-               })
-           );
-       }
+        for (let i = 0; i < imageFiles.length; i++) {
+            fileReaders.push(
+                new Promise((resolve, reject) => {
+                    const reader = new FileReader();
+                    reader.onloadend = function () {
+                        imagesArray.push(reader.result);
+                        resolve();
+                    };
+                    reader.onerror = reject;
+                    reader.readAsDataURL(imageFiles[i]);
+                })
+            );
+        }
 
-       Promise.all(fileReaders)
-           .then(() => {
-               // use first image as the main image; all images are used as thumbnails.
-               const listingID = Date.now().toString();
+        Promise.all(fileReaders)
+            .then(() => {
+                // use first image as the main image; all images are used as thumbnails.
+                const listingID = Date.now().toString();
 
-               const newListing = {
-                   id: listingID,
-                   title,
-                   price: `$${price}`,
-                   description,
-                   mainImage: imagesArray[0], // first image becomes the main image
-                   category,
-                   type,
-                   condition,
-                   location,
-                   mailing,
-                   seller: { username: "CurrentUser", profileIcon: "👤", joined: "2025" },
-                   suggestedProducts: [],
-                   bumped: "No",
-                   reviews: []
-               };
-               const storedListings = JSON.parse(localStorage.getItem("listings")) || [];
-               storedListings.push(newListing);
-               
-               addLocalListing(newListing);
-               displayListings();
-               createListingForm.reset();
-               addListingModal.classList.add("hidden");
-           })
-           .catch((error) => {
-               console.error("Error reading images:", error);
-               alert("There was an error processing your images. Please try again.");
-           });
-   });
+                const newListing = {
+                    id: listingID,
+                    title,
+                    price: `$${price}`,
+                    description,
+                    mainImage: imagesArray[0], // First image becomes the main image
+                    category,
+                    type,
+                    condition,
+                    location,
+                    mailing,
+                    seller: { username: "currentuser", profileIcon: "👤", joined: "2025" },
+                    suggestedProducts: [],
+                    bumped: "No",
+                    reviews: []
+                };
+
+                const storedListings = JSON.parse(localStorage.getItem("listings")) || [];
+                storedListings.push(newListing);
+                
+                addLocalListing(newListing);
+                displayListings();
+                createListingForm.reset();
+                addListingModal.classList.add("hidden");
+            })
+            .catch((error) => {
+                console.error("Error reading images:", error);
+                alert("There was an error processing your images. Please try again.");
+            });
+    });
+
+    // update dynamic profile info in the profile card and top-right icon
+
+    // retrieve logged-in user details (set in login.js)
+    const loggedinuser = JSON.parse(localStorage.getItem("loggedInUser")) || { username: "guest", profilePic: "avatar" };
+
+    // update profile card (main container)
+    const avatarEl = document.getElementById("user-avatar");
+    if (loggedinuser.profilePic) { 
+        avatarEl.textContent = loggedinuser.username.slice(0, 2).toUpperCase();
+    }
+    const usernameEl = document.getElementById("user-username");
+    usernameEl.textContent = "@" + loggedinuser.username;
+    // (username appears above the verified badge as per your html structure)
+
+
+    // clear existing icons in the top bar's icons container (if any)
+    const topBarIcons = document.querySelector('.top-bar .buttons');
+    topBarIcons.innerHTML = "";
+    const profileLink = document.createElement('a');
+    profileLink.href = "profile.html";
+    const topRightAvatar = document.createElement("div");
+    topRightAvatar.classList.add("avatar"); 
+    topRightAvatar.style.width = "2.5rem"; 
+    topRightAvatar.style.height = "2.5rem"; 
+    topRightAvatar.style.fontSize = "1rem"; 
+    topRightAvatar.style.marginTop = "-1.5rem"; 
+    topRightAvatar.style.marginLeft = "0.8rem";
+
+    if (loggedinuser.profilePic) {
+        topRightAvatar.textContent = loggedinuser.username.slice(0, 2).toUpperCase();
+    }
+    profileLink.appendChild(topRightAvatar);
+    topBarIcons.appendChild(profileLink);
 });
 
 
-// save listing under smae key as `listings.js`
+// save listing under the same key as `listings.js`
 function saveListingsToLocalStorage(listings) {
     localStorage.setItem("listings", JSON.stringify(listings));
 }
@@ -147,7 +182,7 @@ function displayListings() {
         listingItem.dataset.category = listing.category || "Uncategorized";
        
         const listingImage = document.createElement("img");
-        listingImage.src = listing.mainImage || listing.imageURL || "/assets/default-image.png";
+        listingImage.src = listing.mainImage || listing.imageurl || "/assets/default-image.png";
         listingImage.alt = listing.title;
         listingItem.appendChild(listingImage);
 
