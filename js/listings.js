@@ -20,11 +20,11 @@ function populateListingDetails(listing) {
       <p>${listing.category}</p>
     `;
     document.querySelector(".description p").textContent = listing.description;
-    document.querySelector(".main-image img").src = listing.mainImage || listing.imageURL || "/assets/default-image.jpg";
-    const mainImageUrl = listing.mainImage || listing.imageURL || "/assets/default-image.jpg";
+    const mainImageUrl = listing.mainImage || listing.imageURL || "/assets/default-image.png";
+
+    document.querySelector(".main-image img").src = mainImageUrl;
     
     // thumbnails
-    document.querySelector(".main-image img").src = mainImageUrl;
     const thumbnailsContainer = document.querySelector(".thumbnails");
     if (Array.isArray(listing.thumbnails) && listing.thumbnails.length > 0) {
         thumbnailsContainer.innerHTML = listing.thumbnails
@@ -128,7 +128,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (localListingsObj.hasOwnProperty(listingId)) {
             listing = localListingsObj[listingId];
         } else {
-            // Merge remote data (if category parameter exists, merge that too)
             const mergedRemoteListings = {
                 ...listingsData.listings,
                 ...(category ? (categoryData.listings[category] || {}) : {}),

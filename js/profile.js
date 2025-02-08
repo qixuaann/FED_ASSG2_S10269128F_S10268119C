@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const title = document.getElementById("listing-title").value;
         const price = document.getElementById("listing-price").value;
         const description = document.getElementById("listing-description").value;
-        const imageFiles = document.getElementById("listing-image").files[0];
+        const imageFiles = document.getElementById("listing-image").files;
         const category = document.getElementById("listing-category").value || "Uncategorized";
         const condition = document.getElementById("listing-condition").value || "Unknown";
         const location = document.getElementById("listing-location").value || "Not specified";
         const mailing = document.getElementById("listing-mailing").value || "Not available";
 
-        if (!title || !price || !description || !imageFiles) {
+        if (!title || !price || !description || !imageFiles.length === 0) {
             alert("Please fill in all fields and upload at least one image.");
             return;
         }
@@ -135,7 +135,7 @@ function displayListings() {
         listingItem.dataset.category = listing.category || "Uncategorized";
        
         const listingImage = document.createElement("img");
-        listingImage.src = listing.mainImage || "/assets/default-image.jpg";
+        listingImage.src = listing.mainImage || listing.imageURL || "/assets/default-image.png";
         listingImage.alt = listing.title;
         listingItem.appendChild(listingImage);
 
