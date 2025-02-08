@@ -137,39 +137,98 @@ a:hover {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  .background-container, .right-section, body {
+    background: linear-gradient(135deg,#ffffee, #fcf8f5);
+  }
+  .background-container {
+    flex-direction: column; 
+  }
+
   .signup-container {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    margin-top: -150px;
-    width: 70%;
-    padding: 15px;
+    width: 100%; 
+    top: 25%; 
+    padding: 5%; 
+    right: 20px;
+  }
+
+  h1 {
+    font-size: 220%; 
+    margin-bottom: 5%;
+  }
+
+  label {
+    font-size: 13px;
+    color: black;
   }
 
   input {
-    padding: 8px;
-    font-size: 14px;
+    font-size: 15px; 
   }
 
   button {
-    padding: 10px;
-    font-size: 14px;
+    font-size: 18px; 
+  }
+
+  .lottie-wrapper {
+    top: 20%;
+    left: 5%; 
+    opacity: 70%;
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media (max-width: 1024px) {
+  .background-container {
+    flex-direction: row; 
+  }
+
   .signup-container {
-    width: 85%;
-    margin-top: -100px;
+    width: 50%; 
+    top: 30%; 
+    margin-top: -10%;
+    padding: 4%;
+  }
+
+  h1 {
+    font-size: 240%; 
+    margin-bottom: 6%;
+  }
+
+  label {
+    font-size: 14px; 
   }
 
   input {
-    font-size: 12px;
+    font-size: 16px; 
   }
 
   button {
-    font-size: 12px;
-    padding: 8px;
+    font-size: 18px; 
+  }
+
+  .lottie-wrapper {
+    left: 3%;
+    bottom: 15%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .background-container {
+    flex-direction: row; 
+  }
+
+  .signup-container {
+    width: 38%; 
+    padding: 2%;
+  }
+
+  h1 {
+    font-size: 280%; 
+    margin-bottom: 8%;
+  }
+
+  .lottie-wrapper {
+    left: 3%;
+    bottom: 18%;
   }
 }
