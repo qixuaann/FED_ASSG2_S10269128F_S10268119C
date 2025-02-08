@@ -180,6 +180,10 @@ body {
     margin-left: 15px;
   }
 
+  .see-all-container {
+    display: none; /* hide on mobile devices */
+  }
+
   .banner {
     text-align: left;
     margin-top: 10px;
@@ -218,6 +222,7 @@ body {
     scroll-snap-type: x mandatory;
     padding: 10px;
     gap: 10px;
+    margin-left: 10px;
   }
 
   .categories::-webkit-scrollbar {
