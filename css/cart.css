@@ -164,3 +164,130 @@ p {
 #logoutForm button:hover {
     background-color: #c9302c;
 }
+
+dotlottie-player {
+    width: 70%;
+    left: 41.5%;
+    position: absolute;  
+    top: 60%;  
+    width: 300px;  
+    height: 300px; 
+}
+
+@media only screen and (max-width: 768px) {
+    .cart-container {
+        width: 90%;
+        top: 20%;
+        margin-top: 180px;
+        left: 5%;
+    }
+
+    .checkout-container {
+        width: 90%;
+        max-height: 80%;
+        padding: 15px;
+        margin-top: 200px;
+    }
+
+    .cart-item {
+        width: 100%;
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .cart-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .cart-details, .payment-details {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .payment-summary {
+        padding: 10px;
+    }
+
+    .shopping-btn, .sign-up-btn {
+        width: 200px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .checkout-btn {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+
+    .remove-btn {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    #logoutForm button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #logoutForm button::hover {
+        background-color: #c9302c;
+    }
+    
+    dotlottie-player {
+        left: 12%;
+        position: absolute; 
+        top: 9%; 
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    .cart-container {
+        width: 95%;
+        top: 15%;
+        left: 2.5%;
+    }
+
+    .checkout-container {
+        padding: 10px;
+    }
+
+    .cart-item {
+        width: 100%;
+        margin: 10px 0;
+        padding: 8px;
+    }
+
+    .cart-item img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .cart-item-details h3 {
+        font-size: 1em;
+    }
+
+    .shopping-btn, .sign-up-btn {
+        width: 180px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .checkout-btn {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    .remove-btn {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    #logoutForm button {
+        width: 100%;
+        padding: 10px;
+        font-size: 13px;
+    }
+}
