@@ -133,3 +133,143 @@ hr {
         .message { padding: 5px; margin-bottom: 10px; }
         .user { background-color: #d3f8d3; }
         .other { background-color: #f0f0f0; }
+
+@media only screen and (max-width: 768px) {
+    /* sidebar */
+    .sidebar {
+        margin-left: 10px;
+    }
+    .convo {
+        width: 75%; 
+        height: 80px;
+        margin-left: 15px;
+        margin-bottom: 8px;
+        padding: 3px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    }
+
+    .chat-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .chat-section {
+        width: 100%; 
+        margin-top: 15px;
+        margin-left: 0;
+        
+    }
+    
+    .chat-btn {
+        width: 100%; 
+        margin-left: 15px;
+        margin-top: 3px;
+    }
+  
+    /* profile info */
+    .profile-info {
+        flex-direction: column;
+        gap: 12px;
+        padding-left: 30px;
+        width: 400px;
+        height: 80px;
+    }
+
+    .pagination {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    #prev-button, #next-button {
+        width: 100px;
+        margin-top: 10px;
+        margin-right: 270px;
+    }
+
+    .listing-selected {
+        flex-direction: column; 
+        gap: 4px;
+        width: 80%;
+        margin-left: 40px;
+    }
+
+    hr {
+        margin: 10px 0;
+    }
+
+    .listing-img {
+        width: 80px; 
+        height: 80px;
+    }
+
+    .profile-info img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .buy-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buy-btn, .add-to-cart-btn {
+        width: 80%;
+        font-size: 14px; 
+        padding: 10px 0; 
+    }
+
+
+    .messages {
+        width: 80%;
+        margin-left: 40px;
+        height: 200px; 
+        margin-top: 10px;
+        padding-top: 5px;
+        padding-bottom: 10px; 
+    }
+
+    #sendMessageButton, #messageInput{
+        width: 80%;
+        margin-left: 40px;
+        font-size: 14px; 
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .convo {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .chat-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chat-section {
+        margin-top: 15px;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .pagination button {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .listing-selected {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .listing-img {
+        width: 70px;
+        height: 70px;
+    }
+}
