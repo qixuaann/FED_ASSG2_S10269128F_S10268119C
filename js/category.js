@@ -13,7 +13,7 @@ const renderCategoryPage = async () => {
     // fetch listings from Firebase
     let listings = categoryData ? categoryData.listings : {};
 
-    // Fetch local profile listings
+    // fetch local profile listings
     const localListings = getLocalProfileListings();
     
     const filteredLocalListings = localListings.filter(
@@ -99,6 +99,92 @@ const renderCategoryPage = async () => {
 
 renderCategoryPage();
 
+document.addEventListener('DOMContentLoaded', () => {
+  console.log("gameConsole.js loaded and DOM ready.");
+  if (typeof categoryData === 'undefined') {
+    console.error("categoryData is not defined.");
+    return;
+  }
+  const banner = document.getElementById("category-banner");
+  if (banner) {
+    banner.style.backgroundImage = `url(${categoryData.bgImage})`;
+  } else {
+    console.warn("category-banner element not found.");
+  }
+  
+  const title = document.getElementById("category-title");
+  if (title) {
+    title.innerText = categoryName;
+  }
+  
+  const listingContainer = document.getElementById("listings-container");
+  if (!listingContainer) {
+    console.error("listings-container element not found.");
+    return;
+  }
+  listingContainer.innerHTML = "";
+  
+  const listings = categoryData.listings;
+  const listingIds = Object.keys(listings);
+  const treasureCount = Math.min(3, listingIds.length);
+  const treasureIndices = new Set();
+  
+  while (treasureIndices.size < treasureCount) {
+    treasureIndices.add(Math.floor(Math.random() * listingIds.length));
+  }
+  
+  for (const listingId in listings) {
+    const listing = listings[listingId];
+    const isTreasure = treasureIndices.has(listingIds.indexOf(listingId));
+  
+    const listingLink = document.createElement('a');
+    listingLink.href = `listings.html?id=${listingId}&category=${encodeURIComponent(categoryName)}`;
+    
+    const listingElement = document.createElement("div");
+    listingElement.className = "listing-item";
+    if (isTreasure) {
+      listingElement.classList.add("treasure");
+    }
+  
+    listingElement.innerHTML = `
+      <img src="${listing.mainImage || listing.imageURL || '/assets/default-image.jpg'}" alt="${listing.title}" />
+      <h3>${listing.title}</h3>
+      <p>$${listing.price}</p>
+    `;
+  
+    if (isTreasure) {
+      const lottiePlayerWrapper = document.createElement("a");
+      lottiePlayerWrapper.setAttribute("href", "#"); // Prevent navigation
+      lottiePlayerWrapper.classList.add("tuan");
+  
+      const lottiePlayer = document.createElement("dotlottie-player");
+      lottiePlayer.setAttribute("src", "https://lottie.host/e40b6f55-979c-426c-8d8f-3511d48db81f/nZm2cy8K9I.lottie");
+      lottiePlayer.setAttribute("background", "transparent");
+      lottiePlayer.setAttribute("speed", "1");
+      lottiePlayer.setAttribute("style", "width: 50px; height: 50px;");
+      lottiePlayer.setAttribute("loop", "");
+      lottiePlayer.setAttribute("autoplay", "");
+  
+      lottiePlayerWrapper.appendChild(lottiePlayer);
+      listingElement.appendChild(lottiePlayerWrapper);
+  
+      listingElement.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("Congratulations! You've found a Golden Find! Enjoy your reward!");
+        if (typeof window.addNewVoucher === 'function') {
+          console.log("Calling addNewVoucher() from gameConsole.js.");
+          window.addNewVoucher();
+        } else {
+          console.error("addNewVoucher() is not defined.");
+        }
+      });
+    }
+  
+    listingLink.appendChild(listingElement);
+    listingContainer.appendChild(listingLink);
+  }
+});
+
 // dynamic profile
 // retrieve the logged-in user details from localstorage.
 if (!(JSON.parse(localStorage.getItem("loggedInUser")))) {
@@ -139,3 +225,4 @@ if (topBarIcons) {
   profileLink.appendChild(topRightAvatar);
   topBarIcons.appendChild(profileLink);
 }
+
