@@ -164,7 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   
-  
   // save listings to localstorage
   function saveListingsToLocalStorage(listings) {
     localStorage.setItem("listings", JSON.stringify(listings));
@@ -280,3 +279,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   
+// sign out functionality
+const signOutBtn = document.getElementById('sign-out-btn');
+if (signOutBtn) {
+  signOutBtn.addEventListener('click', () => {
+    // remove the logged-in user info from localstorage
+    localStorage.removeItem('loggedInUser');
+    // show a pop-up that sign out was successful
+    alert("Signed out successfully. See you soon!");
+    // redirect to home.html
+    window.location.href = 'home.html';
+  });
+}

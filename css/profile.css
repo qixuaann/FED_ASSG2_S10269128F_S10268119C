@@ -122,13 +122,26 @@ body {
     font-size: 0.9rem;
 }
 
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .edit-btn {
-    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+}
+
+.sign-out-btn {
+    margin-top: 0.8rem;
+}
+
+.edit-btn, .sign-out-btn {
+    padding: 0.5rem 1.5rem;
     background-color: transparent;
     border: 0.1rem solid #333;
     border-radius: 0.5rem;
     cursor: pointer;
-    margin-top: -0.5rem; 
 }
 
 /* profile categories Section */
@@ -150,6 +163,7 @@ body {
     text-align: center;
     transition: transform 0.2s ease;  
     background-color: #eee;
+    margin-top: -3rem;
     border-radius: 0.5rem;
     padding: 0.8rem;
     width: 5rem;           

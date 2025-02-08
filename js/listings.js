@@ -186,9 +186,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // dynamic profile
 // retrieve the logged-in user details from localstorage.
-const loggedinuser =
-  JSON.parse(localStorage.getItem("loggedInUser")) ||
-  { username: "guest", profilePic: "avatar" };
+if (!(JSON.parse(localStorage.getItem("loggedInUser")))) {
+  if (signUpButton) signUpButton.style.display = "inline-block";
+  if (loginButton) loginButton.style.display = "inline-block";
+
+  // Remove any existing profile avatar
+  const existingAvatar = document.querySelector(".top-bar .avatar");
+  if (existingAvatar) {
+    existingAvatar.remove();
+  }
+  else {
+    // Hide Sign Up & Log In buttons
+    if (signUpButton) signUpButton.style.display = "none";
+    if (loginButton) loginButton.style.display = "none";
+  }
+}
+
+const loggedinuser = JSON.parse(localStorage.getItem("loggedInUser")) 
 
 // update the top-right (or top-bar) avatar icon (if the container exists)
 const topBarIcons = document.querySelector('.top-bar .buttons');
@@ -210,3 +224,4 @@ if (topBarIcons) {
   profileLink.appendChild(topRightAvatar);
   topBarIcons.appendChild(profileLink);
 }
+
