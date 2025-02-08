@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
   
-    // (optional) limit the number of listings shown
+    // limit the number of listings shown
     const limitedListings = userListings.slice(0, 30);
   
     limitedListings.forEach(listing => {
