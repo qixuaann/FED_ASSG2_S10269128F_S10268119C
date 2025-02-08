@@ -46,14 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     subtotal += validPrice * item.quantity;
                 });
               
-                const shipping = 0; 
                 const taxRate = 0.1; 
                 const tax = subtotal * taxRate;
-                const total = subtotal + shipping + tax;
+                const total = subtotal + tax;
               
                 return {
                     subtotal: subtotal.toFixed(2),
-                    shipping: shipping.toFixed(2),
+                    shipping: "Free",
                     tax: tax.toFixed(2),
                     total: total.toFixed(2),
                 };
@@ -63,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const { subtotal, shipping, tax, total } = calculateCartTotal(cart);
 
             document.getElementById("subtotal").textContent = `$${subtotal}`;
-            document.getElementById("shipping").textContent = `$${shipping}`;
+            document.getElementById("shipping").textContent = `${shipping}`;
             document.getElementById("tax").textContent = `$${tax}`;
             document.getElementById("total").textContent = `$${total}`;
 

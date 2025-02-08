@@ -83,8 +83,52 @@
             <div class="tab" data-tab="about-tab">About</div>
             <div class="tab">
                 <button id="add-listing">Add Listing</button>
-            </div>
+                <!-- add listing modal -->
+                <div id="add-listing-modal" class="modal hidden">
+                  <div class="modal-content">
+                      <span id="close-modal" class="close">&times;</span>
+                      <h2>Create a New Listing</h2>
+                      <form id="create-listing-form">
+                          <label for="listing-title">Title</label>
+                          <input type="text" id="listing-title" name="title" required>
+          
+                          <label for="listing-price">Price</label>
+                          <input type="number" id="listing-price" name="price" required>
+          
+                          <label for="listing-description">Description</label>
+                          <textarea id="listing-description" name="description" required></textarea>
+          
+                          <label for="listing-category">Category</label>
+                          <input type="text" id="listing-category" name="category" placeholder="E.g., Electronics, Furniture" required>
+          
+                          <label for="listing-condition">Condition</label>
+                          <select id="listing-condition" name="condition">
+                              <option value="New">New</option>
+                              <option value="Used - Like New">Used - Like New</option>
+                              <option value="Used - Good">Used - Good</option>
+                              <option value="Used - Acceptable">Used - Acceptable</option>
+                          </select>
+          
+                          <label for="listing-location">Location</label>
+                          <input type="text" id="listing-location" name="location" placeholder="E.g., Singapore, Jurong East" required>
+          
+                          <label for="listing-mailing">Mailing Options</label>
+                          <select id="listing-mailing" name="mailing">
+                              <option value="Meetup">Meetup</option>
+                              <option value="Delivery">Delivery</option>
+                              <option value="Both">Both</option>
+                          </select>
+          
+                          <label for="listing-image">Image</label>
+                          <input type="file" id="listing-image" accept="image/*" required>
+          
+                          <button type="submit" class="submit-btn">Create Listing</button>
+                      </form>
+                  </div>
+              </div>
+          </div>          
         </div>
+        
         <div class="tab-content active" id="listing-tab">
           <!-- need include calculation logic -->
           <div id="calculate-listings"></div>
