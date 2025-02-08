@@ -125,14 +125,60 @@ a:hover {
     align-items: center;
 }
 
+
+/* BEGIN: New styles for left and right sections */
+
+/* Flex container for full page background, splitting into left and right sections */
+.background-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Left section with a distinct color/gradient background */
+.left-section {
+    flex: 1.9;
+    background: linear-gradient(135deg, #ffffee, #fcf8f5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Optional styling for an image inside the left section */
+.left-section img {
+    width: 60%;
+    height: auto;
+}
+
+/* Right section that will contain your login form */
+.right-section {
+    flex: 1.45;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff;
+}
+
+/* END: New styles for left and right sections */
+
 /* media queries */
 @media only screen and (max-width: 768px) {
+    .background-container, .right-section, body {
+        background: linear-gradient(135deg,#ffffee, #fcf8f5);
+    }
+
+    .background-container {
+        max-height: 250px;  
+    }
     .login-container {
         position: absolute;
-        top: 50%;
-        left: 5%; 
-        margin-top: -150px;
-        width: 70%; 
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        padding: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+        border-radius: 10px;
     }
 
     .top-bar {
@@ -142,7 +188,7 @@ a:hover {
 
     .logo img {
         width: 130px; 
-        margin-left: 20px;
+        margin-left: 10px;
     }
 
     .login {
@@ -183,6 +229,14 @@ a:hover {
 
     .forgot-password {
         margin-top: 5px;
+    }
+
+    .lottie-wrapper {
+        height: auto;
+        width: 90%; 
+        max-width: 400px;
+        margin-left: 50%;
+        top: 9%;
     }
 }
 
@@ -231,38 +285,3 @@ a:hover {
         margin-top: 5px;
     }
 }
-
-/* BEGIN: New styles for left and right sections */
-
-/* Flex container for full page background, splitting into left and right sections */
-.background-container {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-}
-
-/* Left section with a distinct color/gradient background */
-.left-section {
-    flex: 1.9;
-    background: linear-gradient(135deg, #ffffee, #fcf8f5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Optional styling for an image inside the left section */
-.left-section img {
-    width: 60%;
-    height: auto;
-}
-
-/* Right section that will contain your login form */
-.right-section {
-    flex: 1.45;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffff;
-}
-
-/* END: New styles for left and right sections */
