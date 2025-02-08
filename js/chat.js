@@ -108,11 +108,16 @@ export function populateChatUI(listingData) {
       listingImageElement.src = listingData.mainImage || '';
       listingImageElement.alt = listingData.title || 'Listing Image';
     }
-    messagesDiv.innerHTML = '';
+    // messagesDiv.innerHTML = '';
 }
 
 export function displayMessagesForListing(listingId) {
     const messagesDiv = document.getElementById('messages');
+    if (!messagesDiv) {
+        console.error("Messages div (#messages) not found.");
+        return;
+    }
+
 
     listenForMessages(listingId, (messages) => {
         if (messages.length === 0) {

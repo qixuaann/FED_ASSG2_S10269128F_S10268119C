@@ -42,36 +42,39 @@
           </div>
         </div>
     </nav>
-    
-    <!-- <div class="chat-container">
+      <div class="chat-container">
         <div class="sidebar">
-            <ul class="chat-list">
-              <a href="chat.html" class="chat-section">
-                <button class="convo">
-                  <img src="/assets/auther.png" alt="auther-icon">
-                  <div class="chat-info">
-                    <li>@auther_03</li>
-                    <li id="listingTitle"><strong>Club Shirts Cute</strong></li>
-                    <li class="light-text">Start chatting...</li>
-                  </div>
-                </button>
-              </a>
-            </ul>
+          <a href="" class="chat-section">
+            <button class="convo">
+              <img src="/assets/auther.png" alt="auther-icon">
+              <div class="chat-info">
+                <li></li>
+                <li id="listingTitle"><strong></strong></li>
+                <li class="light-text">Start chatting...</li>
+              </div>
+            </button>
+          </a>
+          <ul class="chat-list"></ul>
+          <div class="pagination">
+            <button id="prev-button">Previous</button>
+            <button id="next-button">Next</button>
+          </div>  
         </div>
+      
         <div class="chat-section">
           <div class="profile-info">
             <img src="/assets/auther.png" alt="auther-icon">
-            <h4>@auther_03</h4>
+            <h4></h4>
             <img src="/assets/seller-setting.png" alt="seller-setting-icon" class="seller-setting-icon">
             <hr>
           </div>
           <hr>
 
           <div class="listing-selected">
-            <img src="/assets/tee.jpeg" alt="Suggested product 1" class="listing-img">
+            <img src="" alt="Suggested product 1" class="listing-img">
             <div class="product-info">
-              <p>Club Shirts Cute<p>
-                <div id="listingPrice">S$13</div>
+              <p id="listingDescription"><p>
+                <div id="listingPrice"></div>
                 <div class="buy-actions">
                   <a href="buy.html" class="chat">
                     <button class="buy-btn">Buy</button>
@@ -80,52 +83,9 @@
                     <button class="add-to-cart-btn">Add to Cart</button>
                   </a>
                 </div>          
-            </div>
-          </div> -->
-          <div class="chat-container">
-            <div class="sidebar">
-              <a href="" class="chat-section">
-                <button class="convo">
-                  <img src="/assets/auther.png" alt="auther-icon">
-                  <div class="chat-info">
-                    <li></li>
-                    <li id="listingTitle"><strong></strong></li>
-                    <li class="light-text">Start chatting...</li>
-                  </div>
-                </button>
-              </a>
-              <ul class="chat-list"></ul>
-              <div class="pagination">
-                <button id="prev-button">Previous</button>
-                <button id="next-button">Next</button>
-              </div>  
-            </div>
-          
-            <div class="chat-section">
-              <div class="profile-info">
-                <img src="/assets/auther.png" alt="auther-icon">
-                <h4></h4>
-                <img src="/assets/seller-setting.png" alt="seller-setting-icon" class="seller-setting-icon">
-                <hr>
-              </div>
-              <hr>
+            </div>             
+          </div>
     
-              <div class="listing-selected">
-                <img src="" alt="Suggested product 1" class="listing-img">
-                <div class="product-info">
-                  <p id="listingDescription"><p>
-                    <div id="listingPrice"></div>
-                    <div class="buy-actions">
-                      <a href="buy.html" class="chat">
-                        <button class="buy-btn">Buy</button>
-                      </a>
-                      <a href="cart.html" class="chat">
-                        <button class="add-to-cart-btn">Add to Cart</button>
-                      </a>
-                    </div>          
-                </div>             
-              </div>
-        
 
           <div class="messages" id="messages">
               <!-- msgs will appear here -->
@@ -136,7 +96,7 @@
           </div>
         </div>
     </div>
-    
+    <script type="module" src="../js/chat.js"></script>
     <script type="module">
       import { sendMessage, listenForMessages, resetBotResponseFlag, createListingButton } from '../js/chat.js';
 
@@ -168,8 +128,6 @@
           });
           messagesDiv.scrollTop = messagesDiv.scrollHeight;
       });
-
-
       // fetch from Firebase + pagination
       let listingsPerPage = 10; 
       let currentPage = 1;
@@ -257,6 +215,5 @@
     </script>
     <script type="module" src="../js/firebase.js"></script>
     <script type="module" src="../js/home.js"></script>
-    <script type="module" src="../js/chat.js"></script>
     </body>
 </html>

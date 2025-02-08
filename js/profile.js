@@ -37,50 +37,69 @@ document.addEventListener("DOMContentLoaded", () => {
         const title = document.getElementById("listing-title").value;
         const price = document.getElementById("listing-price").value;
         const description = document.getElementById("listing-description").value;
-        const imageFile = document.getElementById("listing-image").files[0];
+        const imageFiles = document.getElementById("listing-image").files[0];
         const category = document.getElementById("listing-category").value || "Uncategorized";
         const condition = document.getElementById("listing-condition").value || "Unknown";
         const location = document.getElementById("listing-location").value || "Not specified";
         const mailing = document.getElementById("listing-mailing").value || "Not available";
 
-        if (!title || !price || !description || !imageFile) {
-            alert("Please fill in all fields and upload an image.");
+        if (!title || !price || !description || !imageFiles) {
+            alert("Please fill in all fields and upload at least one image.");
             return;
         }
 
-        const reader = new FileReader();
-        reader.onloadend = function () {
-            const imageURL = reader.result;
+       // convert all image files to Base64 and collect them in an array.
+       const fileReaders = [];
+       const imagesArray = [];
 
-            const listingID = Date.now().toString();
+       for (let i = 0; i < imageFiles.length; i++) {
+           fileReaders.push(
+               new Promise((resolve, reject) => {
+                   const reader = new FileReader();
+                   reader.onloadend = function () {
+                       imagesArray.push(reader.result);
+                       resolve();
+                   };
+                   reader.onerror = reject;
+                   reader.readAsDataURL(imageFiles[i]);
+               })
+           );
+       }
 
-            const newListing = {
-                id: listingID,
-                title,
-                price: `$${price}`, // match the displayed format
-                description,
-                mainImage: imageURL, // changed from imageURL to mainImage
-                category,
-                condition,
-                location,
-                mailing,
-                seller: { username: "CurrentUser", profileIcon: "👤", joined: "2025" },
-                thumbnails: [imageURL], 
-                suggestedProducts: [], 
-                bumped: "No",
-                reviews: [] // optional
-            };
+       Promise.all(fileReaders)
+           .then(() => {
+               // use first image as the main image; all images are used as thumbnails.
+               const listingID = Date.now().toString();
 
-            addLocalListing(newListing);
-            displayListings();
-            createListingForm.reset();
+               const newListing = {
+                   id: listingID,
+                   title,
+                   price: `$${price}`,
+                   description,
+                   mainImage: imagesArray[0], // first image becomes the main image
+                   category,
+                   condition,
+                   location,
+                   mailing,
+                   seller: { username: "CurrentUser", profileIcon: "👤", joined: "2025" },
+                   thumbnails: imagesArray,  // full array
+                   suggestedProducts: [],
+                   bumped: "No",
+                   reviews: []
+               };
 
-            addListingModal.classList.add("hidden");
-        };
-
-        reader.readAsDataURL(imageFile);
-    });
+               addLocalListing(newListing);
+               displayListings();
+               createListingForm.reset();
+               addListingModal.classList.add("hidden");
+           })
+           .catch((error) => {
+               console.error("Error reading images:", error);
+               alert("There was an error processing your images. Please try again.");
+           });
+   });
 });
+
 
 // save listing under smae key as `listings.js`
 function saveListingsToLocalStorage(listings) {

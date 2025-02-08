@@ -20,16 +20,23 @@ function populateListingDetails(listing) {
       <p>${listing.category}</p>
     `;
     document.querySelector(".description p").textContent = listing.description;
-    document.querySelector(".main-image img").src = listing.mainImage;
-
+    document.querySelector(".main-image img").src = listing.mainImage || listing.imageURL || "/assets/default-image.jpg";
+    const mainImageUrl = listing.mainImage || listing.imageURL || "/assets/default-image.jpg";
+    
     // thumbnails
-    const thumbnails = document.querySelector(".thumbnails");
-    thumbnails.innerHTML = listing.thumbnails
-      .map((src) => `<img src="${src}" alt="Thumbnail">`)
-      .join("");
+    document.querySelector(".main-image img").src = mainImageUrl;
+    const thumbnailsContainer = document.querySelector(".thumbnails");
+    if (Array.isArray(listing.thumbnails) && listing.thumbnails.length > 0) {
+        thumbnailsContainer.innerHTML = listing.thumbnails
+          .map((src) => `<img src="${src}" alt="Thumbnail">`)
+          .join("");
+    } else {
+        thumbnailsContainer.innerHTML = `<img src="${mainImageUrl}" alt="Thumbnail">`;
+    }
 
     // suggested products
     const suggestedProducts = document.querySelector(".suggested-products");
+    if (listing.suggestedProducts && listing.suggestedProducts.length > 0)
     suggestedProducts.innerHTML = `
       <h3>Suggested Products</h3>
       ${listing.suggestedProducts
@@ -45,29 +52,43 @@ function populateListingDetails(listing) {
         )
         .join("")}
     `;
+    else {
+      suggestedProducts.innerHTML = `<h3>Suggested Products</h3><p>No suggestions available.</p>`;
+    }
+    
     // deal methods
     document.querySelector("#location").textContent = listing.location;
     document.querySelector("#mailing").textContent = listing.mailing;
 
     // reviews
     const reviewsSection = document.querySelector(".reviews");
-    reviewsSection.innerHTML = `
-      <h2>Reviews</h2>
-      <p class="rating">5.0 ★★★★★ <span>(${listing.reviews.length} reviews)</span></p>
-      ${listing.reviews
-        .map(
-          (review) => `
-        <div class="review">
-          <img src="${review.profileImage}" alt="${review.username} profile">
-          <div class="review-desc">
-            <h4>${review.username}</h4>
-            <p>${review.review}</p>
-          </div>
-        </div>
-      `
-        )
-        .join("")}
-    `;
+    if (reviewsSection) {
+      // empty array as fallback in case listing.reviews is undefined
+      const reviewsArray = listing.reviews || [];
+      reviewsSection.innerHTML = `
+        <h2>Reviews</h2>
+        <p class="rating">5.0 ★★★★★ <span>(${reviewsArray.length} reviews)</span></p>
+        ${
+          reviewsArray.length > 0 
+          ? reviewsArray.map(
+              (review) => `
+                <div class="review">
+                  <img src="${review.profileImage}" alt="${review.username} profile">
+                  <div class="review-desc">
+                    <h4>${review.username}</h4>
+                    <p>${review.review}</p>
+                  </div>
+                </div>
+              `
+            ).join("")
+          : "<p>No reviews yet.</p>"
+        }
+      `;
+    } else {
+      console.error("Reviews section not found.");
+    }
+    
+    
     // seller info
     document.querySelector(".profile-icon").textContent = listing.seller.profileIcon;
     document.querySelector(".profile-info strong").textContent = listing.seller.username;
@@ -102,6 +123,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       ...(categoryData.listings[category] || {}),
       ...localListingsObj // include local listings
     };
+
+    let listing;
+        if (localListingsObj.hasOwnProperty(listingId)) {
+            listing = localListingsObj[listingId];
+        } else {
+            // Merge remote data (if category parameter exists, merge that too)
+            const mergedRemoteListings = {
+                ...listingsData.listings,
+                ...(category ? (categoryData.listings[category] || {}) : {}),
+            };
+            listing = mergedRemoteListings[listingId];
+        }
 
 
     if (listingId) {
