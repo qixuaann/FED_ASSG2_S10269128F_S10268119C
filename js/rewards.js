@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let rewardsRecord = JSON.parse(localStorage.getItem('rewardsRecord'));
     if (!rewardsRecord) {
       rewardsRecord = [
-        { img: 'badge1.png', title: '5% discount off', desc: 'no min spend', claimed: false },
-        { img: 'badge2.png', title: '$3 off', desc: 'no min spend', claimed: false },
-        { img: 'badge3.png', title: 'Free mailing', desc: 'no min spend', claimed: false }
+        { img: '/assets/badge1.png', title: '5% discount off', desc: 'no min spend', claimed: false },
+        { img: '/assets/badge2.png', title: '$3 off', desc: 'no min spend', claimed: false },
+        { img: '/assets/badge3.png', title: 'Free mailing', desc: 'no min spend', claimed: false }
       ];
       localStorage.setItem('rewardsRecord', JSON.stringify(rewardsRecord));
       console.log("Initialized rewardsRecord.");
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log("addNewVoucher() called.");
       let vouchers = JSON.parse(localStorage.getItem('vouchersClaimed')) || [];
       const newVoucher = {
-        img: 'voucher.png',
+        img: '/assets/voucher.png',
         title: 'Golden Voucher!',
         desc: 'Congratulations! Enjoy your reward!',
         code: 'VOUCHER' + Math.floor(Math.random() * 1000000),
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         const img = document.createElement('img');
-        img.src = reward.img || (type === 'vouchers' ? 'voucher.png' : '');
+        img.src = getRandomBadgeImage() || (type === 'vouchers' ? '/assets/voucher.png' : "");
         img.alt = type === 'vouchers' ? 'Voucher' : 'Badge';
         rewardDiv.appendChild(img);
         
@@ -160,6 +160,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
           }
         }
+        function getRandomBadgeImage() {
+          const badgeImages = [
+            '/assets/badge1.png',
+            '/assets/badge2.png',
+            '/assets/badge3.png'
+          ];
+          return badgeImages[Math.floor(Math.random() * badgeImages.length)];
+        }
+        
         rewardDiv.appendChild(button);
         rewardGrid.appendChild(rewardDiv);
       });
