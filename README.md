@@ -9,16 +9,16 @@ While retaining core functionalities like account management and transaction han
 ## Design Process
 MokeSell is designed for individuals looking for an interactive, user-friendly marketplace that encourages engagement through gamification. Our target users include:
 
---**Sellers:** Individuals selling new or second-hand items and engaging with an active marketplace.
---**Buyers:** Consumers seeking affordable, unique, or second-hand goods through an intuitive and engaging platform.
---**Engaged Users:** People who enjoy interactive elements, gamification, and a sense of competition, enhancing user retention and satisfaction.
+-**Sellers:** Individuals selling new or second-hand items and engaging with an active marketplace.
+-**Buyers:** Consumers seeking affordable, unique, or second-hand goods through an intuitive and engaging platform.
+-**Engaged Users:** People who enjoy interactive elements, gamification, and a sense of competition, enhancing user retention and satisfaction.
 
 ### User Stories
---As a buyer, I want to search for specific items so that I can quickly find what I need.
---As a seller, I want to list my items with photos and descriptions so that I can attract potential buyers.
---As a user, I want to participate in treasure hunts so that I can earn rewards and discounts.
---As a buyer, I want to chat with sellers so that I can negotiate offers and finalize transactions.
---As a user, I want a review system so that I can make informed decisions based on previous buyer experiences.
+-As a buyer, I want to search for specific items so that I can quickly find what I need.
+-As a seller, I want to list my items with photos and descriptions so that I can attract potential buyers.
+-As a user, I want to participate in treasure hunts so that I can earn rewards and discounts.
+-As a buyer, I want to chat with sellers so that I can negotiate offers and finalize transactions.
+-As a user, I want a review system so that I can make informed decisions based on previous buyer experiences.
 
 ### Design Assets
 Wireframes and mockups are included here https://www.figma.com/design/a8uwqeScDyTBGEA53oV2mP/MokeSell---P05--Joyce-%26-Qi-Xuan?node-id=0-1&t=rSiWX1jJ6RZRT3Q7-1
@@ -49,14 +49,14 @@ Wireframes and mockups are included here https://www.figma.com/design/a8uwqeScDy
 - **Chat List:** Buyers are able to scroll through and filter chat page of every listing on the marketplace
   
 ### Features Left to Implement
---**Auction Mode:** Allows sellers to list items with bidding functionality.
---**AI-Powered Recommendations:** Suggests relevant items based on user behavior.
---**Referral Program:** Users can invite friends and earn rewards.
+-**Auction Mode:** Allows sellers to list items with bidding functionality.
+-**AI-Powered Recommendations:** Suggests relevant items based on user behavior.
+-**Referral Program:** Users can invite friends and earn rewards.
 
 ## Technologies Used
---**HTML, CSS, JavaScript:** Core technologies for structuring and styling the platform.
---**Firebase Realtime Database:** Store product listings (category/popular) and chat history.
---**RestDB:** Seure user authentication and account management.
+-**HTML, CSS, JavaScript:** Core technologies for structuring and styling the platform.
+-**Firebase Realtime Database:** Store product listings (category/popular) and chat history.
+-**RestDB:** Seure user authentication and account management.
 
 ## Assistive AI Usage
 - **ChatGPT** was used to generate initial project structure, improve code snippets, and troubleshoot bugs
@@ -64,22 +64,21 @@ Wireframes and mockups are included here https://www.figma.com/design/a8uwqeScDy
 
 ## Testing
 ### Manual Testing
---**Contact Form:** 
---Attempted submission of an empty form verified an error message appears.
---Tested form with an invalid email address, and a relevant error message was displayed.
---Successfully submitted a valid form and confirmed a success message.
+-**Contact Form:** 
+-Attempted submission of an empty form verified an error message appears.
+-Tested form with an invalid email address, and a relevant error message was displayed.-Successfully submitted a valid form and confirmed a success message.
 
---**Browser Compatibility:** 
---Tested on Chrome, Firefox, Safari, and Edge for responsiveness.
---Verified mobile responsiveness on various screen sizes.
+-**Browser Compatibility:** 
+-Tested on Chrome, Firefox, Safari, and Edge for responsiveness.
+-Verified mobile responsiveness on various screen sizes.
 
---**Bug Fixes & Observations:**
+-**Bug Fixes & Observations:**
 -Identified an issue where expired listings remained visible; fix in progress.
 -Noticed minor alignment issues on smaller screens; adjustments made.
 
 ## Credits
 **Media** 
---All images used for listings were sourced from Unsplash, Pinterest, Canva, Ebay.
+-All images used for listings were sourced from Unsplash, Pinterest, Canva, Ebay.
 
 **Acknowledgements** 
---Inspiration for the gamification mechanics was drawn from various e-commerce platforms.
+-Inspiration for the gamification mechanics was drawn from various e-commerce platforms.
