@@ -2,73 +2,84 @@
 # MokeSell: A Gamified and Interactive Consumer-to-Consumer Marketplace
 
 ## Project Overview
-
 MokeSell is an innovative online marketplace designed for users to buy and sell both new and second-hand items. The platform enables seamless account creation, item listing, and secure transactions. To make the user experience more engaging, we have introduced new features such as gamification and treasure hunts. These additions enhance user interaction, foster community engagement, and increase loyalty.
 
 While retaining core functionalities like account management and transaction handling, MokeSell offers a unique and fun shopping experience that keeps users coming back. We have chosen a neutral color scheme to create a calming and user-friendly environment, ensuring effortless navigation and an overall enhanced user experience.
 
-## Key Features
+## Design Process
+MokeSell is designed for individuals looking for an interactive, user-friendly marketplace that encourages engagement through gamification. Our target users include:
 
+--**Sellers:** Individuals selling new or second-hand items and engaging with an active marketplace.
+--**Buyers:** Consumers seeking affordable, unique, or second-hand goods through an intuitive and engaging platform.
+--**Engaged Users:** People who enjoy interactive elements, gamification, and a sense of competition, enhancing user retention and satisfaction.
+
+### User Stories
+--As a buyer, I want to search for specific items so that I can quickly find what I need.
+--As a seller, I want to list my items with photos and descriptions so that I can attract potential buyers.
+--As a user, I want to participate in treasure hunts so that I can earn rewards and discounts.
+--As a buyer, I want to chat with sellers so that I can negotiate offers and finalize transactions.
+--As a user, I want a review system so that I can make informed decisions based on previous buyer experiences.
+
+### Design Assets
+Wireframes and mockups are included here https://www.figma.com/design/a8uwqeScDyTBGEA53oV2mP/MokeSell---P05--Joyce-%26-Qi-Xuan?node-id=0-1&t=rSiWX1jJ6RZRT3Q7-1
+
+
+## Features
 ### 1. Gamification
-
 - **Treasure Hunt**
-
-Specially tagged items, such as "Golden Find," can be discovered by browsing the marketplace.
-
-Each category (e.g., electronics, furniture) includes hidden treasures that offer rewards such as discounts, loyalty points, or badges.
-
-The hidden treasure appears as a ‘game console’ icon. Clicking on the icon grants a reward—the bigger the icon, the smaller the reward.
-
-Treasure hunts incentivize users to explore the platform frequently, creating an element of surprise and excitement.
+--Specially tagged items, such as "Golden Find," can be discovered by browsing the marketplace.
+--Each category (e.g., electronics, furniture) includes hidden treasures that offer rewards such as discounts, loyalty points, or badges.
+--The hidden treasure appears as a ‘game console’ icon. Clicking on the icon grants a reward.
+--Treasure hunts incentivize users to explore the platform frequently, creating an element of surprise and excitement.
 
 ### 2. Account Management
-
 - **Account Creation & Login:** Simple and secure account registration and login process.
 
-- **Profile Management:** Users can update their personal information and settings with ease.
+- **Profile Management:** Users can update their personal information and settings dynamically.
 
 ### 3. Listing Management
-
 - **Create Listings:** Sellers can list items by uploading photos, selecting categories, and providing detailed descriptions.
-
 - **Active Listings Limit:** Sellers can manage up to 30 active listings for free.
 
-- **Listing Expiry:** Listings automatically become inactive after 30 days to ensure fresh inventory.
-
 ### 4. Browsing and Search
-
-- **Search Functionality:** Buyers can search for specific items using keywords for quick and easy navigation.
-
 - **Category Browsing:** Browse items by categories or sub-categories for an organized and efficient shopping experience.
 
-- **Save Listings:** Users can "like" and save favorite items for future reference.
-
 ### 5. Transaction Management
-
 - **Chat Feature:** Integrated chat system for direct communication between buyers and sellers to discuss transaction details.
+- **Chat List:** Buyers are able to scroll through and filter chat page of every listing on the marketplace
+  
+### Features Left to Implement
+--**Auction Mode:** Allows sellers to list items with bidding functionality.
+--**AI-Powered Recommendations:** Suggests relevant items based on user behavior.
+--**Referral Program:** Users can invite friends and earn rewards.
 
-- **Offer Submission:** Buyers can submit offers directly through the platform, allowing for flexible negotiations.
+## Technologies Used
+--**HTML, CSS, JavaScript:** Core technologies for structuring and styling the platform.
+--**Firebase Realtime Database:** Store product listings (category/popular) and chat history.
+--**RestDB:** Seure user authentication and account management.
 
-- **Review System:** After each transaction, users can leave reviews and ratings based on various criteria, promoting trust and transparency.
+## Assistive AI Usage
+- **ChatGPT** was used to generate initial project structure, improve code snippets, and troubleshoot bugs
+  
 
-## Objectives
+## Testing
+### Manual Testing
+--**Contact Form:** 
+--Attempted submission of an empty form verified an error message appears.
+--Tested form with an invalid email address, and a relevant error message was displayed.
+--Successfully submitted a valid form and confirmed a success message.
 
-- **Increase Engagement:** Introduce gamification and treasure hunts to enhance user interaction and make the shopping experience more fun and competitive.
+--**Browser Compatibility:** 
+--Tested on Chrome, Firefox, Safari, and Edge for responsiveness.
+--Verified mobile responsiveness on various screen sizes.
 
-- **Simplify Transactions:** Streamline listing management, communication, and offer submission processes to make buying and selling easier.
+--**Bug Fixes & Observations:**
+-Identified an issue where expired listings remained visible; fix in progress.
+-Noticed minor alignment issues on smaller screens; adjustments made.
 
-- **Build Trust:** Leverage the review system to foster trust and credibility within the platform, ensuring transparency between buyers and sellers.
+## Credits
+**Media** 
+--All images used for listings were sourced from Unsplash, Pinterest, Canva, Ebay.
 
-## Target Audience
-
-- **Sellers:** Individuals looking to sell new or second-hand items and engage with an active marketplace.
-
-- **Buyers:** Consumers seeking affordable, unique, or second-hand goods through an intuitive and engaging platform.
-
-- **Engaged Users:** People who enjoy interactive elements, gamification, and a sense of competition, enhancing user retention and satisfaction.
-
-## Get Started
-
-Stay tuned for updates and new features. Join MokeSell and experience a fun, engaging, and secure way to buy and sell online!
-
-
+**Acknowledgements** 
+--Inspiration for the gamification mechanics was drawn from various e-commerce platforms.
