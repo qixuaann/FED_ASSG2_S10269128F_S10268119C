@@ -52,8 +52,15 @@
               <p><span>Subtotal</span><span id="subtotal"></span></p>
               <p><span>Shipping</span><span id="shipping"></span></p>
               <p><span>Tax (10%)</span><span id="tax"></span></p>
+              <p id="discount-row" style="display: none;">Discount: <span id="discount">-$0.00</span></p>
               <p class="total"><span>Total</span><span id="total"></span></p>
           </div>
+          <div class="voucher-section">
+            <input type="text" id="voucher-code" placeholder="Enter voucher code">
+            <button id="apply-voucher">Apply</button>
+            <p id="voucher-message"></p>
+          </div>
+          <button id="remove-voucher">Remove Voucher</button>
           <button id="checkout-btn" class="checkout-btn">Checkout</button>
           <button id=".remove-btn"></button>
           <form id="logoutForm">

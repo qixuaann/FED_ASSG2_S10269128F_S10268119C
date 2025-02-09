@@ -1,6 +1,84 @@
+// voucher 
+// ensure cart is retrieved from localStorage
+const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+const cart = currentUser ? JSON.parse(localStorage.getItem(`cart_${currentUser.Username}`)) || [] : [];
+
+function calculateCartTotal(cart) {
+    let subtotal = 0;
+    cart.forEach(item => {
+        const validPrice = parseFloat(item.price.toString().replace(/[^0-9.]/g, '')) || 0;
+        subtotal += validPrice * item.quantity;
+    });
+
+    const taxRate = 0.1; 
+    const tax = subtotal * taxRate;
+    let total = subtotal + tax;
+
+    const appliedVoucher = JSON.parse(localStorage.getItem("appliedVoucher"));
+    let discount = 0;
+    let shipping = "Free"; // Default shipping
+
+    if (appliedVoucher) {
+        if (appliedVoucher.title.includes("5% discount")) {
+            discount = subtotal * 0.05;
+        } else if (appliedVoucher.title.includes("$3 off")) {
+            discount = 3;
+        } else if (appliedVoucher.title.includes("Free mailing")) {
+            shipping = "Free";
+        }
+        total -= discount;
+    }            
+
+    return {
+        subtotal: subtotal.toFixed(2),
+        shipping: shipping,
+        tax: tax.toFixed(2),
+        discount: discount.toFixed(2),
+        total: total.toFixed(2),
+    };
+}
+
+function updateCartTotal() {
+    const { subtotal, shipping, tax, discount, total } = calculateCartTotal(cart);
+
+    document.getElementById("subtotal").textContent = `$${subtotal}`;
+    document.getElementById("shipping").textContent = `${shipping}`;
+    document.getElementById("tax").textContent = `$${tax}`;
+    document.getElementById("total").textContent = `$${total}`;
+
+    // show or hide the discount row
+    if (discount > 0) {
+        document.getElementById("discount").textContent = `-$${discount}`;
+        document.getElementById("discount-row").style.display = "block";
+    } else {
+        document.getElementById("discount-row").style.display = "none";
+    }
+}
+
+// retrieve claimed vouchers
+const claimedVouchers = JSON.parse(localStorage.getItem("vouchersClaimed")) || [];
+
+document.getElementById("apply-voucher").addEventListener("click", function () {
+    const enteredCode = document.getElementById("voucher-code").value.trim();
+    const voucherMessage = document.getElementById("voucher-message");
+
+    // find a matching voucher
+    const validVoucher = claimedVouchers.find(voucher => voucher.code === enteredCode);
+
+    if (validVoucher) {
+        localStorage.setItem("appliedVoucher", JSON.stringify(validVoucher));
+        voucherMessage.textContent = "Voucher applied successfully!";
+        voucherMessage.style.color = "green";
+        updateCartTotal(); // recalculate cart with discount
+    } else {
+        voucherMessage.textContent = "Invalid or unclaimed voucher!";
+        voucherMessage.style.color = "red";
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const cartContainer = document.getElementById("cart-container");
-    const cartItemsContainer = document.getElementById("cart-items"); 
+    const cartItemsContainer = document.getElementById("cart-items");
     const checkoutButton = document.getElementById("checkout-btn");
 
     if (!cartContainer || !cartItemsContainer || !checkoutButton) {
@@ -12,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isLoggedIn) {
         const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-        const cart = JSON.parse(localStorage.getItem(`cart_${currentUser?.Username}`)) || [];
+        let cart = JSON.parse(localStorage.getItem(`cart_${currentUser?.Username}`)) || [];
 
         if (cart.length === 0) {
             cartContainer.innerHTML = `
@@ -23,9 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         } else {
             const cartItemsHTML = cart.map((item) => {
-                // remove price symbol
                 const validPrice = parseFloat(item.price.toString().replace(/[^0-9.]/g, '')) || 0;
-                const itemTotal = (validPrice * item.quantity).toFixed(2); 
+                const itemTotal = (validPrice * item.quantity).toFixed(2);
                 return `
                     <div class="cart-item">
                         <img src="${item.image}" alt="${item.name}">
@@ -35,43 +112,17 @@ document.addEventListener("DOMContentLoaded", () => {
                         <button class="remove-btn" data-id="${item.id}">Remove</button>
                     </div>
                 `;
-                
             }).join("");
 
-            function calculateCartTotal(cart) {
-                let subtotal = 0;
-                // subtotal
-                cart.forEach(item => {
-                    const validPrice = parseFloat(item.price.toString().replace(/[^0-9.]/g, '')) || 0;
-                    subtotal += validPrice * item.quantity;
-                });
-              
-                const taxRate = 0.1; 
-                const tax = subtotal * taxRate;
-                const total = subtotal + tax;
-              
-                return {
-                    subtotal: subtotal.toFixed(2),
-                    shipping: "Free",
-                    tax: tax.toFixed(2),
-                    total: total.toFixed(2),
-                };
-              }
-              
             cartItemsContainer.innerHTML = cartItemsHTML;
-            const { subtotal, shipping, tax, total } = calculateCartTotal(cart);
-
-            document.getElementById("subtotal").textContent = `$${subtotal}`;
-            document.getElementById("shipping").textContent = `${shipping}`;
-            document.getElementById("tax").textContent = `$${tax}`;
-            document.getElementById("total").textContent = `$${total}`;
+            updateCartTotal(); // ensure totals are updated on load
 
             document.querySelectorAll(".remove-btn").forEach(button => {
                 button.addEventListener("click", (event) => {
                     const productId = event.target.dataset.id;
-                    const updatedCart = cart.filter(item => item.id !== productId);
-                    localStorage.setItem(`cart_${currentUser.Username}`, JSON.stringify(updatedCart));
-                    location.reload(); // refresh cart page
+                    cart = cart.filter(item => item.id !== productId);
+                    localStorage.setItem(`cart_${currentUser.Username}`, JSON.stringify(cart));
+                    location.reload(); 
                 });
             });
 
@@ -95,6 +146,12 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `;
     }
+});
+document.getElementById("remove-voucher").addEventListener("click", function () {
+    localStorage.removeItem("appliedVoucher"); // Remove the applied voucher
+    updateCartTotal(); // Recalculate total without discount
+    document.getElementById("voucher-message").textContent = "Voucher removed.";
+    document.getElementById("voucher-message").style.color = "red";
 });
 
 // need make it work
