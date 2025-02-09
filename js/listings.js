@@ -20,7 +20,7 @@ function populateListingDetails(listing) {
       <p>${listing.category}</p>
     `;
     document.querySelector(".description p").textContent = listing.description;
-    const mainImageUrl = listing.mainImage || listing.imageURL || "/assets/default-image.png";
+    const mainImageUrl = listing.mainImage || listing.imageURL || "../assets/default-image.png";
 
     document.querySelector(".main-image img").src = mainImageUrl;
     

@@ -28,31 +28,31 @@ const setPopularListings = () => {
         title: "Chaps Ralph Lauren Coat Man",
         category: "Men's Fashion",
         price: "80.00",
-        imageURL: "assets/jacket1.jpg"
+        imageURL: "../assets/jacket1.jpg"
       },
       listingID2: {
         title: "SEVENTEEN 4th Album Repackage 'SECTOR 17'",
         category: "Hobbies & Toys",
         price: "28.00",
-        imageURL: "assets/listing-kpop1.jpg"
+        imageURL: "../assets/listing-kpop1.jpg"
       },
       listingID3: {
         title: "Club Shirts Cute",
         category: "Woman's Fashion",
         price: "13.00",
-        imageURL: "assets/tee.jpeg"
+        imageURL: "../assets/tee.jpeg"
       },
       listingID4: {
         title: "Sony WHCH520/B Bluetooth Headphones",
         category: "Mobile & Gadgets",
         price: "13.00",
-        imageURL: "assets/headphones.jpg"
+        imageURL: "../assets/headphones.jpg"
       },
       listingID5: {
         title: "Ralph Lauren Jacket",
         category: "Men's Fashion",
         price: "13.00",
-        imageURL: "assets/jacket2.jpg"
+        imageURL: "../assets/jacket2.jpg"
       },
     })
     .then(() => {
