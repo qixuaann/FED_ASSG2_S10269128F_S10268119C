@@ -185,9 +185,9 @@ hr {
     .profile-info {
         flex-direction: column;
         gap: 12px;
-        padding-left: 30px;
+        padding-left: 25px;
         width: 400px;
-        height: 80px;
+        height: 50px;
     }
 
     .pagination {
@@ -208,18 +208,15 @@ hr {
         width: 80%;
         margin-left: 40px;
     }
-
-    hr {
-        margin: 10px 0;
-    }
-
+    
     .listing-img {
         width: 80px; 
         height: 80px;
+        margin-bottom: 10px;
     }
 
     .profile-info img {
-        width: 30px;
+        width: 35px;
         height: 30px;
     }
 
@@ -229,16 +226,16 @@ hr {
     }
 
     .buy-btn, .add-to-cart-btn {
-        width: 80%;
+        width: 30%;
         font-size: 14px; 
-        padding: 10px 0; 
+        padding: 5px; 
+        height: 30px;
     }
-
 
     .messages {
         width: 80%;
         margin-left: 40px;
-        height: 200px; 
+        height: 230px; 
         margin-top: 10px;
         padding-top: 5px;
         padding-bottom: 10px; 
@@ -248,7 +245,11 @@ hr {
         width: 80%;
         margin-left: 40px;
         font-size: 14px; 
+        height: 35px;
         margin-bottom: 15px;
+    }
+    .seller-setting-icon, hr {
+        display: none;
     }
 }
 

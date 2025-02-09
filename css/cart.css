@@ -136,7 +136,6 @@ p {
 .checkout-btn {
     display: block;
     width: 100%;
-    padding: 15px;
     background-color: #0574eb;
     color: white;
     text-align: center;
@@ -165,8 +164,8 @@ p {
 }
 
 #logoutForm button {
-    margin-top: 10px;
-    padding: 10px 15px;
+    margin-top: 0;
+    padding: 8px 13px;
     border: none;
     background-color: #e88885;
     color: white;
@@ -186,6 +185,41 @@ dotlottie-player {
     top: 60%;  
     width: 300px;  
     height: 300px; 
+}
+
+#apply-voucher {
+    background: #06812f;
+    color: white;
+    padding: 3px 7px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.3s ease;
+}
+
+#remove-voucher {
+    background: #ff4d4d;
+    color: white;
+    padding: 3px 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: background 0.3s ease;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+#voucher-code {
+    margin-top: 6px;
+    padding: 8px 9px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background: #cc0000;
 }
 
 @media only screen and (max-width: 768px) {
