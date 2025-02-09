@@ -115,7 +115,7 @@ signupForm.addEventListener("submit", async (event) => {
     console.log("User created:", responseData);
 
     alert("Sign-up successful!");
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 
   } catch (error) {
     console.error("Error during sign up:", error);
