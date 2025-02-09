@@ -54,8 +54,8 @@ function populateListingDetails(listing) {
     `;
     else {
       suggestedProducts.innerHTML = `
-      <h3 style="margin-left: 260px;">Suggested Products</h3>
-      <p style="margin-left: 260px;">No suggestions available.</p>
+      <h3 style="margin-left: 130px;">Suggested Products</h3>
+      <p style="margin-left: 130px;">No suggestions available.</p>
   `;
       }
     
