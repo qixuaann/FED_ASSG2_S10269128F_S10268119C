@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (topBarIcons) {
       topBarIcons.innerHTML = "";
       const profileLink = document.createElement('a');
-      profileLink.href = "profile.html";
+      profileLink.href = "html/profile.html";
       const topRightAvatar = document.createElement("div");
       topRightAvatar.classList.add("avatar");
       topRightAvatar.style.width = "2.1rem";
@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let rewardsRecord = JSON.parse(localStorage.getItem('rewardsRecord'));
     if (!rewardsRecord) {
       rewardsRecord = [
-        { img: '/assets/badge1.png', title: '5% discount off', desc: 'no min spend', claimed: false },
-        { img: '/assets/badge2.png', title: '$3 off', desc: 'no min spend', claimed: false },
-        { img: '/assets/badge3.png', title: 'Free mailing', desc: 'no min spend', claimed: false }
+        { img: '../assets/badge1.png', title: '5% discount off', desc: 'no min spend', claimed: false },
+        { img: '../assets/badge2.png', title: '$3 off', desc: 'no min spend', claimed: false },
+        { img: '../assets/badge3.png', title: 'Free mailing', desc: 'no min spend', claimed: false }
       ];
       localStorage.setItem('rewardsRecord', JSON.stringify(rewardsRecord));
       console.log("Initialized rewardsRecord.");
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log("addNewVoucher() called.");
       let vouchers = JSON.parse(localStorage.getItem('vouchersClaimed')) || [];
       const newVoucher = {
-        img: '/assets/voucher.png',
+        img: '../assets/voucher.png',
         title: 'Golden Voucher!',
         desc: 'Congratulations! Enjoy your reward!',
         code: 'VOUCHER' + Math.floor(Math.random() * 1000000),
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         const img = document.createElement('img');
-        img.src = (type === 'vouchers') ? '/assets/voucher.png' : getRandomBadgeImage();
+        img.src = (type === 'vouchers') ? '../assets/voucher.png' : getRandomBadgeImage();
         img.alt = type === 'vouchers' ? 'Voucher' : 'Badge';
         rewardDiv.appendChild(img);
         
@@ -162,9 +162,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         function getRandomBadgeImage() {
           const badgeImages = [
-            '/assets/badge1.png',
-            '/assets/badge2.png',
-            '/assets/badge3.png'
+            '../assets/badge1.png',
+            '../assets/badge2.png',
+            '../assets/badge3.png'
           ];
           return badgeImages[Math.floor(Math.random() * badgeImages.length)];
         }

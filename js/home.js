@@ -45,7 +45,7 @@ fetchPopularListings((listings) => {
     listingContent.appendChild(price);
 
     listingItem.addEventListener('click', () => {
-      window.location.href = `listings.html?id=${listingId}`;
+      window.location.href = `../html/listings.html?id=${listingId}`;
     });
 
     listingItem.appendChild(listingContent);
@@ -61,7 +61,7 @@ categoryContainers.forEach((container) => {
   container.addEventListener("click", () => {
     const categoryName = container.dataset.category; 
     if (categoryName) {
-      window.location.href = `category.html?category=${encodeURIComponent(categoryName)}`;
+      window.location.href = `../html/category.html?category=${encodeURIComponent(categoryName)}`;
     }
   });
 });

@@ -43,7 +43,7 @@ function populateListingDetails(listing) {
         .map(
           (product) => `
         <div class="product">
-          <a href="listings.html?id=${product.id}">
+          <a href="../html/listings.html?id=${product.id}">
               <img src="${product.image}" alt="${product.name}">
               <p>${product.name}</p>
            </a>
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const chatLink = document.querySelector(".chatlink"); 
 
       if (chatLink) {
-        chatLink.href = `chat.html?category=${encodeURIComponent(listing.category)}&id=${encodeURIComponent(listingId)}`;
+        chatLink.href = `../html/chat.html?category=${encodeURIComponent(listing.category)}&id=${encodeURIComponent(listingId)}`;
 
         chatLink.addEventListener('click', (event) => {
           event.preventDefault(); 
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           }
 
           localStorage.setItem(`cart_${currentUser.Username}`, JSON.stringify(userCart));
-          window.location.href = "cart.html";
+          window.location.href = "../html/cart.html";
         } 
     });
   }

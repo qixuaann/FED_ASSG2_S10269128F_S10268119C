@@ -51,7 +51,7 @@ const renderCategoryPage = async () => {
             const isTreasure = treasureIndices.has(listingIds.indexOf(listingId));
 
             const listingLink = document.createElement('a');
-            listingLink.href = `listings.html?id=${listingId}&category=${encodeURIComponent(categoryName)}`;
+            listingLink.href = `../html/listings.html?id=${listingId}&category=${encodeURIComponent(categoryName)}`;
             
             const listingElement = document.createElement("div");
             listingElement.className = "listing-item";
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isTreasure = treasureIndices.has(listingIds.indexOf(listingId));
   
     const listingLink = document.createElement('a');
-    listingLink.href = `listings.html?id=${listingId}&category=${encodeURIComponent(categoryName)}`;
+    listingLink.href = `html/listings.html?id=${listingId}&category=${encodeURIComponent(categoryName)}`;
     
     const listingElement = document.createElement("div");
     listingElement.className = "listing-item";
@@ -228,7 +228,7 @@ const topBarIcons = document.querySelector('.top-bar .buttons');
 if (topBarIcons) {
   topBarIcons.innerHTML = "";
   const profileLink = document.createElement('a');
-  profileLink.href = "profile.html";
+  profileLink.href = "html/profile.html";
   const topRightAvatar = document.createElement("div");
   topRightAvatar.classList.add("avatar");
   topRightAvatar.style.width = "2.1rem";

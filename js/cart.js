@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (cart.length === 0) {
             cartContainer.innerHTML = `
                 <p class="indication">You don't have any items in your cart.</p>
-                <a href="home.html" class="home">
+                <a href="index.html" class="home">
                     <button class="shopping-btn">Start Shopping</button>
                 </a>
             `;
@@ -137,10 +137,10 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="indication">You don't have any items in your cart.</p>
             <p>Have an account? Sign in to see your items.</p>
             <div class="buttons">
-                <a href="home.html" class="home">
+                <a href="index.html" class="home">
                     <button id="shopping-btn" class="shopping-btn">Start Shopping</button>
                 </a>
-                <a href="sign-up.html" class="sign-up">
+                <a href="../html/sign-up.html" class="sign-up">
                     <button id="sign-up-btn" class="sign-up-btn"><strong>Sign in</strong></button>
                 </a>
             </div>

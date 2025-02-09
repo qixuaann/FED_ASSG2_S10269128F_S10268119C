@@ -173,7 +173,7 @@ export function createListingButton(container, listingId, listingData) {
     // append
     container.appendChild(button);
       button.addEventListener('click', () => {
-        const chatUrl = `chat.html?category=${encodeURIComponent(listingData.category)}&id=${encodeURIComponent(listingId)}`;
+        const chatUrl = `../html/chat.html?category=${encodeURIComponent(listingData.category)}&id=${encodeURIComponent(listingId)}`;
         window.location.href = chatUrl;
     });
     
@@ -242,7 +242,7 @@ if (!(JSON.parse(localStorage.getItem("loggedInUser")))) {
   if (topBarIcons) {
     topBarIcons.innerHTML = "";
     const profileLink = document.createElement('a');
-    profileLink.href = "profile.html";
+    profileLink.href = "html/profile.html";
     const topRightAvatar = document.createElement("div");
     topRightAvatar.classList.add("avatar");
     topRightAvatar.style.width = "2.1rem";

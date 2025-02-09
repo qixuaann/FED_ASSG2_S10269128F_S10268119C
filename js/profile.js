@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       // clicking anywhere on the listing redirects to its details page.
       listingItem.addEventListener("click", () => {
-        window.location.href = `listings.html?id=${listing.id}`;
+        window.location.href = `html/listings.html?id=${listing.id}`;
       });
   
       listingsContainer.appendChild(listingItem);
