@@ -250,6 +250,10 @@ hr {
     margin: 10px 0;
 }
 
+/* to remove during vid */
+.thumbnails {
+    display: none;
+}
 @media only screen and (max-width: 1200px) {
     .product-page {
         max-width: 100%;
@@ -280,15 +284,14 @@ hr {
     }
 
     .main-image img {
-        width: 75%;
         height: 200px;
-        max-width: 75%;
-        margin-left: 10px;
+        width: 500px;
+        margin-left: 20px;
     }
 
     .thumbnails {
         justify-content: center;
-        margin-right: 10px;
+        margin-left: 20px;
     }
 
     .thumbnails img {
@@ -332,25 +335,11 @@ hr {
         margin-top: 20px;
     }
 
-    .main-image {
-        width: 160px;
-        margin-left: 6px;
-    }
-
-    .thumbnails {
-        margin-left: 15px;
-    }
-
 }
 
 @media only screen and (max-width: 768px) {
     .product-page {
         padding: 10px;
-    }
-
-    .main-image img {
-        width: 80%;
-        max-width: 100%;
     }
 
     .content {
