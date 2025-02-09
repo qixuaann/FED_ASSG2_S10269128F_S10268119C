@@ -105,8 +105,8 @@ document.addEventListener("DOMContentLoaded", async () => {
  
   try {
     const [listingsResponse, categoryResponse] = await Promise.all([
-      fetch("/data/listings.json"),
-      fetch("/data/categoryListings.json"),
+      fetch("../data/listings.json"),
+      fetch("../data/categoryListings.json"),
     ]);
 
     const [listingsData, categoryData] = await Promise.all([

@@ -91,7 +91,7 @@ const topBarIcons = document.querySelector('.top-bar .buttons');
 if (topBarIcons) {
   topBarIcons.innerHTML = "";
   const profileLink = document.createElement('a');
-  profileLink.href = "html/profile.html";
+  profileLink.href = "../html/profile.html";
   const topRightAvatar = document.createElement("div");
   topRightAvatar.classList.add("avatar");
   topRightAvatar.style.width = "2.1rem";
