@@ -66,7 +66,6 @@ categoryContainers.forEach((container) => {
   });
 });
 
-
 // dynamic profile
 // retrieve the logged-in user details from localstorage.
 if (!(JSON.parse(localStorage.getItem("loggedInUser")))) {
@@ -92,7 +91,7 @@ const topBarIcons = document.querySelector('.top-bar .buttons');
 if (topBarIcons) {
   topBarIcons.innerHTML = "";
   const profileLink = document.createElement('a');
-  profileLink.href = "profile.html";
+  profileLink.href = "html/profile.html";
   const topRightAvatar = document.createElement("div");
   topRightAvatar.classList.add("avatar");
   topRightAvatar.style.width = "2.1rem";
