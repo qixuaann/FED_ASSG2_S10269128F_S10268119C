@@ -262,6 +262,12 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       listingContent.appendChild(deleteBtn);
   
+
+      const bumpBtn = document.createElement("button");
+      bumpBtn.textContent = "Bump";
+      bumpBtn.classList.add("bump-btn");
+    
+      listingContent.appendChild(bumpBtn);
       listingItem.appendChild(listingContent);
   
       // clicking anywhere on the listing redirects to its details page.
