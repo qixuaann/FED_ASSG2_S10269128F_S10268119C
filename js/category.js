@@ -85,6 +85,24 @@ const renderCategoryPage = async () => {
       
               listingElement.addEventListener("click", () => {
                 alert("Congratulations! You've found a Golden Find! Enjoy your reward!");
+                const loggedinuser = JSON.parse(localStorage.getItem("loggedInUser")) || { badgesEarned: 0, totalBadges: 20 };
+                loggedinuser.badgesEarned += 1;  
+
+                // create new reward
+                const newReward = {
+                  img: '/assets/badge1.png' || '/assets/badge2.png' || '/assets/badge3.png',
+                  title: 'Golden Find!',
+                  desc: 'Congratulations! You found a Golden Find!',
+                  claimed: false
+                };
+
+                // existing rewards from localStorage/create a new array
+                let rewardsRecord = JSON.parse(localStorage.getItem('rewardsRecord')) || [];
+                rewardsRecord.push(newReward);
+
+                localStorage.setItem('rewardsRecord', JSON.stringify(rewardsRecord));
+                localStorage.setItem('loggedInUser', JSON.stringify(loggedinuser));
+                window.location.href = 'rewards.html';
               });
             }
 
