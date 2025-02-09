@@ -67,7 +67,7 @@ const renderCategoryPage = async () => {
             
             if (isTreasure) {
               const lottiePlayerWrapper = document.createElement("a");
-              lottiePlayerWrapper.setAttribute("href", "rewards.html");
+              lottiePlayerWrapper.setAttribute("href", "../html/rewards.html");
               lottiePlayerWrapper.setAttribute("target", "_blank");
               lottiePlayerWrapper.classList.add("tuan");
       
@@ -90,7 +90,7 @@ const renderCategoryPage = async () => {
 
                 // create new reward
                 const newReward = {
-                  img: '/assets/badge1.png' || '/assets/badge2.png' || '/assets/badge3.png',
+                  img: '../assets/badge1.png' || '../assets/badge2.png' || '../assets/badge3.png',
                   title: 'Golden Find!',
                   desc: 'Congratulations! You found a Golden Find!',
                   claimed: false
