@@ -288,6 +288,6 @@ if (signOutBtn) {
     // show a pop-up that sign out was successful
     alert("Signed out successfully. See you soon!");
     // redirect to home.html
-    window.location.href = '../index.html';
+    window.location.href = "../index.html";
   });
 }
