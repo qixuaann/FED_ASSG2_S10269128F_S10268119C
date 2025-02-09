@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // retrieve the logged-in user details from localstorage.
     const loggedinuser =
       JSON.parse(localStorage.getItem("loggedInUser")) ||
-      { username: "Guest", profilePic: "Avatar" };
+      { username: "guest", profilePic: "Avatar" };
   
     // update the profile card (if the element exists)
     const avatarEl = document.getElementById("user-avatar");
