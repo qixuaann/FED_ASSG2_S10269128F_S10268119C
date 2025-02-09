@@ -120,8 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
             addListingModal.classList.add("hidden");
           })
           .catch((error) => {
-            console.error("error processing images:", error);
-            alert("there was an error processing your images. please try again.");
+            console.error("Error processing images:", error);
+            alert("There was an error processing your images. Please try again.");
           });
       });
     }
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // retrieve the logged-in user details from localstorage.
     const loggedinuser =
       JSON.parse(localStorage.getItem("loggedInUser")) ||
-      { username: "guest", profilePic: "avatar" };
+      { username: "guest", profilePic: "Avatar" };
   
     // update the profile card (if the element exists)
     const avatarEl = document.getElementById("user-avatar");
@@ -293,7 +293,7 @@ if (signOutBtn) {
     localStorage.removeItem('loggedInUser');
     // show a pop-up that sign out was successful
     alert("Signed out successfully. See you soon!");
-    // redirect to home.html
-    window.location.href = 'home.html';
+    // redirect to index.html
+    window.location.href = "../index.html";
   });
 }

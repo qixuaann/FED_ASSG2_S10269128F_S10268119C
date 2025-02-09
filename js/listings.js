@@ -20,7 +20,7 @@ function populateListingDetails(listing) {
       <p>${listing.category}</p>
     `;
     document.querySelector(".description p").textContent = listing.description;
-    const mainImageUrl = listing.mainImage || listing.imageURL || "/assets/default-image.png";
+    const mainImageUrl = listing.mainImage || listing.imageURL || "../assets/default-image.png";
 
     document.querySelector(".main-image img").src = mainImageUrl;
     
@@ -105,8 +105,8 @@ document.addEventListener("DOMContentLoaded", async () => {
  
   try {
     const [listingsResponse, categoryResponse] = await Promise.all([
-      fetch("/data/listings.json"),
-      fetch("/data/categoryListings.json"),
+      fetch("../data/listings.json"),
+      fetch("../data/categoryListings.json"),
     ]);
 
     const [listingsData, categoryData] = await Promise.all([

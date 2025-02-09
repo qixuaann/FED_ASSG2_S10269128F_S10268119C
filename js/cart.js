@@ -157,10 +157,10 @@ document.getElementById("remove-voucher").addEventListener("click", function () 
 // need make it work
 document.addEventListener("click", function (event) {
     if (event.target.id === "shopping-btn") {
-        window.location.href = "home.html";
+        window.location.href = "../index.html";
     }
     if (event.target.id === "sign-up-btn") {
-        window.location.href = "sign-up.html";
+        window.location.href = "../html/sign-up.html";
     }
 
 });

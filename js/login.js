@@ -79,7 +79,7 @@ loginForm.addEventListener("submit", async (event) => {
         });
 
         if (!response.ok) {
-            throw new Error("error fetching user data");
+            throw new Error("Error fetching user data");
         }
 
         const users = await response.json();
@@ -131,11 +131,11 @@ loginForm.addEventListener("submit", async (event) => {
         localStorage.setItem("loggedInUser", JSON.stringify({
             username: user.Username, 
             email: user.Email, // if available in restdb
-            profilePic: user.ProfilePic || "/assets/default-avatar.png" // default image if none is set
+            profilePic: user.ProfilePic || "../assets/default-avatar.png" // default image if none is set
         }));
 
         // back to home page
-        window.location.href = "home.html"; 
+        window.location.href = "../index.html"; 
 
     } catch (error) {
         console.error("Error during login:", error);
