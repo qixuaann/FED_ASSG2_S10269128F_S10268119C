@@ -312,7 +312,7 @@ body {
 
 #add-listing {
     display: block;
-    margin-left: 1100px;
+    margin-left: 940px;
     width: 100px;
     padding: 13px;
     background-color: #488ddb;
@@ -558,7 +558,7 @@ h2 {
 .ad-column {
     width: 11.5%; /* Adjust width as needed */
     position: absolute; 
-    bottom: -11%;
+    top: 15%;
     right: 5%; /* Position it from the right edge */
     display: flex;
     flex-direction: column;
@@ -566,6 +566,7 @@ h2 {
 }
 
 .ad-column h1 {
+    margin-bottom: 40px;
     font-weight: normal;
     font-size: 70%;
     text-align: center;
@@ -756,15 +757,6 @@ h2 {
     .ad-box img {
         width: 130px; 
         height: 200px;
-    }
-
-    .ad-box::after {
-        content: "Advertisement";
-        width: 100%;
-        text-align: center;
-        font-weight: light;
-        opacity: 50%;
-        margin-top: 5px;
     }
 
     /* button adjustments */

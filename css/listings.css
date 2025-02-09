@@ -250,10 +250,7 @@ hr {
     margin: 10px 0;
 }
 
-/* to remove during vid */
-.thumbnails {
-    display: none;
-}
+
 @media only screen and (max-width: 1200px) {
     .product-page {
         max-width: 100%;

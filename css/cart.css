@@ -19,8 +19,8 @@
     align-items: center;
     width: 550px;
     gap: 10px;
-    top: 60%;
-    left: 35%;
+    top: 69%;
+    left: 33%;
 }
 .checkout-container {
     display: flex;
@@ -181,9 +181,9 @@ p {
 
 dotlottie-player {
     width: 70%;
-    left: 41.5%;
+    left: 40.5%;
     position: absolute;  
-    top: 60%;  
+    top: 68%;  
     width: 300px;  
     height: 300px; 
 }
@@ -211,6 +211,7 @@ dotlottie-player {
     margin-bottom: 10px;
     margin-left: 5px;
 }
+
 #voucher-code {
     margin-top: 6px;
     padding: 8px 9px;

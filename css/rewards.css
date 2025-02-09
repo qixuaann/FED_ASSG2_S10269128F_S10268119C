@@ -149,3 +149,91 @@ h2 {
     margin-top: 10px;
     color: green;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px; 
+    }
+
+    .search-bar {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+
+    .nav-icons {
+        gap: 10px; 
+    }
+
+    .profile-icon {
+        padding: 6px 10px; 
+    }
+
+    .profile {
+        margin: 20px auto; 
+    }
+
+    .avatar {
+        width: 50px; 
+        height: 50px;
+        font-size: 1.5rem; 
+    }
+
+    h2 {
+        font-size: 1.2rem; 
+    }
+
+    .toggle-buttons {
+        flex-direction: column; 
+    }
+
+    .toggle-buttons button {
+        width: 60%; 
+        margin: 0; 
+        margin-top: 8px; 
+    }
+
+    .rewards {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .reward-grid {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .reward {
+        width: 100%; 
+    }
+
+    .reward img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .reward h4 {
+        font-size: 0.9rem; 
+    }
+
+    .claim-btn, .claimed-btn {
+        width: 100%;
+        padding: 8px; 
+    }
+
+    .see-all {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
