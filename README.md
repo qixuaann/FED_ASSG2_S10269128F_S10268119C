@@ -97,7 +97,8 @@ This screenshot shows the function to increment vouchers for gamification
 
 ## **Credits**  
 ### **Media**  
-- All images used for listings were sourced from [Unsplash](https://unsplash.com/), [Pinterest](https://www.pinterest.com/), [Canva](https://www.canva.com/), and [eBay](https://www.ebay.com/).  
+- All images used for listings/banners were sourced from [Google](https://google.com), [Unsplash](https://unsplash.com/), [Pinterest](https://www.pinterest.com/), [Canva](https://www.canva.com/), and [eBay](https://www.ebay.com/).  
+- Animatiosn used for login/signup/cart were sourced from [Lottie](https://lottiefiles.com/).
 
 ### **Acknowledgements**  
 - Inspiration for the gamification mechanics was drawn from various e-commerce platforms.  
