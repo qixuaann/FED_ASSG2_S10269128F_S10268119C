@@ -82,7 +82,7 @@ const fetchPopularListings = (callback) => {
 const setCategoryListings = () => {
     const categoryListings = {
         "Car": {
-          bgImage: "/assets/car-banner.jpg",
+          bgImage: "/assets/car-banner.png",
           listings: {
             listingID1: {
               title: "Jaguar XE 2.0 14D TSS Auto",
@@ -107,7 +107,7 @@ const setCategoryListings = () => {
           }
         },
         "Luxury": {
-          bgImage: "/assets/luxury-banner.jpg",
+          bgImage: "/assets/luxury-banner.png",
           listings: {
             listingID5: {
               title: "LV Bag",
@@ -132,7 +132,7 @@ const setCategoryListings = () => {
           }
         },
         "Mobile & Gadgets": {
-            bgImage: "/assets/mobilengadgets-banner.jpg",
+            bgImage: "/assets/mobilengadgets-banner.png",
             listings: {
                 listingID9: {
                     title: "iPhone 13",
@@ -157,7 +157,7 @@ const setCategoryListings = () => {
             },
         },
         "Home Services": {
-            bgImage: "/assets/homeservices-banner.jpg",
+            bgImage: "/assets/homeservices-banner.png",
             listings: {
                 listingID13: {
                     title: "Handyman, Home Services, Home Repairs, Handyman and Drilling Services",
@@ -182,7 +182,7 @@ const setCategoryListings = () => {
             },
         },
         "Hobbies & Toys": {
-            bgImage: "/assets/hobbiesntoys-banner.jpg",
+            bgImage: "/assets/hobbiesntoys-banner.png",
             listings: {
                 listingID17: {
                     title: "BN Jellycat Bashful Bunny Soft Toy",
@@ -207,7 +207,7 @@ const setCategoryListings = () => {
             },
         },
         "Property": {
-            bgImage: "/assets/property-banner.jpg",
+            bgImage: "/assets/property-banner.png",
             listings: {
                 listingID21: {
                     title: "HDB 4 room unit (Open for viewing)",
@@ -232,7 +232,7 @@ const setCategoryListings = () => {
             },
         },
         "Computers & Tech": {
-            bgImage: "/assets/computerntech-banner.avif",
+            bgImage: "/assets/computerntech-banner.png",
             listings: {
                 listingID25: {
                     title: "Apple Macbook Pro M13 (NO NEGO)",
@@ -282,7 +282,7 @@ const setCategoryListings = () => {
               },
         },
         "Men's Fashion": {
-            bgImage: "/assets/menfashion-banner.jpg",
+            bgImage: "/assets/menfashion-banner.png",
             listings: {
                 listingID33: {
                     title: "Men Suit Jackets Blazer Coat Slim Fit",
@@ -307,7 +307,7 @@ const setCategoryListings = () => {
               },
         },
         "Beauty & Personal Care": {
-            bgImage: "/assets/skincare-banner.jpg",
+            bgImage: "/assets/skincare-banner.png",
             listings: {
                 listingID29: {
                     title: "Brand new / Preloved Skincare Products to clear",
