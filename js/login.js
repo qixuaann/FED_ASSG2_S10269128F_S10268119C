@@ -135,7 +135,7 @@ loginForm.addEventListener("submit", async (event) => {
         }));
 
         // back to home page
-        window.location.href = "home.html"; 
+        window.location.href = "index.html"; 
 
     } catch (error) {
         console.error("Error during login:", error);
