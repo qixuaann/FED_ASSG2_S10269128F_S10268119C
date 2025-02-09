@@ -287,7 +287,7 @@ if (signOutBtn) {
     localStorage.removeItem('loggedInUser');
     // show a pop-up that sign out was successful
     alert("Signed out successfully. See you soon!");
-    // redirect to home.html
+    // redirect to index.html
     window.location.href = "../index.html";
   });
 }
