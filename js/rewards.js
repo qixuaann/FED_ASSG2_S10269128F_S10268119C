@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         const img = document.createElement('img');
-        img.src = getRandomBadgeImage() || (type === 'vouchers' ? '/assets/voucher.png' : "");
+        img.src = (type === 'vouchers') ? '/assets/voucher.png' : getRandomBadgeImage();
         img.alt = type === 'vouchers' ? 'Voucher' : 'Badge';
         rewardDiv.appendChild(img);
         
